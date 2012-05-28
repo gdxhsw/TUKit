@@ -15,22 +15,43 @@
 		F55809E91573AC5800865948 /* TEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F55809E81573AC5800865948 /* TEAppDelegate.m */; };
 		F55809EC1573AC5800865948 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F55809EA1573AC5800865948 /* MainStoryboard.storyboard */; };
 		F55809EF1573AC5800865948 /* TEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F55809EE1573AC5800865948 /* TEViewController.m */; };
+		F5580A681573AF4600865948 /* liblibTUKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5580A241573AD0200865948 /* liblibTUKit.a */; };
+		F5580A6B1573C25B00865948 /* README in Resources */ = {isa = PBXBuildFile; fileRef = F5580A6A1573C25B00865948 /* README */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F5580A231573AD0200865948 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5580A1F1573AD0100865948 /* libTUKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F5580A0F1573AD0100865948;
+			remoteInfo = libTUKit;
+		};
+		F5580A661573AF3C00865948 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5580A1F1573AD0100865948 /* libTUKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F5580A0E1573AD0100865948;
+			remoteInfo = libTUKit;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		F55809D41573AC5800865948 /* TUKitSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TUKitSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F55809D81573AC5800865948 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F55809DA1573AC5800865948 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F55809DC1573AC5800865948 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		F55809E01573AC5800865948 /* TUKitSample-Info.plist */ = {isa = PBXFileReference; path = "TUKitSample-Info.plist"; sourceTree = "<group>"; };
+		F55809E01573AC5800865948 /* TUKitSample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TUKitSample-Info.plist"; sourceTree = "<group>"; };
 		F55809E21573AC5800865948 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F55809E41573AC5800865948 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F55809E61573AC5800865948 /* TUKitSample-Prefix.pch */ = {isa = PBXFileReference; path = "TUKitSample-Prefix.pch"; sourceTree = "<group>"; };
-		F55809E71573AC5800865948 /* TEAppDelegate.h */ = {isa = PBXFileReference; path = TEAppDelegate.h; sourceTree = "<group>"; };
+		F55809E61573AC5800865948 /* TUKitSample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TUKitSample-Prefix.pch"; sourceTree = "<group>"; };
+		F55809E71573AC5800865948 /* TEAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TEAppDelegate.h; sourceTree = "<group>"; };
 		F55809E81573AC5800865948 /* TEAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TEAppDelegate.m; sourceTree = "<group>"; };
 		F55809EB1573AC5800865948 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		F55809ED1573AC5800865948 /* TEViewController.h */ = {isa = PBXFileReference; path = TEViewController.h; sourceTree = "<group>"; };
+		F55809ED1573AC5800865948 /* TEViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TEViewController.h; sourceTree = "<group>"; };
 		F55809EE1573AC5800865948 /* TEViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TEViewController.m; sourceTree = "<group>"; };
+		F5580A1F1573AD0100865948 /* libTUKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libTUKit.xcodeproj; path = libTUKit/libTUKit.xcodeproj; sourceTree = "<group>"; };
+		F5580A6A1573C25B00865948 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5580A681573AF4600865948 /* liblibTUKit.a in Frameworks */,
 				F55809D91573AC5800865948 /* UIKit.framework in Frameworks */,
 				F55809DB1573AC5800865948 /* Foundation.framework in Frameworks */,
 				F55809DD1573AC5800865948 /* CoreGraphics.framework in Frameworks */,
@@ -50,6 +72,8 @@
 		F55809C91573AC5800865948 = {
 			isa = PBXGroup;
 			children = (
+				F5580A6A1573C25B00865948 /* README */,
+				F5580A1F1573AD0100865948 /* libTUKit.xcodeproj */,
 				F55809DE1573AC5800865948 /* TUKitSample */,
 				F55809D71573AC5800865948 /* Frameworks */,
 				F55809D51573AC5800865948 /* Products */,
@@ -98,6 +122,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F5580A201573AD0100865948 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F5580A241573AD0200865948 /* liblibTUKit.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -112,6 +144,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				F5580A671573AF3C00865948 /* PBXTargetDependency */,
 			);
 			name = TUKitSample;
 			productName = TUKitSample;
@@ -138,12 +171,28 @@
 			mainGroup = F55809C91573AC5800865948;
 			productRefGroup = F55809D51573AC5800865948 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F5580A201573AD0100865948 /* Products */;
+					ProjectRef = F5580A1F1573AD0100865948 /* libTUKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				F55809D31573AC5800865948 /* TUKitSample */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		F5580A241573AD0200865948 /* liblibTUKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = liblibTUKit.a;
+			remoteRef = F5580A231573AD0200865948 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		F55809D21573AC5800865948 /* Resources */ = {
@@ -152,6 +201,7 @@
 			files = (
 				F55809E31573AC5800865948 /* InfoPlist.strings in Resources */,
 				F55809EC1573AC5800865948 /* MainStoryboard.storyboard in Resources */,
+				F5580A6B1573C25B00865948 /* README in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +219,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F5580A671573AF3C00865948 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libTUKit;
+			targetProxy = F5580A661573AF3C00865948 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F55809E11573AC5800865948 /* InfoPlist.strings */ = {

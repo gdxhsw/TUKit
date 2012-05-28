@@ -1,0 +1,393 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F5580A131573AD0100865948 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5580A121573AD0100865948 /* Foundation.framework */; };
+		F5580A191573AD0100865948 /* TUKit.m in Sources */ = {isa = PBXBuildFile; fileRef = F5580A181573AD0100865948 /* TUKit.m */; };
+		F5580A3A1573AEA000865948 /* TEModel.h in Headers */ = {isa = PBXBuildFile; fileRef = F5580A261573AEA000865948 /* TEModel.h */; };
+		F5580A3B1573AEA000865948 /* TEModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F5580A271573AEA000865948 /* TEModel.m */; };
+		F5580A3C1573AEA000865948 /* TETableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = F5580A281573AEA000865948 /* TETableViewCell.h */; };
+		F5580A3D1573AEA000865948 /* TETableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5580A291573AEA000865948 /* TETableViewCell.m */; };
+		F5580A3E1573AEA000865948 /* TETableViewDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = F5580A2A1573AEA000865948 /* TETableViewDataSource.h */; };
+		F5580A3F1573AEA000865948 /* TETableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = F5580A2B1573AEA000865948 /* TETableViewDataSource.m */; };
+		F5580A401573AEA000865948 /* TETableViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = F5580A2C1573AEA000865948 /* TETableViewDelegate.h */; };
+		F5580A411573AEA000865948 /* TETableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5580A2D1573AEA000865948 /* TETableViewDelegate.m */; };
+		F5580A421573AEA000865948 /* TETableViewExpandableDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = F5580A2E1573AEA000865948 /* TETableViewExpandableDataSource.h */; };
+		F5580A431573AEA000865948 /* TETableViewExpandableDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = F5580A2F1573AEA000865948 /* TETableViewExpandableDataSource.m */; };
+		F5580A441573AEA000865948 /* TETableViewExpandableDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = F5580A301573AEA000865948 /* TETableViewExpandableDelegate.h */; };
+		F5580A451573AEA000865948 /* TETableViewExpandableDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5580A311573AEA000865948 /* TETableViewExpandableDelegate.m */; };
+		F5580A461573AEA000865948 /* TETableViewExpandableItem.h in Headers */ = {isa = PBXBuildFile; fileRef = F5580A321573AEA000865948 /* TETableViewExpandableItem.h */; };
+		F5580A471573AEA000865948 /* TETableViewExpandableItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F5580A331573AEA000865948 /* TETableViewExpandableItem.m */; };
+		F5580A481573AEA000865948 /* TETableViewItem.h in Headers */ = {isa = PBXBuildFile; fileRef = F5580A341573AEA000865948 /* TETableViewItem.h */; };
+		F5580A491573AEA000865948 /* TETableViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F5580A351573AEA000865948 /* TETableViewItem.m */; };
+		F5580A4A1573AEA000865948 /* TETableViewSectionDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = F5580A361573AEA000865948 /* TETableViewSectionDataSource.h */; };
+		F5580A4B1573AEA000865948 /* TETableViewSectionDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = F5580A371573AEA000865948 /* TETableViewSectionDataSource.m */; };
+		F5580A4C1573AEA000865948 /* TETableViewSectionExpandableDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = F5580A381573AEA000865948 /* TETableViewSectionExpandableDataSource.h */; };
+		F5580A4D1573AEA000865948 /* TETableViewSectionExpandableDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = F5580A391573AEA000865948 /* TETableViewSectionExpandableDataSource.m */; };
+		F5580A561573AEB500865948 /* TEStarRatingView.h in Headers */ = {isa = PBXBuildFile; fileRef = F5580A541573AEB500865948 /* TEStarRatingView.h */; };
+		F5580A571573AEB500865948 /* TEStarRatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5580A551573AEB500865948 /* TEStarRatingView.m */; };
+		F5580A5F1573AECA00865948 /* AFUIImageReflection.h in Headers */ = {isa = PBXBuildFile; fileRef = F5580A591573AECA00865948 /* AFUIImageReflection.h */; };
+		F5580A601573AECA00865948 /* AFUIImageReflection.m in Sources */ = {isa = PBXBuildFile; fileRef = F5580A5A1573AECA00865948 /* AFUIImageReflection.m */; };
+		F5580A611573AECA00865948 /* TEGallery.h in Headers */ = {isa = PBXBuildFile; fileRef = F5580A5B1573AECA00865948 /* TEGallery.h */; };
+		F5580A621573AECA00865948 /* TEGallery.m in Sources */ = {isa = PBXBuildFile; fileRef = F5580A5C1573AECA00865948 /* TEGallery.m */; };
+		F5580A631573AECA00865948 /* TEPhoto.h in Headers */ = {isa = PBXBuildFile; fileRef = F5580A5D1573AECA00865948 /* TEPhoto.h */; };
+		F5580A641573AECA00865948 /* TEPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = F5580A5E1573AECA00865948 /* TEPhoto.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F5580A0F1573AD0100865948 /* liblibTUKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblibTUKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5580A121573AD0100865948 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F5580A161573AD0100865948 /* libTUKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "libTUKit-Prefix.pch"; sourceTree = "<group>"; };
+		F5580A171573AD0100865948 /* TUKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TUKit.h; sourceTree = "<group>"; };
+		F5580A181573AD0100865948 /* TUKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TUKit.m; sourceTree = "<group>"; };
+		F5580A261573AEA000865948 /* TEModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEModel.h; path = TETableView/TEModel.h; sourceTree = "<group>"; };
+		F5580A271573AEA000865948 /* TEModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEModel.m; path = TETableView/TEModel.m; sourceTree = "<group>"; };
+		F5580A281573AEA000865948 /* TETableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TETableViewCell.h; path = TETableView/TETableViewCell.h; sourceTree = "<group>"; };
+		F5580A291573AEA000865948 /* TETableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TETableViewCell.m; path = TETableView/TETableViewCell.m; sourceTree = "<group>"; };
+		F5580A2A1573AEA000865948 /* TETableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TETableViewDataSource.h; path = TETableView/TETableViewDataSource.h; sourceTree = "<group>"; };
+		F5580A2B1573AEA000865948 /* TETableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TETableViewDataSource.m; path = TETableView/TETableViewDataSource.m; sourceTree = "<group>"; };
+		F5580A2C1573AEA000865948 /* TETableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TETableViewDelegate.h; path = TETableView/TETableViewDelegate.h; sourceTree = "<group>"; };
+		F5580A2D1573AEA000865948 /* TETableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TETableViewDelegate.m; path = TETableView/TETableViewDelegate.m; sourceTree = "<group>"; };
+		F5580A2E1573AEA000865948 /* TETableViewExpandableDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TETableViewExpandableDataSource.h; path = TETableView/TETableViewExpandableDataSource.h; sourceTree = "<group>"; };
+		F5580A2F1573AEA000865948 /* TETableViewExpandableDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TETableViewExpandableDataSource.m; path = TETableView/TETableViewExpandableDataSource.m; sourceTree = "<group>"; };
+		F5580A301573AEA000865948 /* TETableViewExpandableDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TETableViewExpandableDelegate.h; path = TETableView/TETableViewExpandableDelegate.h; sourceTree = "<group>"; };
+		F5580A311573AEA000865948 /* TETableViewExpandableDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TETableViewExpandableDelegate.m; path = TETableView/TETableViewExpandableDelegate.m; sourceTree = "<group>"; };
+		F5580A321573AEA000865948 /* TETableViewExpandableItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TETableViewExpandableItem.h; path = TETableView/TETableViewExpandableItem.h; sourceTree = "<group>"; };
+		F5580A331573AEA000865948 /* TETableViewExpandableItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TETableViewExpandableItem.m; path = TETableView/TETableViewExpandableItem.m; sourceTree = "<group>"; };
+		F5580A341573AEA000865948 /* TETableViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TETableViewItem.h; path = TETableView/TETableViewItem.h; sourceTree = "<group>"; };
+		F5580A351573AEA000865948 /* TETableViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TETableViewItem.m; path = TETableView/TETableViewItem.m; sourceTree = "<group>"; };
+		F5580A361573AEA000865948 /* TETableViewSectionDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TETableViewSectionDataSource.h; path = TETableView/TETableViewSectionDataSource.h; sourceTree = "<group>"; };
+		F5580A371573AEA000865948 /* TETableViewSectionDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TETableViewSectionDataSource.m; path = TETableView/TETableViewSectionDataSource.m; sourceTree = "<group>"; };
+		F5580A381573AEA000865948 /* TETableViewSectionExpandableDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TETableViewSectionExpandableDataSource.h; path = TETableView/TETableViewSectionExpandableDataSource.h; sourceTree = "<group>"; };
+		F5580A391573AEA000865948 /* TETableViewSectionExpandableDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TETableViewSectionExpandableDataSource.m; path = TETableView/TETableViewSectionExpandableDataSource.m; sourceTree = "<group>"; };
+		F5580A501573AEB500865948 /* __default_highlighted_star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = __default_highlighted_star.png; sourceTree = "<group>"; };
+		F5580A511573AEB500865948 /* __default_highlighted_star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "__default_highlighted_star@2x.png"; sourceTree = "<group>"; };
+		F5580A521573AEB500865948 /* __default_star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = __default_star.png; sourceTree = "<group>"; };
+		F5580A531573AEB500865948 /* __default_star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "__default_star@2x.png"; sourceTree = "<group>"; };
+		F5580A541573AEB500865948 /* TEStarRatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEStarRatingView.h; path = TEStarRating/TEStarRatingView.h; sourceTree = "<group>"; };
+		F5580A551573AEB500865948 /* TEStarRatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEStarRatingView.m; path = TEStarRating/TEStarRatingView.m; sourceTree = "<group>"; };
+		F5580A591573AECA00865948 /* AFUIImageReflection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFUIImageReflection.h; path = TEGallery/AFUIImageReflection.h; sourceTree = "<group>"; };
+		F5580A5A1573AECA00865948 /* AFUIImageReflection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFUIImageReflection.m; path = TEGallery/AFUIImageReflection.m; sourceTree = "<group>"; };
+		F5580A5B1573AECA00865948 /* TEGallery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEGallery.h; path = TEGallery/TEGallery.h; sourceTree = "<group>"; };
+		F5580A5C1573AECA00865948 /* TEGallery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEGallery.m; path = TEGallery/TEGallery.m; sourceTree = "<group>"; };
+		F5580A5D1573AECA00865948 /* TEPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEPhoto.h; path = TEGallery/TEPhoto.h; sourceTree = "<group>"; };
+		F5580A5E1573AECA00865948 /* TEPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEPhoto.m; path = TEGallery/TEPhoto.m; sourceTree = "<group>"; };
+		F5580A651573AEF900865948 /* TEDebug.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TEDebug.h; sourceTree = "<group>"; };
+		F5580A691573B80700865948 /* TEArcCompatible.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TEArcCompatible.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F5580A0C1573AD0100865948 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5580A131573AD0100865948 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F5580A041573AD0100865948 = {
+			isa = PBXGroup;
+			children = (
+				F5580A141573AD0100865948 /* libTUKit */,
+				F5580A111573AD0100865948 /* Frameworks */,
+				F5580A101573AD0100865948 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F5580A101573AD0100865948 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F5580A0F1573AD0100865948 /* liblibTUKit.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F5580A111573AD0100865948 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F5580A121573AD0100865948 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F5580A141573AD0100865948 /* libTUKit */ = {
+			isa = PBXGroup;
+			children = (
+				F5580A581573AEBE00865948 /* TEGallery */,
+				F5580A4E1573AEA700865948 /* TEStarRating */,
+				F5580A251573AD4100865948 /* TETableView */,
+				F5580A651573AEF900865948 /* TEDebug.h */,
+				F5580A691573B80700865948 /* TEArcCompatible.h */,
+				F5580A171573AD0100865948 /* TUKit.h */,
+				F5580A181573AD0100865948 /* TUKit.m */,
+				F5580A151573AD0100865948 /* Supporting Files */,
+			);
+			path = libTUKit;
+			sourceTree = "<group>";
+		};
+		F5580A151573AD0100865948 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F5580A161573AD0100865948 /* libTUKit-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F5580A251573AD4100865948 /* TETableView */ = {
+			isa = PBXGroup;
+			children = (
+				F5580A261573AEA000865948 /* TEModel.h */,
+				F5580A271573AEA000865948 /* TEModel.m */,
+				F5580A281573AEA000865948 /* TETableViewCell.h */,
+				F5580A291573AEA000865948 /* TETableViewCell.m */,
+				F5580A2A1573AEA000865948 /* TETableViewDataSource.h */,
+				F5580A2B1573AEA000865948 /* TETableViewDataSource.m */,
+				F5580A2C1573AEA000865948 /* TETableViewDelegate.h */,
+				F5580A2D1573AEA000865948 /* TETableViewDelegate.m */,
+				F5580A2E1573AEA000865948 /* TETableViewExpandableDataSource.h */,
+				F5580A2F1573AEA000865948 /* TETableViewExpandableDataSource.m */,
+				F5580A301573AEA000865948 /* TETableViewExpandableDelegate.h */,
+				F5580A311573AEA000865948 /* TETableViewExpandableDelegate.m */,
+				F5580A321573AEA000865948 /* TETableViewExpandableItem.h */,
+				F5580A331573AEA000865948 /* TETableViewExpandableItem.m */,
+				F5580A341573AEA000865948 /* TETableViewItem.h */,
+				F5580A351573AEA000865948 /* TETableViewItem.m */,
+				F5580A361573AEA000865948 /* TETableViewSectionDataSource.h */,
+				F5580A371573AEA000865948 /* TETableViewSectionDataSource.m */,
+				F5580A381573AEA000865948 /* TETableViewSectionExpandableDataSource.h */,
+				F5580A391573AEA000865948 /* TETableViewSectionExpandableDataSource.m */,
+			);
+			name = TETableView;
+			sourceTree = "<group>";
+		};
+		F5580A4E1573AEA700865948 /* TEStarRating */ = {
+			isa = PBXGroup;
+			children = (
+				F5580A4F1573AEB500865948 /* images */,
+				F5580A541573AEB500865948 /* TEStarRatingView.h */,
+				F5580A551573AEB500865948 /* TEStarRatingView.m */,
+			);
+			name = TEStarRating;
+			sourceTree = "<group>";
+		};
+		F5580A4F1573AEB500865948 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				F5580A501573AEB500865948 /* __default_highlighted_star.png */,
+				F5580A511573AEB500865948 /* __default_highlighted_star@2x.png */,
+				F5580A521573AEB500865948 /* __default_star.png */,
+				F5580A531573AEB500865948 /* __default_star@2x.png */,
+			);
+			name = images;
+			path = TEStarRating/images;
+			sourceTree = "<group>";
+		};
+		F5580A581573AEBE00865948 /* TEGallery */ = {
+			isa = PBXGroup;
+			children = (
+				F5580A591573AECA00865948 /* AFUIImageReflection.h */,
+				F5580A5A1573AECA00865948 /* AFUIImageReflection.m */,
+				F5580A5B1573AECA00865948 /* TEGallery.h */,
+				F5580A5C1573AECA00865948 /* TEGallery.m */,
+				F5580A5D1573AECA00865948 /* TEPhoto.h */,
+				F5580A5E1573AECA00865948 /* TEPhoto.m */,
+			);
+			name = TEGallery;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		F5580A0D1573AD0100865948 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5580A3A1573AEA000865948 /* TEModel.h in Headers */,
+				F5580A3C1573AEA000865948 /* TETableViewCell.h in Headers */,
+				F5580A3E1573AEA000865948 /* TETableViewDataSource.h in Headers */,
+				F5580A401573AEA000865948 /* TETableViewDelegate.h in Headers */,
+				F5580A421573AEA000865948 /* TETableViewExpandableDataSource.h in Headers */,
+				F5580A441573AEA000865948 /* TETableViewExpandableDelegate.h in Headers */,
+				F5580A461573AEA000865948 /* TETableViewExpandableItem.h in Headers */,
+				F5580A481573AEA000865948 /* TETableViewItem.h in Headers */,
+				F5580A4A1573AEA000865948 /* TETableViewSectionDataSource.h in Headers */,
+				F5580A4C1573AEA000865948 /* TETableViewSectionExpandableDataSource.h in Headers */,
+				F5580A561573AEB500865948 /* TEStarRatingView.h in Headers */,
+				F5580A5F1573AECA00865948 /* AFUIImageReflection.h in Headers */,
+				F5580A611573AECA00865948 /* TEGallery.h in Headers */,
+				F5580A631573AECA00865948 /* TEPhoto.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		F5580A0E1573AD0100865948 /* libTUKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5580A1C1573AD0100865948 /* Build configuration list for PBXNativeTarget "libTUKit" */;
+			buildPhases = (
+				F5580A0B1573AD0100865948 /* Sources */,
+				F5580A0C1573AD0100865948 /* Frameworks */,
+				F5580A0D1573AD0100865948 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libTUKit;
+			productName = libTUKit;
+			productReference = F5580A0F1573AD0100865948 /* liblibTUKit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F5580A061573AD0100865948 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "28 interactive";
+			};
+			buildConfigurationList = F5580A091573AD0100865948 /* Build configuration list for PBXProject "libTUKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F5580A041573AD0100865948;
+			productRefGroup = F5580A101573AD0100865948 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F5580A0E1573AD0100865948 /* libTUKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F5580A0B1573AD0100865948 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5580A191573AD0100865948 /* TUKit.m in Sources */,
+				F5580A3B1573AEA000865948 /* TEModel.m in Sources */,
+				F5580A3D1573AEA000865948 /* TETableViewCell.m in Sources */,
+				F5580A3F1573AEA000865948 /* TETableViewDataSource.m in Sources */,
+				F5580A411573AEA000865948 /* TETableViewDelegate.m in Sources */,
+				F5580A431573AEA000865948 /* TETableViewExpandableDataSource.m in Sources */,
+				F5580A451573AEA000865948 /* TETableViewExpandableDelegate.m in Sources */,
+				F5580A471573AEA000865948 /* TETableViewExpandableItem.m in Sources */,
+				F5580A491573AEA000865948 /* TETableViewItem.m in Sources */,
+				F5580A4B1573AEA000865948 /* TETableViewSectionDataSource.m in Sources */,
+				F5580A4D1573AEA000865948 /* TETableViewSectionExpandableDataSource.m in Sources */,
+				F5580A571573AEB500865948 /* TEStarRatingView.m in Sources */,
+				F5580A601573AECA00865948 /* AFUIImageReflection.m in Sources */,
+				F5580A621573AECA00865948 /* TEGallery.m in Sources */,
+				F5580A641573AECA00865948 /* TEPhoto.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F5580A1A1573AD0100865948 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F5580A1B1573AD0100865948 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F5580A1D1573AD0100865948 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				DSTROOT = /tmp/libTUKit.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "libTUKit/libTUKit-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F5580A1E1573AD0100865948 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				DSTROOT = /tmp/libTUKit.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "libTUKit/libTUKit-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F5580A091573AD0100865948 /* Build configuration list for PBXProject "libTUKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5580A1A1573AD0100865948 /* Debug */,
+				F5580A1B1573AD0100865948 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5580A1C1573AD0100865948 /* Build configuration list for PBXNativeTarget "libTUKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5580A1D1573AD0100865948 /* Debug */,
+				F5580A1E1573AD0100865948 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F5580A061573AD0100865948 /* Project object */;
+}

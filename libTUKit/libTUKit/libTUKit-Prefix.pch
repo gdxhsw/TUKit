@@ -1,0 +1,10 @@
+//
+// Prefix header for all source files of the 'libTUKit' target in the 'libTUKit' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <UIKit/UIKit.h>
+    #include "TEDebug.h"
+    #include "TEArcCompatible.h"
+#endif
