@@ -6,6 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#include "TEArcCompatible.h"
 
 @interface TETableViewCell : UITableViewCell
 

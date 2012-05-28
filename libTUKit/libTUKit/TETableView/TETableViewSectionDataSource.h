@@ -6,6 +6,7 @@
 //
 
 #import "TETableViewDataSource.h"
+#include "TEArcCompatible.h"
 
 @interface TETableViewSection : NSObject
 

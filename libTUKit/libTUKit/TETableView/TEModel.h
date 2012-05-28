@@ -6,6 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#include "TEArcCompatible.h"
 
 @protocol TEModelDelegate;
 

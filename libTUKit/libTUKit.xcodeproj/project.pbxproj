@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F5580A131573AD0100865948 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5580A121573AD0100865948 /* Foundation.framework */; };
-		F5580A191573AD0100865948 /* TUKit.m in Sources */ = {isa = PBXBuildFile; fileRef = F5580A181573AD0100865948 /* TUKit.m */; };
 		F5580A3A1573AEA000865948 /* TEModel.h in Headers */ = {isa = PBXBuildFile; fileRef = F5580A261573AEA000865948 /* TEModel.h */; };
 		F5580A3B1573AEA000865948 /* TEModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F5580A271573AEA000865948 /* TEModel.m */; };
 		F5580A3C1573AEA000865948 /* TETableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = F5580A281573AEA000865948 /* TETableViewCell.h */; };
@@ -43,8 +42,6 @@
 		F5580A0F1573AD0100865948 /* libTUKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTUKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5580A121573AD0100865948 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F5580A161573AD0100865948 /* libTUKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "libTUKit-Prefix.pch"; sourceTree = "<group>"; };
-		F5580A171573AD0100865948 /* TUKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TUKit.h; sourceTree = "<group>"; };
-		F5580A181573AD0100865948 /* TUKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TUKit.m; sourceTree = "<group>"; };
 		F5580A261573AEA000865948 /* TEModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEModel.h; path = TETableView/TEModel.h; sourceTree = "<group>"; };
 		F5580A271573AEA000865948 /* TEModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEModel.m; path = TETableView/TEModel.m; sourceTree = "<group>"; };
 		F5580A281573AEA000865948 /* TETableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TETableViewCell.h; path = TETableView/TETableViewCell.h; sourceTree = "<group>"; };
@@ -126,8 +123,6 @@
 				F5580A251573AD4100865948 /* TETableView */,
 				F5580A651573AEF900865948 /* TEDebug.h */,
 				F5580A691573B80700865948 /* TEArcCompatible.h */,
-				F5580A171573AD0100865948 /* TUKit.h */,
-				F5580A181573AD0100865948 /* TUKit.m */,
 				F5580A151573AD0100865948 /* Supporting Files */,
 			);
 			path = libTUKit;
@@ -278,7 +273,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5580A191573AD0100865948 /* TUKit.m in Sources */,
 				F5580A3B1573AEA000865948 /* TEModel.m in Sources */,
 				F5580A3D1573AEA000865948 /* TETableViewCell.m in Sources */,
 				F5580A3F1573AEA000865948 /* TETableViewDataSource.m in Sources */,

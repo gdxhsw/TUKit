@@ -7,16 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#include "TEArcCompatible.h"
 
 @interface TEStarRatingView : UIView
 
-#if !__has_feature(objc_arc)
-@property (retain, nonatomic) UIImage *starImage;
-@property (retain, nonatomic) UIImage *highlightedStarImage;
-#else
-@property (strong, nonatomic) UIImage *starImage;
-@property (strong, nonatomic) UIImage *highlightedStarImage;
-#endif
+@property (STRONG, nonatomic) UIImage *starImage;
+@property (STRONG, nonatomic) UIImage *highlightedStarImage;
 @property (assign, nonatomic) NSUInteger numberOfStars;
 @property (assign, nonatomic) CGFloat rating;
 

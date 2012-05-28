@@ -7,6 +7,7 @@
 //
 
 #import "TETableViewItem.h"
+#include "TEArcCompatible.h"
 
 @interface TETableViewExpandableItem : TETableViewItem
 
