@@ -40,7 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F5580A0F1573AD0100865948 /* liblibTUKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblibTUKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5580A0F1573AD0100865948 /* libTUKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTUKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5580A121573AD0100865948 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F5580A161573AD0100865948 /* libTUKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "libTUKit-Prefix.pch"; sourceTree = "<group>"; };
 		F5580A171573AD0100865948 /* TUKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TUKit.h; sourceTree = "<group>"; };
@@ -105,7 +105,7 @@
 		F5580A101573AD0100865948 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F5580A0F1573AD0100865948 /* liblibTUKit.a */,
+				F5580A0F1573AD0100865948 /* libTUKit.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -244,7 +244,7 @@
 			);
 			name = libTUKit;
 			productName = libTUKit;
-			productReference = F5580A0F1573AD0100865948 /* liblibTUKit.a */;
+			productReference = F5580A0F1573AD0100865948 /* libTUKit.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -346,6 +346,7 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
 				DSTROOT = /tmp/libTUKit.dst;
+				EXECUTABLE_PREFIX = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "libTUKit/libTUKit-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
@@ -359,6 +360,7 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
 				DSTROOT = /tmp/libTUKit.dst;
+				EXECUTABLE_PREFIX = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "libTUKit/libTUKit-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
