@@ -15,7 +15,7 @@
 		F55809E91573AC5800865948 /* TEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F55809E81573AC5800865948 /* TEAppDelegate.m */; };
 		F55809EC1573AC5800865948 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F55809EA1573AC5800865948 /* MainStoryboard.storyboard */; };
 		F55809EF1573AC5800865948 /* TEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F55809EE1573AC5800865948 /* TEViewController.m */; };
-		F5580A681573AF4600865948 /* liblibTUKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5580A241573AD0200865948 /* liblibTUKit.a */; };
+		F5580A681573AF4600865948 /* libTUKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5580A241573AD0200865948 /* libTUKit.a */; };
 		F5580A6B1573C25B00865948 /* README in Resources */ = {isa = PBXBuildFile; fileRef = F5580A6A1573C25B00865948 /* README */; };
 /* End PBXBuildFile section */
 
@@ -59,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5580A681573AF4600865948 /* liblibTUKit.a in Frameworks */,
+				F5580A681573AF4600865948 /* libTUKit.a in Frameworks */,
 				F55809D91573AC5800865948 /* UIKit.framework in Frameworks */,
 				F55809DB1573AC5800865948 /* Foundation.framework in Frameworks */,
 				F55809DD1573AC5800865948 /* CoreGraphics.framework in Frameworks */,
@@ -188,7 +188,7 @@
 		F5580A241573AD0200865948 /* liblibTUKit.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = liblibTUKit.a;
+			path = libTUKit.a;
 			remoteRef = F5580A231573AD0200865948 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -334,6 +334,7 @@
 				F55809F41573AC5800865948 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

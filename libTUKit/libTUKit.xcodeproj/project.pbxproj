@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3AD064CC1574092600C6DAA6 /* NSString+URLEncode.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AD064C81574092600C6DAA6 /* NSString+URLEncode.h */; };
+		3AD064CD1574092600C6DAA6 /* NSString+URLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD064C91574092600C6DAA6 /* NSString+URLEncode.m */; };
+		3AD064CE1574092600C6DAA6 /* TEImageLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AD064CA1574092600C6DAA6 /* TEImageLoader.h */; };
+		3AD064CF1574092600C6DAA6 /* TEImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD064CB1574092600C6DAA6 /* TEImageLoader.m */; };
+		3AD064D315740D1100C6DAA6 /* TEStrikeThroughLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AD064D115740D1100C6DAA6 /* TEStrikeThroughLabel.h */; };
+		3AD064D415740D1100C6DAA6 /* TEStrikeThroughLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD064D215740D1100C6DAA6 /* TEStrikeThroughLabel.m */; };
+		3AD064DA15740DBA00C6DAA6 /* TELoadingImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AD064D615740DBA00C6DAA6 /* TELoadingImageView.h */; };
+		3AD064DB15740DBA00C6DAA6 /* TELoadingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD064D715740DBA00C6DAA6 /* TELoadingImageView.m */; };
+		3AD064DC15740DBA00C6DAA6 /* TERoundedCornerImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AD064D815740DBA00C6DAA6 /* TERoundedCornerImageView.h */; };
+		3AD064DD15740DBA00C6DAA6 /* TERoundedCornerImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD064D915740DBA00C6DAA6 /* TERoundedCornerImageView.m */; };
 		F5580A131573AD0100865948 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5580A121573AD0100865948 /* Foundation.framework */; };
 		F5580A3A1573AEA000865948 /* TEModel.h in Headers */ = {isa = PBXBuildFile; fileRef = F5580A261573AEA000865948 /* TEModel.h */; };
 		F5580A3B1573AEA000865948 /* TEModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F5580A271573AEA000865948 /* TEModel.m */; };
@@ -39,6 +49,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3AD064C81574092600C6DAA6 /* NSString+URLEncode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+URLEncode.h"; path = "TEImageLoader/NSString+URLEncode.h"; sourceTree = "<group>"; };
+		3AD064C91574092600C6DAA6 /* NSString+URLEncode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+URLEncode.m"; path = "TEImageLoader/NSString+URLEncode.m"; sourceTree = "<group>"; };
+		3AD064CA1574092600C6DAA6 /* TEImageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEImageLoader.h; path = TEImageLoader/TEImageLoader.h; sourceTree = "<group>"; };
+		3AD064CB1574092600C6DAA6 /* TEImageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEImageLoader.m; path = TEImageLoader/TEImageLoader.m; sourceTree = "<group>"; };
+		3AD064D115740D1100C6DAA6 /* TEStrikeThroughLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEStrikeThroughLabel.h; path = TEStrikeThroughLabel/TEStrikeThroughLabel.h; sourceTree = "<group>"; };
+		3AD064D215740D1100C6DAA6 /* TEStrikeThroughLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEStrikeThroughLabel.m; path = TEStrikeThroughLabel/TEStrikeThroughLabel.m; sourceTree = "<group>"; };
+		3AD064D615740DBA00C6DAA6 /* TELoadingImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TELoadingImageView.h; path = TELoadingImageView/TELoadingImageView.h; sourceTree = "<group>"; };
+		3AD064D715740DBA00C6DAA6 /* TELoadingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TELoadingImageView.m; path = TELoadingImageView/TELoadingImageView.m; sourceTree = "<group>"; };
+		3AD064D815740DBA00C6DAA6 /* TERoundedCornerImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TERoundedCornerImageView.h; path = TELoadingImageView/TERoundedCornerImageView.h; sourceTree = "<group>"; };
+		3AD064D915740DBA00C6DAA6 /* TERoundedCornerImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TERoundedCornerImageView.m; path = TELoadingImageView/TERoundedCornerImageView.m; sourceTree = "<group>"; };
 		F5580A0F1573AD0100865948 /* libTUKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTUKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5580A121573AD0100865948 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F5580A161573AD0100865948 /* libTUKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "libTUKit-Prefix.pch"; sourceTree = "<group>"; };
@@ -90,6 +110,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3AD064C6157408D300C6DAA6 /* TEImageLoader */ = {
+			isa = PBXGroup;
+			children = (
+				3AD064C81574092600C6DAA6 /* NSString+URLEncode.h */,
+				3AD064C91574092600C6DAA6 /* NSString+URLEncode.m */,
+				3AD064CA1574092600C6DAA6 /* TEImageLoader.h */,
+				3AD064CB1574092600C6DAA6 /* TEImageLoader.m */,
+			);
+			name = TEImageLoader;
+			sourceTree = "<group>";
+		};
+		3AD064D015740D0600C6DAA6 /* TEStrikeThroughLabel */ = {
+			isa = PBXGroup;
+			children = (
+				3AD064D115740D1100C6DAA6 /* TEStrikeThroughLabel.h */,
+				3AD064D215740D1100C6DAA6 /* TEStrikeThroughLabel.m */,
+			);
+			name = TEStrikeThroughLabel;
+			sourceTree = "<group>";
+		};
+		3AD064D515740DAB00C6DAA6 /* TELoadingImageView */ = {
+			isa = PBXGroup;
+			children = (
+				3AD064D615740DBA00C6DAA6 /* TELoadingImageView.h */,
+				3AD064D715740DBA00C6DAA6 /* TELoadingImageView.m */,
+				3AD064D815740DBA00C6DAA6 /* TERoundedCornerImageView.h */,
+				3AD064D915740DBA00C6DAA6 /* TERoundedCornerImageView.m */,
+			);
+			name = TELoadingImageView;
+			sourceTree = "<group>";
+		};
 		F5580A041573AD0100865948 = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +169,9 @@
 		F5580A141573AD0100865948 /* libTUKit */ = {
 			isa = PBXGroup;
 			children = (
+				3AD064D515740DAB00C6DAA6 /* TELoadingImageView */,
+				3AD064D015740D0600C6DAA6 /* TEStrikeThroughLabel */,
+				3AD064C6157408D300C6DAA6 /* TEImageLoader */,
 				F5580A581573AEBE00865948 /* TEGallery */,
 				F5580A4E1573AEA700865948 /* TEStarRating */,
 				F5580A251573AD4100865948 /* TETableView */,
@@ -219,6 +273,11 @@
 				F5580A5F1573AECA00865948 /* AFUIImageReflection.h in Headers */,
 				F5580A611573AECA00865948 /* TEGallery.h in Headers */,
 				F5580A631573AECA00865948 /* TEPhoto.h in Headers */,
+				3AD064CC1574092600C6DAA6 /* NSString+URLEncode.h in Headers */,
+				3AD064CE1574092600C6DAA6 /* TEImageLoader.h in Headers */,
+				3AD064D315740D1100C6DAA6 /* TEStrikeThroughLabel.h in Headers */,
+				3AD064DA15740DBA00C6DAA6 /* TELoadingImageView.h in Headers */,
+				3AD064DC15740DBA00C6DAA6 /* TERoundedCornerImageView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +346,11 @@
 				F5580A601573AECA00865948 /* AFUIImageReflection.m in Sources */,
 				F5580A621573AECA00865948 /* TEGallery.m in Sources */,
 				F5580A641573AECA00865948 /* TEPhoto.m in Sources */,
+				3AD064CD1574092600C6DAA6 /* NSString+URLEncode.m in Sources */,
+				3AD064CF1574092600C6DAA6 /* TEImageLoader.m in Sources */,
+				3AD064D415740D1100C6DAA6 /* TEStrikeThroughLabel.m in Sources */,
+				3AD064DB15740DBA00C6DAA6 /* TELoadingImageView.m in Sources */,
+				3AD064DD15740DBA00C6DAA6 /* TERoundedCornerImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,6 +446,7 @@
 				F5580A1E1573AD0100865948 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

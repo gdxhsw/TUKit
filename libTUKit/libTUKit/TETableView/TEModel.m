@@ -102,12 +102,12 @@
     else {
         [self notifyDidFinishLoad];
     }
-    _loadingThread = nil;
+    TERELEASE(_loadingThread);
 }
 
 - (void)cancel {
     [_loadingThread cancel];
-    _loadingThread = nil;
+    TERELEASE(_loadingThread);
 }
 
 - (void)loadData {
@@ -121,8 +121,11 @@
 - (id)init {
     self = [super init];
     if (self) {
+#if !__has_feature(objc_arc)
+        [_delegates release];
+#endif
         _delegates = [NSMutableArray new];
-        _loadingThread = nil;
+        TERELEASE(_loadingThread);
     }
     return self;
 }

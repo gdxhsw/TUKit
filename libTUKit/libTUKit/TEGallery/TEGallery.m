@@ -261,10 +261,16 @@
     _scaleEnabled = NO;
     _minimumScale = DEFAULT_MINIMUM_SCALE;
     _maximumScale = DEFAULT_MAXIMUM_SCALE;
+#if !__has_feature(objc_arc)
+    [_photos release];
+#endif
     _photos = [[NSMutableArray alloc] init];
 }
 
 - (void)initScrollView {
+#if !__has_feature(objc_arc)
+    [_scrollView release];
+#endif
     _scrollView = [[TEScrollView alloc] initWithFrame:CGRectMake(0, 0, 
                                                                  self.frame.size.width,
                                                                  self.frame.size.height)];
@@ -297,10 +303,9 @@
 
 #if !__has_feature(objc_arc)
 - (void)dealloc {
-    [super dealloc];
-    
     [_photos release];
     [_scrollView release];
+    [super dealloc];
 }
 #endif
 

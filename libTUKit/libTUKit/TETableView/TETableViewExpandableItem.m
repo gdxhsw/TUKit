@@ -22,7 +22,12 @@
                                            reason:@"expandItem cannot sub-classed from TETableViewExpandableItem." 
                                          userInfo:nil];
         }
+#if __has_feature(objc_arc)
         _expandItem = expandItem;
+#else
+        [_expandItem release];
+        _expandItem = [expandItem retain];
+#endif
     }
 }
 

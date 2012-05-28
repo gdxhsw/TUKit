@@ -10,3 +10,8 @@ Components
 2. TEGallery
 3. TEStarRating
 4. TEDebug.h
+5. TELoadingImageView
+6. TERoundedCornerImageView
+7. TEImageLoader
+8. TEStrikeThroughLabel
+9. TEStrikeThroughLabel

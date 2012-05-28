@@ -50,12 +50,18 @@
 
 - (id)initWithImage:(UIImage *)image {
     if ((self = [super initWithFrame:CGRectZero])) {
+#if !__has_feature(objc_arc)
+        [_imageView release];
+#endif
         _imageView = [[UIImageView alloc] initWithImage:image];
         _imageView.contentMode = UIViewContentModeScaleAspectFit;
         [super setFrame:_imageView.frame];
         self.backgroundColor = [UIColor clearColor];
         _imageView.backgroundColor = [UIColor clearColor];
         [self addSubview:_imageView];
+#if !__has_feature(objc_arc)
+        [_imageView release];
+#endif
     }
     return self;
 }

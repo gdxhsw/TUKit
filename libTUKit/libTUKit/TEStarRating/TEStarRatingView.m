@@ -143,7 +143,9 @@ NSUInteger kDefaultNumberOfStars = 5;
 
 - (void)initView {
 #if !__has_feature(objc_arc)
+    [_starImage release];
     _starImage = [[UIImage imageNamed:kDefaultStarImageName] retain];
+    [_highlightedStarImage release];
     _highlightedStarImage = [[UIImage imageNamed:kDefaultHighlightedStarImageName] retain];
 #else
     _starImage = [UIImage imageNamed:kDefaultStarImageName];

@@ -16,6 +16,9 @@
 - (id)init {
     self = [super init];
     if (self) {
+#if !__has_feature(objc_arc)
+        [_items release];
+#endif
         _items = [NSMutableArray new];
     }
     return self;
