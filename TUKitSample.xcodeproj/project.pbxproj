@@ -1,0 +1,283 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F55809D91573AC5800865948 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55809D81573AC5800865948 /* UIKit.framework */; };
+		F55809DB1573AC5800865948 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55809DA1573AC5800865948 /* Foundation.framework */; };
+		F55809DD1573AC5800865948 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55809DC1573AC5800865948 /* CoreGraphics.framework */; };
+		F55809E31573AC5800865948 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F55809E11573AC5800865948 /* InfoPlist.strings */; };
+		F55809E51573AC5800865948 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F55809E41573AC5800865948 /* main.m */; };
+		F55809E91573AC5800865948 /* TEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F55809E81573AC5800865948 /* TEAppDelegate.m */; };
+		F55809EC1573AC5800865948 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F55809EA1573AC5800865948 /* MainStoryboard.storyboard */; };
+		F55809EF1573AC5800865948 /* TEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F55809EE1573AC5800865948 /* TEViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F55809D41573AC5800865948 /* TUKitSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TUKitSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F55809D81573AC5800865948 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F55809DA1573AC5800865948 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F55809DC1573AC5800865948 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F55809E01573AC5800865948 /* TUKitSample-Info.plist */ = {isa = PBXFileReference; path = "TUKitSample-Info.plist"; sourceTree = "<group>"; };
+		F55809E21573AC5800865948 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F55809E41573AC5800865948 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F55809E61573AC5800865948 /* TUKitSample-Prefix.pch */ = {isa = PBXFileReference; path = "TUKitSample-Prefix.pch"; sourceTree = "<group>"; };
+		F55809E71573AC5800865948 /* TEAppDelegate.h */ = {isa = PBXFileReference; path = TEAppDelegate.h; sourceTree = "<group>"; };
+		F55809E81573AC5800865948 /* TEAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TEAppDelegate.m; sourceTree = "<group>"; };
+		F55809EB1573AC5800865948 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		F55809ED1573AC5800865948 /* TEViewController.h */ = {isa = PBXFileReference; path = TEViewController.h; sourceTree = "<group>"; };
+		F55809EE1573AC5800865948 /* TEViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TEViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F55809D11573AC5800865948 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F55809D91573AC5800865948 /* UIKit.framework in Frameworks */,
+				F55809DB1573AC5800865948 /* Foundation.framework in Frameworks */,
+				F55809DD1573AC5800865948 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F55809C91573AC5800865948 = {
+			isa = PBXGroup;
+			children = (
+				F55809DE1573AC5800865948 /* TUKitSample */,
+				F55809D71573AC5800865948 /* Frameworks */,
+				F55809D51573AC5800865948 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F55809D51573AC5800865948 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F55809D41573AC5800865948 /* TUKitSample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F55809D71573AC5800865948 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F55809D81573AC5800865948 /* UIKit.framework */,
+				F55809DA1573AC5800865948 /* Foundation.framework */,
+				F55809DC1573AC5800865948 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F55809DE1573AC5800865948 /* TUKitSample */ = {
+			isa = PBXGroup;
+			children = (
+				F55809E71573AC5800865948 /* TEAppDelegate.h */,
+				F55809E81573AC5800865948 /* TEAppDelegate.m */,
+				F55809EA1573AC5800865948 /* MainStoryboard.storyboard */,
+				F55809ED1573AC5800865948 /* TEViewController.h */,
+				F55809EE1573AC5800865948 /* TEViewController.m */,
+				F55809DF1573AC5800865948 /* Supporting Files */,
+			);
+			path = TUKitSample;
+			sourceTree = "<group>";
+		};
+		F55809DF1573AC5800865948 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F55809E01573AC5800865948 /* TUKitSample-Info.plist */,
+				F55809E11573AC5800865948 /* InfoPlist.strings */,
+				F55809E41573AC5800865948 /* main.m */,
+				F55809E61573AC5800865948 /* TUKitSample-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F55809D31573AC5800865948 /* TUKitSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F55809F21573AC5800865948 /* Build configuration list for PBXNativeTarget "TUKitSample" */;
+			buildPhases = (
+				F55809D01573AC5800865948 /* Sources */,
+				F55809D11573AC5800865948 /* Frameworks */,
+				F55809D21573AC5800865948 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TUKitSample;
+			productName = TUKitSample;
+			productReference = F55809D41573AC5800865948 /* TUKitSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F55809CB1573AC5800865948 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TE;
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "28 interactive";
+			};
+			buildConfigurationList = F55809CE1573AC5800865948 /* Build configuration list for PBXProject "TUKitSample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F55809C91573AC5800865948;
+			productRefGroup = F55809D51573AC5800865948 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F55809D31573AC5800865948 /* TUKitSample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F55809D21573AC5800865948 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F55809E31573AC5800865948 /* InfoPlist.strings in Resources */,
+				F55809EC1573AC5800865948 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F55809D01573AC5800865948 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F55809E51573AC5800865948 /* main.m in Sources */,
+				F55809E91573AC5800865948 /* TEAppDelegate.m in Sources */,
+				F55809EF1573AC5800865948 /* TEViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F55809E11573AC5800865948 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F55809E21573AC5800865948 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F55809EA1573AC5800865948 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F55809EB1573AC5800865948 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F55809F01573AC5800865948 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F55809F11573AC5800865948 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F55809F31573AC5800865948 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TUKitSample/TUKitSample-Prefix.pch";
+				INFOPLIST_FILE = "TUKitSample/TUKitSample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F55809F41573AC5800865948 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TUKitSample/TUKitSample-Prefix.pch";
+				INFOPLIST_FILE = "TUKitSample/TUKitSample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F55809CE1573AC5800865948 /* Build configuration list for PBXProject "TUKitSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F55809F01573AC5800865948 /* Debug */,
+				F55809F11573AC5800865948 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F55809F21573AC5800865948 /* Build configuration list for PBXNativeTarget "TUKitSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F55809F31573AC5800865948 /* Debug */,
+				F55809F41573AC5800865948 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F55809CB1573AC5800865948 /* Project object */;
+}
