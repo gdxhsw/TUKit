@@ -75,17 +75,18 @@ NSString *kTEInvalidClass = @"invalidClass";
     TETableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
     if (cell == nil) {
         if (useNib) {
-            cell = [[[NSBundle mainBundle] loadNibNamed:item.cellNibName
-                                                  owner:nil
-                                                options:nil] objectAtIndex:item.cellNibIndex];
-#if !__has_feature(objc_arc)
-            [cell retain];
-#endif
+            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:item.cellNibName
+                                                         owner:nil
+                                                       options:nil];
+            cell = [nib objectAtIndex:item.cellNibIndex];
             [cell loadView];
         }
         else {
             cell = [[cellClass alloc] initWithStyle:item.cellStyle
                                     reuseIdentifier:reuseIdentifier];
+#if !__has_feature(objc_arc)
+            [cell autorelease];
+#endif
             [cell loadView];
         }
     }

@@ -208,20 +208,6 @@
     [_delegate gallery:self didChangeCenterIndex:_oldCenterIndex];
 }
 
-- (void)loadNearByPhotos {
-    NSInteger photoCount = [_dataSource numbersOfPhotoWithGallery:self];
-    NSInteger centerIndex = [self centerIndex];
-    for (int i = centerIndex - 1; i <= centerIndex + 1; i++) {
-        if (i >= 0 && i < photoCount) {
-            TEPhoto *photo = [_photos objectAtIndex:i];
-            if (photo == nil) {
-                photo = [_dataSource gallery:self
-                                photoAtIndex:i];
-            }
-        }
-    }
-}
-
 #pragma mark - Properties
 
 - (void)setDataSource:(id <TEGalleryDataSource>)dataSource {

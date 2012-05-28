@@ -34,28 +34,43 @@
 #pragma mark - Lifecycle
 
 + (id)itemWithObject:(id)object cellClass:(Class)cellClass reuseIdentifier:(NSString *)reuseIdentifier nibName:(NSString *)nibName nibIndex:(NSUInteger)nibIndex expandItem:(TETableViewItem *)expandItem {
-    return [[TETableViewExpandableItem alloc] initWithObject:object
-                                                   cellClass:cellClass
-                                             reuseIdentifier:reuseIdentifier
-                                                     nibName:nibName
-                                                    nibIndex:nibIndex
-                                                  expandItem:expandItem];
+    TETableViewExpandableItem *item = [[TETableViewExpandableItem alloc] initWithObject:object
+                                                                              cellClass:cellClass
+                                                                        reuseIdentifier:reuseIdentifier
+                                                                                nibName:nibName
+                                                                               nibIndex:nibIndex
+                                                                             expandItem:expandItem];
+#if __has_feature(objc_arc)
+    return item;
+#else
+    return [item autorelease];
+#endif
 }
 
 + (id)itemWithObject:(id)object cellClass:(Class)cellClass reuseIdentifier:(NSString *)reuseIdentifier nibName:(NSString *)nibName expandItem:(TETableViewItem *)expandItem {
-    return [[TETableViewExpandableItem alloc] initWithObject:object
-                                                   cellClass:cellClass
-                                             reuseIdentifier:reuseIdentifier
-                                                     nibName:nibName
-                                                  expandItem:expandItem];
+    TETableViewExpandableItem *item = [[TETableViewExpandableItem alloc] initWithObject:object
+                                                                              cellClass:cellClass
+                                                                        reuseIdentifier:reuseIdentifier
+                                                                                nibName:nibName
+                                                                             expandItem:expandItem];
+#if __has_feature(objc_arc)
+    return item;
+#else
+    return [item autorelease];
+#endif
 }
 
 + (id)itemWithObject:(id)object cellClass:(Class)cellClass style:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier expandItem:(TETableViewItem *)expandItem {
-    return [[TETableViewExpandableItem alloc] initWithObject:object
-                                                   cellClass:cellClass
-                                                       style:style
-                                             reuseIdentifier:reuseIdentifier
-                                                  expandItem:expandItem];
+    TETableViewExpandableItem *item = [[TETableViewExpandableItem alloc] initWithObject:object
+                                                                              cellClass:cellClass
+                                                                                  style:style
+                                                                        reuseIdentifier:reuseIdentifier
+                                                                             expandItem:expandItem];
+#if __has_feature(objc_arc)
+    return item;
+#else
+    return [item autorelease];
+#endif
 }
 
 - (id)initWithObject:(id)object cellClass:(Class)cellClass reuseIdentifier:(NSString *)reuseIdentifier nibName:(NSString *)nibName nibIndex:(NSUInteger)nibIndex expandItem:(TETableViewItem *)expandItem {

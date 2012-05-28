@@ -287,9 +287,15 @@ static NSOperationQueue *_operationQueue = nil;
         operations = [NSMutableArray new];
         [_operationDelegates setObject:operations
                                 forKey:delegate];
+#if !__has_feature(objc_arc)
+        [operations release];
+#endif
     }
     [operations addObject:operation];
     [_operationQueue addOperation:operation];
+#if !__has_feature(objc_arc)
+    [operation release];
+#endif
 }
 
 - (void)cancelOperationForDelegate:(id <TEImageLoaderDelegate>)delegate {

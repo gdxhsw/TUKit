@@ -23,26 +23,41 @@
 #pragma mark - Static methods
 
 + (id)itemWithObject:(id)object cellClass:(Class)cellClass reuseIdentifier:(NSString *)reuseIdentifier nibName:(NSString *)nibName nibIndex:(NSUInteger)nibIndex {
-    return [[TETableViewItem alloc] initWithObject:object
-                                         cellClass:cellClass
-                                   reuseIdentifier:reuseIdentifier
-                                           nibName:nibName
-                                          nibIndex:nibIndex];
+    TETableViewItem *item = [[TETableViewItem alloc] initWithObject:object
+                                                          cellClass:cellClass
+                                                    reuseIdentifier:reuseIdentifier
+                                                            nibName:nibName
+                                                           nibIndex:nibIndex];
+#if __has_feature(objc_arc)
+    return item;
+#else
+    return [item autorelease];
+#endif
 }
 
 + (id)itemWithObject:(id)object cellClass:(Class)cellClass reuseIdentifier:(NSString *)reuseIdentifier nibName:(NSString *)nibName {
-    return [[TETableViewItem alloc] initWithObject:object
-                                         cellClass:cellClass
-                                   reuseIdentifier:reuseIdentifier
-                                           nibName:nibName
-                                          nibIndex:0];
+    TETableViewItem *item = [[TETableViewItem alloc] initWithObject:object
+                                                          cellClass:cellClass
+                                                    reuseIdentifier:reuseIdentifier
+                                                            nibName:nibName
+                                                           nibIndex:0];
+#if __has_feature(objc_arc)
+    return item;
+#else
+    return [item autorelease];
+#endif
 }
 
 + (id)itemWithObject:(id)object cellClass:(Class)cellClass style:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
-    return [[TETableViewItem alloc] initWithObject:object
-                                         cellClass:cellClass
-                                             style:style
-                                   reuseIdentifier:reuseIdentifier];
+    TETableViewItem *item = [[TETableViewItem alloc] initWithObject:object
+                                                          cellClass:cellClass
+                                                              style:style
+                                                    reuseIdentifier:reuseIdentifier];
+#if __has_feature(objc_arc)
+    return item;
+#else
+    return [item autorelease];
+#endif
 }
 
 #pragma mark - Lifecycle
