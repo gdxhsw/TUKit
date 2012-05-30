@@ -15,7 +15,6 @@
 @interface TETableViewDataSource : NSObject <UITableViewDataSource, TEModelDelegate>
 
 @property (STRONG, nonatomic) NSMutableArray *items;
-@property (STRONG, nonatomic) TEModel *model;
 @property (WEAK, nonatomic) id <TETableViewDataSourceDelegate> delegate;
 
 - (UITableViewCell *)cellWithTableView:(UITableView *)tableView item:(TETableViewItem *)item;

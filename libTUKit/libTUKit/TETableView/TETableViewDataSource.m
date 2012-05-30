@@ -13,7 +13,6 @@ NSString *kTEInvalidClass = @"invalidClass";
 @implementation TETableViewDataSource
 
 @synthesize items = _items;
-@synthesize model = _model;
 @synthesize delegate = _delegate;
 
 - (id)init {
@@ -28,16 +27,6 @@ NSString *kTEInvalidClass = @"invalidClass";
 }
 
 #pragma mark - Properties
-
-- (void)setModel:(TEModel *)model {
-#if __has_feature(objc_arc)
-    _model = model;
-#else
-    TERELEASE(_model);
-    _model = [model retain];
-#endif
-    [_model.delegates addObject:self];
-}
 
 - (void)setItems:(NSMutableArray *)items {
 #if __has_feature(objc_arc)
@@ -113,7 +102,6 @@ NSString *kTEInvalidClass = @"invalidClass";
 #if !__has_feature(objc_arc)
 - (void)dealloc {
     TERELEASE(_items);
-    TERELEASE(_model);
     _delegate = nil;
     [super dealloc];
 }
