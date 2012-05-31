@@ -12,7 +12,6 @@ NSString *kTEInvalidClass = @"invalidClass";
 @implementation TETableViewDataSource
 
 @synthesize items = _items;
-@synthesize delegate = _delegate;
 
 - (id)init {
     self = [super init];
@@ -23,20 +22,6 @@ NSString *kTEInvalidClass = @"invalidClass";
         _items = [NSMutableArray new];
     }
     return self;
-}
-
-#pragma mark - Properties
-
-- (void)setItems:(NSMutableArray *)items {
-#if __has_feature(objc_arc)
-    _items = items;
-#else
-    TERELEASE(_items);
-    _items = [items retain];
-#endif
-    if ([self.delegate respondsToSelector:@selector(itemDidChangeWithDataSource:)]) {
-        [self.delegate itemDidChangeWithDataSource:self];
-    }
 }
 
 #pragma mark - Public methods
@@ -63,7 +48,7 @@ NSString *kTEInvalidClass = @"invalidClass";
 #if !__has_feature(objc_arc)
 - (void)dealloc {
     TERELEASE(_items);
-    _delegate = nil;
+    
     [super dealloc];
 }
 #endif

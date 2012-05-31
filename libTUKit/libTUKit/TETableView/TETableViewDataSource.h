@@ -15,7 +15,6 @@
 @interface TETableViewDataSource : NSObject <UITableViewDataSource, TEModelDelegate>
 
 @property (STRONG, nonatomic) NSMutableArray *items;
-@property (WEAK, nonatomic) id <TETableViewDataSourceDelegate> delegate;
 
 - (id <TETableViewItem>)itemForIndexPath:(NSIndexPath *)indexPath;
 
