@@ -7,25 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#include "TEArcCompatible.h"
 
-@interface TETableViewItem : NSObject
+@protocol TETableViewItem <NSObject>
 
-@property (assign, nonatomic) NSInteger tag;
-@property (STRONG, nonatomic) id object;
+- (UITableViewCell *)cellWithTableView:(UITableView *)tableView;
 
-@property (STRONG, nonatomic) Class cellClass;
-@property (copy, nonatomic) NSString *cellReuseIdentifier;
-@property (copy, nonatomic) NSString *cellNibName;
-@property (assign, nonatomic) NSUInteger cellNibIndex;
-@property (assign, nonatomic) UITableViewCellStyle cellStyle;
-
-+ (id)itemWithObject:(id)object cellClass:(Class)cellClass reuseIdentifier:(NSString *)reuseIdentifier nibName:(NSString *)nibName nibIndex:(NSUInteger)nibIndex;
-+ (id)itemWithObject:(id)object cellClass:(Class)cellClass reuseIdentifier:(NSString *)reuseIdentifier nibName:(NSString *)nibName;
-+ (id)itemWithObject:(id)object cellClass:(Class)cellClass style:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier;
-
-- (id)initWithObject:(id)object cellClass:(Class)cellClass reuseIdentifier:(NSString *)reuseIdentifier nibName:(NSString *)nibName nibIndex:(NSUInteger)nibIndex;
-- (id)initWithObject:(id)object cellClass:(Class)cellClass reuseIdentifier:(NSString *)reuseIdentifier nibName:(NSString *)nibName;
-- (id)initWithObject:(id)object cellClass:(Class)cellClass style:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier;
+@optional
+- (CGFloat)cellHeight;
 
 @end

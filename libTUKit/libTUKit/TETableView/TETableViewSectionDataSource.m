@@ -53,8 +53,8 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [self cellWithTableView:tableView
-                              item:[self itemForIndexPath:indexPath]];
+    id <TETableViewItem> item = [self itemForIndexPath:indexPath];
+    return [item cellWithTableView:tableView];
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {

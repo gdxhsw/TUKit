@@ -20,8 +20,6 @@
 		F5580A131573AD0100865948 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5580A121573AD0100865948 /* Foundation.framework */; };
 		F5580A3A1573AEA000865948 /* TEModel.h in Headers */ = {isa = PBXBuildFile; fileRef = F5580A261573AEA000865948 /* TEModel.h */; };
 		F5580A3B1573AEA000865948 /* TEModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F5580A271573AEA000865948 /* TEModel.m */; };
-		F5580A3C1573AEA000865948 /* TETableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = F5580A281573AEA000865948 /* TETableViewCell.h */; };
-		F5580A3D1573AEA000865948 /* TETableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5580A291573AEA000865948 /* TETableViewCell.m */; };
 		F5580A3E1573AEA000865948 /* TETableViewDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = F5580A2A1573AEA000865948 /* TETableViewDataSource.h */; };
 		F5580A3F1573AEA000865948 /* TETableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = F5580A2B1573AEA000865948 /* TETableViewDataSource.m */; };
 		F5580A401573AEA000865948 /* TETableViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = F5580A2C1573AEA000865948 /* TETableViewDelegate.h */; };
@@ -31,9 +29,7 @@
 		F5580A441573AEA000865948 /* TETableViewExpandableDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = F5580A301573AEA000865948 /* TETableViewExpandableDelegate.h */; };
 		F5580A451573AEA000865948 /* TETableViewExpandableDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5580A311573AEA000865948 /* TETableViewExpandableDelegate.m */; };
 		F5580A461573AEA000865948 /* TETableViewExpandableItem.h in Headers */ = {isa = PBXBuildFile; fileRef = F5580A321573AEA000865948 /* TETableViewExpandableItem.h */; };
-		F5580A471573AEA000865948 /* TETableViewExpandableItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F5580A331573AEA000865948 /* TETableViewExpandableItem.m */; };
 		F5580A481573AEA000865948 /* TETableViewItem.h in Headers */ = {isa = PBXBuildFile; fileRef = F5580A341573AEA000865948 /* TETableViewItem.h */; };
-		F5580A491573AEA000865948 /* TETableViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F5580A351573AEA000865948 /* TETableViewItem.m */; };
 		F5580A4A1573AEA000865948 /* TETableViewSectionDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = F5580A361573AEA000865948 /* TETableViewSectionDataSource.h */; };
 		F5580A4B1573AEA000865948 /* TETableViewSectionDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = F5580A371573AEA000865948 /* TETableViewSectionDataSource.m */; };
 		F5580A4C1573AEA000865948 /* TETableViewSectionExpandableDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = F5580A381573AEA000865948 /* TETableViewSectionExpandableDataSource.h */; };
@@ -64,8 +60,6 @@
 		F5580A161573AD0100865948 /* libTUKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "libTUKit-Prefix.pch"; sourceTree = "<group>"; };
 		F5580A261573AEA000865948 /* TEModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEModel.h; path = TETableView/TEModel.h; sourceTree = "<group>"; };
 		F5580A271573AEA000865948 /* TEModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEModel.m; path = TETableView/TEModel.m; sourceTree = "<group>"; };
-		F5580A281573AEA000865948 /* TETableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TETableViewCell.h; path = TETableView/TETableViewCell.h; sourceTree = "<group>"; };
-		F5580A291573AEA000865948 /* TETableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TETableViewCell.m; path = TETableView/TETableViewCell.m; sourceTree = "<group>"; };
 		F5580A2A1573AEA000865948 /* TETableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TETableViewDataSource.h; path = TETableView/TETableViewDataSource.h; sourceTree = "<group>"; };
 		F5580A2B1573AEA000865948 /* TETableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TETableViewDataSource.m; path = TETableView/TETableViewDataSource.m; sourceTree = "<group>"; };
 		F5580A2C1573AEA000865948 /* TETableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TETableViewDelegate.h; path = TETableView/TETableViewDelegate.h; sourceTree = "<group>"; };
@@ -75,9 +69,7 @@
 		F5580A301573AEA000865948 /* TETableViewExpandableDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TETableViewExpandableDelegate.h; path = TETableView/TETableViewExpandableDelegate.h; sourceTree = "<group>"; };
 		F5580A311573AEA000865948 /* TETableViewExpandableDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TETableViewExpandableDelegate.m; path = TETableView/TETableViewExpandableDelegate.m; sourceTree = "<group>"; };
 		F5580A321573AEA000865948 /* TETableViewExpandableItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TETableViewExpandableItem.h; path = TETableView/TETableViewExpandableItem.h; sourceTree = "<group>"; };
-		F5580A331573AEA000865948 /* TETableViewExpandableItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TETableViewExpandableItem.m; path = TETableView/TETableViewExpandableItem.m; sourceTree = "<group>"; };
 		F5580A341573AEA000865948 /* TETableViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TETableViewItem.h; path = TETableView/TETableViewItem.h; sourceTree = "<group>"; };
-		F5580A351573AEA000865948 /* TETableViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TETableViewItem.m; path = TETableView/TETableViewItem.m; sourceTree = "<group>"; };
 		F5580A361573AEA000865948 /* TETableViewSectionDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TETableViewSectionDataSource.h; path = TETableView/TETableViewSectionDataSource.h; sourceTree = "<group>"; };
 		F5580A371573AEA000865948 /* TETableViewSectionDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TETableViewSectionDataSource.m; path = TETableView/TETableViewSectionDataSource.m; sourceTree = "<group>"; };
 		F5580A381573AEA000865948 /* TETableViewSectionExpandableDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TETableViewSectionExpandableDataSource.h; path = TETableView/TETableViewSectionExpandableDataSource.h; sourceTree = "<group>"; };
@@ -195,8 +187,8 @@
 			children = (
 				F5580A261573AEA000865948 /* TEModel.h */,
 				F5580A271573AEA000865948 /* TEModel.m */,
-				F5580A281573AEA000865948 /* TETableViewCell.h */,
-				F5580A291573AEA000865948 /* TETableViewCell.m */,
+				F5580A341573AEA000865948 /* TETableViewItem.h */,
+				F5580A321573AEA000865948 /* TETableViewExpandableItem.h */,
 				F5580A2A1573AEA000865948 /* TETableViewDataSource.h */,
 				F5580A2B1573AEA000865948 /* TETableViewDataSource.m */,
 				F5580A2C1573AEA000865948 /* TETableViewDelegate.h */,
@@ -205,10 +197,6 @@
 				F5580A2F1573AEA000865948 /* TETableViewExpandableDataSource.m */,
 				F5580A301573AEA000865948 /* TETableViewExpandableDelegate.h */,
 				F5580A311573AEA000865948 /* TETableViewExpandableDelegate.m */,
-				F5580A321573AEA000865948 /* TETableViewExpandableItem.h */,
-				F5580A331573AEA000865948 /* TETableViewExpandableItem.m */,
-				F5580A341573AEA000865948 /* TETableViewItem.h */,
-				F5580A351573AEA000865948 /* TETableViewItem.m */,
 				F5580A361573AEA000865948 /* TETableViewSectionDataSource.h */,
 				F5580A371573AEA000865948 /* TETableViewSectionDataSource.m */,
 				F5580A381573AEA000865948 /* TETableViewSectionExpandableDataSource.h */,
@@ -260,7 +248,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5580A3A1573AEA000865948 /* TEModel.h in Headers */,
-				F5580A3C1573AEA000865948 /* TETableViewCell.h in Headers */,
 				F5580A3E1573AEA000865948 /* TETableViewDataSource.h in Headers */,
 				F5580A401573AEA000865948 /* TETableViewDelegate.h in Headers */,
 				F5580A421573AEA000865948 /* TETableViewExpandableDataSource.h in Headers */,
@@ -333,13 +320,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5580A3B1573AEA000865948 /* TEModel.m in Sources */,
-				F5580A3D1573AEA000865948 /* TETableViewCell.m in Sources */,
 				F5580A3F1573AEA000865948 /* TETableViewDataSource.m in Sources */,
 				F5580A411573AEA000865948 /* TETableViewDelegate.m in Sources */,
 				F5580A431573AEA000865948 /* TETableViewExpandableDataSource.m in Sources */,
 				F5580A451573AEA000865948 /* TETableViewExpandableDelegate.m in Sources */,
-				F5580A471573AEA000865948 /* TETableViewExpandableItem.m in Sources */,
-				F5580A491573AEA000865948 /* TETableViewItem.m in Sources */,
 				F5580A4B1573AEA000865948 /* TETableViewSectionDataSource.m in Sources */,
 				F5580A4D1573AEA000865948 /* TETableViewSectionExpandableDataSource.m in Sources */,
 				F5580A571573AEB500865948 /* TEStarRatingView.m in Sources */,

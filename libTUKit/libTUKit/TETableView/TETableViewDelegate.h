@@ -21,6 +21,6 @@
 @protocol TETableViewActionDelegate <NSObject>
 
 @optional
-- (void)tableView:(UITableView *)tableView didSelectItem:(TETableViewItem *)item atIndexPath:(NSIndexPath *)indexPath;
+- (void)tableView:(UITableView *)tableView didSelectItem:(id <TETableViewItem>)item atIndexPath:(NSIndexPath *)indexPath;
 
 @end

@@ -8,24 +8,44 @@
 
 #import "TETableViewSectionExpandableDataSource.h"
 #import "TETableViewExpandableItem.h"
+#import "TETableViewSectionDataSource.h"
 
 @implementation TETableViewSectionExpandableDataSource
 
 #pragma mark - Override methods
 
-- (TETableViewItem *)itemForIndexPath:(NSIndexPath *)indexPath {
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return [self.items count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    id <TETableViewItem> item = [self itemForIndexPath:indexPath];
+    return [item cellWithTableView:tableView];
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    TETableViewSection *s = [self.items objectAtIndex:section];
+    return s.title;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
+    TETableViewSection *s = (TETableViewSection *)[self.items objectAtIndex:section];
+    return s.footer;
+}
+
+- (id <TETableViewItem>)itemForIndexPath:(NSIndexPath *)indexPath {
     TETableViewSection *sec = [self.items objectAtIndex:indexPath.section];
     NSInteger count = 0;
     NSInteger expandedCount = 0;
-    for (TETableViewItem *item in sec.items) {
+    for (id <TETableViewItem> item in sec.items) {
         if (count == indexPath.row) {
             break;
         }
-        if ([item isKindOfClass:[TETableViewExpandableItem class]]) {
-            TETableViewExpandableItem *expandableItem = (TETableViewExpandableItem *)item;
-            if (expandableItem.expanded) {
+        if ([item conformsToProtocol:@protocol(TETableViewExpandableItem)]) {
+            id <TETableViewExpandableItem> expandableItem = (id <TETableViewExpandableItem>)item;
+            if ([self didExpandWithItem:expandableItem]) {
                 if (count + 1 == indexPath.row) {
-                    return expandableItem.expandItem;
+                    return [expandableItem expandItem];
                 }
                 expandedCount += 1;
                 count += 2;
@@ -45,9 +65,9 @@
     TETableViewSection *sec = [self.items objectAtIndex:section];
     NSInteger count = 0;
     for (id item in sec.items) {
-        if ([item isKindOfClass:[TETableViewExpandableItem class]]) {
-            TETableViewExpandableItem *expandableItem = item;
-            if (expandableItem.expanded) {
+        if ([item conformsToProtocol:@protocol(TETableViewExpandableItem)]) {
+            id <TETableViewExpandableItem> expandableItem = item;
+            if ([self didExpandWithItem:expandableItem]) {
                 count += 2;
             }
             else {

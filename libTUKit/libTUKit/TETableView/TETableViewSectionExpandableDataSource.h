@@ -6,8 +6,8 @@
 //  Copyright (c) 2012年 28 interactive. All rights reserved.
 //
 
-#import "TETableViewSectionDataSource.h"
+#import "TETableViewExpandableDataSource.h"
 
-@interface TETableViewSectionExpandableDataSource : TETableViewSectionDataSource
+@interface TETableViewSectionExpandableDataSource : TETableViewExpandableDataSource
 
 @end

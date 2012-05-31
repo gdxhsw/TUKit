@@ -10,7 +10,7 @@
 #import "TETableViewExpandableItem.h"
 
 @interface TETableViewExpandableDelegate : TETableViewDelegate {
-    TETableViewExpandableItem *_oldExpandItem;
+    id <TETableViewExpandableItem> _oldExpandItem;
     NSIndexPath *_oldExpandIndexPath;
 }
 

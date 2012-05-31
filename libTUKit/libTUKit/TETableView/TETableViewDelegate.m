@@ -8,7 +8,6 @@
 
 #import "TETableViewDelegate.h"
 #import "TETableViewDataSource.h"
-#import "TETableViewCell.h"
 
 @implementation TETableViewDelegate
 
@@ -26,9 +25,13 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     TETableViewDataSource *dataSource = (TETableViewDataSource *)tableView.dataSource;
-    TETableViewItem *item = [dataSource itemForIndexPath:indexPath];
-    Class cellClass = [item cellClass];
-    return [cellClass cellHeightWithObject:item];
+    id <TETableViewItem> item = [dataSource itemForIndexPath:indexPath];
+    if ([item respondsToSelector:@selector(cellHeight)]) {
+        return [item cellHeight];
+    }
+    else {
+        return 44.0f;
+    }
 }
 
 #if !__has_feature(objc_arc)

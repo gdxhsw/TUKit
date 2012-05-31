@@ -7,19 +7,9 @@
 //
 
 #import "TETableViewItem.h"
-#include "TEArcCompatible.h"
 
-@interface TETableViewExpandableItem : TETableViewItem
+@protocol TETableViewExpandableItem <TETableViewItem>
 
-@property (assign, nonatomic) BOOL expanded;
-@property (STRONG, nonatomic) TETableViewItem *expandItem;
-
-+ (id)itemWithObject:(id)object cellClass:(Class)cellClass reuseIdentifier:(NSString *)reuseIdentifier nibName:(NSString *)nibName nibIndex:(NSUInteger)nibIndex expandItem:(TETableViewItem *)expandItem;
-+ (id)itemWithObject:(id)object cellClass:(Class)cellClass reuseIdentifier:(NSString *)reuseIdentifier nibName:(NSString *)nibName expandItem:(TETableViewItem *)expandItem;
-+ (id)itemWithObject:(id)object cellClass:(Class)cellClass style:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier expandItem:(TETableViewItem *)expandItem;
-
-- (id)initWithObject:(id)object cellClass:(Class)cellClass reuseIdentifier:(NSString *)reuseIdentifier nibName:(NSString *)nibName nibIndex:(NSUInteger)nibIndex expandItem:(TETableViewItem *)expandItem;
-- (id)initWithObject:(id)object cellClass:(Class)cellClass reuseIdentifier:(NSString *)reuseIdentifier nibName:(NSString *)nibName expandItem:(TETableViewItem *)expandItem;
-- (id)initWithObject:(id)object cellClass:(Class)cellClass style:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier expandItem:(TETableViewItem *)expandItem;
+- (id <TETableViewItem>) expandItem;
 
 @end

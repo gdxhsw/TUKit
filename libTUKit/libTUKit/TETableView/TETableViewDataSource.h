@@ -17,8 +17,7 @@
 @property (STRONG, nonatomic) NSMutableArray *items;
 @property (WEAK, nonatomic) id <TETableViewDataSourceDelegate> delegate;
 
-- (UITableViewCell *)cellWithTableView:(UITableView *)tableView item:(TETableViewItem *)item;
-- (TETableViewItem *)itemForIndexPath:(NSIndexPath *)indexPath;
+- (id <TETableViewItem>)itemForIndexPath:(NSIndexPath *)indexPath;
 
 @end
 

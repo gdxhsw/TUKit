@@ -7,7 +7,15 @@
 //
 
 #import "TETableViewDataSource.h"
+#include "TEArcCompatible.h"
+#import "TETableViewExpandableItem.h"
 
-@interface TETableViewExpandableDataSource : TETableViewDataSource
+@interface TETableViewExpandableDataSource : TETableViewDataSource {
+    NSMutableArray *_expanded;
+}
+
+- (BOOL)didExpandWithItem:(id <TETableViewExpandableItem>)item;
+- (void)expandItem:(id <TETableViewExpandableItem>)item;
+- (void)shrinkItem:(id <TETableViewExpandableItem>)item;
 
 @end
