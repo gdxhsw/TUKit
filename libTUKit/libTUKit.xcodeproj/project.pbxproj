@@ -17,6 +17,8 @@
 		3AD064DB15740DBA00C6DAA6 /* TELoadingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD064D715740DBA00C6DAA6 /* TELoadingImageView.m */; };
 		3AD064DC15740DBA00C6DAA6 /* TERoundedCornerImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AD064D815740DBA00C6DAA6 /* TERoundedCornerImageView.h */; };
 		3AD064DD15740DBA00C6DAA6 /* TERoundedCornerImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD064D915740DBA00C6DAA6 /* TERoundedCornerImageView.m */; };
+		3AF6C7FF157FC13800AA2923 /* UIView+Animations.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AF6C7FD157FC13800AA2923 /* UIView+Animations.h */; };
+		3AF6C800157FC13800AA2923 /* UIView+Animations.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF6C7FE157FC13800AA2923 /* UIView+Animations.m */; };
 		F5580A131573AD0100865948 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5580A121573AD0100865948 /* Foundation.framework */; };
 		F5580A3A1573AEA000865948 /* TEModel.h in Headers */ = {isa = PBXBuildFile; fileRef = F5580A261573AEA000865948 /* TEModel.h */; };
 		F5580A3B1573AEA000865948 /* TEModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F5580A271573AEA000865948 /* TEModel.m */; };
@@ -55,6 +57,8 @@
 		3AD064D715740DBA00C6DAA6 /* TELoadingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TELoadingImageView.m; path = TELoadingImageView/TELoadingImageView.m; sourceTree = "<group>"; };
 		3AD064D815740DBA00C6DAA6 /* TERoundedCornerImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TERoundedCornerImageView.h; path = TELoadingImageView/TERoundedCornerImageView.h; sourceTree = "<group>"; };
 		3AD064D915740DBA00C6DAA6 /* TERoundedCornerImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TERoundedCornerImageView.m; path = TELoadingImageView/TERoundedCornerImageView.m; sourceTree = "<group>"; };
+		3AF6C7FD157FC13800AA2923 /* UIView+Animations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Animations.h"; path = "Extensions/UIView+Animations.h"; sourceTree = "<group>"; };
+		3AF6C7FE157FC13800AA2923 /* UIView+Animations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Animations.m"; path = "Extensions/UIView+Animations.m"; sourceTree = "<group>"; };
 		F5580A0F1573AD0100865948 /* libTUKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTUKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5580A121573AD0100865948 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F5580A161573AD0100865948 /* libTUKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "libTUKit-Prefix.pch"; sourceTree = "<group>"; };
@@ -133,6 +137,15 @@
 			name = TELoadingImageView;
 			sourceTree = "<group>";
 		};
+		3AF6C7FB157FC10C00AA2923 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3AF6C7FD157FC13800AA2923 /* UIView+Animations.h */,
+				3AF6C7FE157FC13800AA2923 /* UIView+Animations.m */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		F5580A041573AD0100865948 = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +174,7 @@
 		F5580A141573AD0100865948 /* libTUKit */ = {
 			isa = PBXGroup;
 			children = (
+				3AF6C7FB157FC10C00AA2923 /* Extensions */,
 				3AD064D515740DAB00C6DAA6 /* TELoadingImageView */,
 				3AD064D015740D0600C6DAA6 /* TEStrikeThroughLabel */,
 				3AD064C6157408D300C6DAA6 /* TEImageLoader */,
@@ -265,6 +279,7 @@
 				3AD064D315740D1100C6DAA6 /* TEStrikeThroughLabel.h in Headers */,
 				3AD064DA15740DBA00C6DAA6 /* TELoadingImageView.h in Headers */,
 				3AD064DC15740DBA00C6DAA6 /* TERoundedCornerImageView.h in Headers */,
+				3AF6C7FF157FC13800AA2923 /* UIView+Animations.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +350,7 @@
 				3AD064D415740D1100C6DAA6 /* TEStrikeThroughLabel.m in Sources */,
 				3AD064DB15740DBA00C6DAA6 /* TELoadingImageView.m in Sources */,
 				3AD064DD15740DBA00C6DAA6 /* TERoundedCornerImageView.m in Sources */,
+				3AF6C800157FC13800AA2923 /* UIView+Animations.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
