@@ -43,7 +43,6 @@ static void addRoundedRectToPath(CGContextRef context, CGRect rect, float ovalWi
     CGContextClip(context);
     
     [self.image drawInRect:rect];
-//    CGContextDrawImage(context, CGRectMake(0, 0, rect.size.width, rect.size.height), self.image.CGImage);
 }
 
 - (void)drawRect:(CGRect)rect forViewPrintFormatter:(UIViewPrintFormatter *)formatter {

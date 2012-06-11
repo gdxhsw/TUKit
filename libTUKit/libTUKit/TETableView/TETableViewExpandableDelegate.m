@@ -7,7 +7,7 @@
 //
 
 #import "TETableViewExpandableDelegate.h"
-#import "TETableViewExpandableDataSource.m"
+#import "TETableViewExpandableDataSource.h"
 
 @implementation TETableViewExpandableDelegate
 
