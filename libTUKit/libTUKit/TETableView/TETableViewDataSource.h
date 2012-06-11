@@ -10,8 +10,6 @@
 #import "TETableViewItem.h"
 #import "TEModel.h"
 
-@protocol TETableViewDataSourceDelegate;
-
 @interface TETableViewDataSource : NSObject <UITableViewDataSource, TEModelDelegate>
 
 @property (STRONG, nonatomic) NSMutableArray *items;

@@ -205,25 +205,17 @@ static NSOperationQueue *_operationQueue = nil;
         if ([info.delegate respondsToSelector:@selector(imageLoader:loadedWithPath:image:)]) {
             UIImage *image = [self imageInMemoryCacheWithPath:info.path];
             if (image == nil) {
-                TELOG(@"4, %@", cachePath);
                 image = [self imageWithPath:cachePath
                                       error:&error];
-                TELOG(@"9, %@, %@", image, error);
                 [self saveImageToMemoryCacheWithPath:info.path
                                                image:image];
-                TELOG(@"10");
             }
-            TELOG(@"5");
             if (!error) {
-                TELOG(@"6");
-                TELOG(@"Success");
                 [info.delegate imageLoader:self
                             loadedWithPath:info.path 
                                      image:image];
             }
             else {
-                TELOG(@"7");
-                TELOG(@"%@", error);
                 if ([info.delegate respondsToSelector:@selector(imageLoader:loadFailedWithPath:error:)]) {
                     [info.delegate imageLoader:self
                             loadFailedWithPath:info.path
@@ -306,7 +298,7 @@ static NSOperationQueue *_operationQueue = nil;
         if (imageData) {
             image = [UIImage imageWithData:imageData];
         }
-        if (image == nil) {
+        if (image == nil && error) {
             *error = [NSError errorWithDomain:kImageLoaderErrorDomain
                                          code:ImageLoaderUnknownError
                                      userInfo:nil];

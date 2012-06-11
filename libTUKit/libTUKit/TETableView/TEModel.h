@@ -14,7 +14,7 @@
     NSThread *_loadingThread;
 }
 
-@property (STRONG, nonatomic) NSMutableArray *delegates;
+@property (WEAK, nonatomic) id <TEModelDelegate> delegate;
 
 - (void)load;
 - (void)loadData;

@@ -9,77 +9,61 @@
 
 @implementation TEModel
 
-@synthesize delegates = _delegates;
+@synthesize delegate = _delegate;
 
 #pragma mark - Private methods
 
 - (void)notifyDidStart {
-    for (id <TEModelDelegate> delegate in self.delegates) {
-        if ([delegate respondsToSelector:@selector(didStartLoadWithModel:)]) {
-            [delegate didStartLoadWithModel:self];
-        }
+    if ([self.delegate respondsToSelector:@selector(didStartLoadWithModel:)]) {
+        [self.delegate didStartLoadWithModel:self];
     }
 }
 
 - (void)notifyDidCancel {
-    for (id <TEModelDelegate> delegate in self.delegates) {
-        if ([delegate respondsToSelector:@selector(didCancelLoadWithModel:)]) {
-            [delegate didCancelLoadWithModel:self];
-        }
+    if ([self.delegate respondsToSelector:@selector(didCancelLoadWithModel:)]) {
+        [self.delegate didCancelLoadWithModel:self];
     }
 }
 
 - (void)notifyDidFinishLoad {
-    for (id <TEModelDelegate> delegate in self.delegates) {
-        if ([delegate respondsToSelector:@selector(didFinishLoadWithModel:)]) {
-            [delegate didFinishLoadWithModel:self];
-        }
+    if ([self.delegate respondsToSelector:@selector(didFinishLoadWithModel:)]) {
+        [self.delegate didFinishLoadWithModel:self];
     }
 }
 
 - (void)notifyDidUpdateWithObject:(id)object atIndexPath:(NSIndexPath *)indexPath {
-    for (id <TEModelDelegate> delegate in self.delegates) {
-        if ([delegate respondsToSelector:@selector(didUpdateModel:withObject:atIndexPath:)]) {
-            [delegate didUpdateModel:self
-                          withObject:object
-                         atIndexPath:indexPath];
-        }
+    if ([self.delegate respondsToSelector:@selector(didUpdateModel:withObject:atIndexPath:)]) {
+        [self.delegate didUpdateModel:self
+                           withObject:object
+                          atIndexPath:indexPath];
     }
 }
 
 - (void)notifyDidInsertWithObject:(id)object atIndexPath:(NSIndexPath *)indexPath {
-    for (id <TEModelDelegate> delegate in self.delegates) {
-        if ([delegate respondsToSelector:@selector(didInsertModel:withObject:atIndexPath:)]) {
-            [delegate didInsertModel:self
-                          withObject:object
-                         atIndexPath:indexPath];
-        }
+    if ([self.delegate respondsToSelector:@selector(didInsertModel:withObject:atIndexPath:)]) {
+        [self.delegate didInsertModel:self
+                           withObject:object
+                          atIndexPath:indexPath];
     }
 }
 
 - (void)notifyDidDeleteWithObject:(id)object atIndexPath:(NSIndexPath *)indexPath {
-    for (id <TEModelDelegate> delegate in self.delegates) {
-        if ([delegate respondsToSelector:@selector(didDeleteModel:withObject:atIndexPath:)]) {
-            [delegate didDeleteModel:self
-                          withObject:object
-                         atIndexPath:indexPath];
-        }
+    if ([self.delegate respondsToSelector:@selector(didDeleteModel:withObject:atIndexPath:)]) {
+        [self.delegate didDeleteModel:self
+                           withObject:object
+                          atIndexPath:indexPath];
     }
 }
 
 - (void)notifyBeginUpdates {
-    for (id <TEModelDelegate> delegate in self.delegates) {
-        if ([delegate respondsToSelector:@selector(beginUpdatesWithModel:)]) {
-            [delegate beginUpdatesWithModel:self];
-        }
+    if ([self.delegate respondsToSelector:@selector(beginUpdatesWithModel:)]) {
+        [self.delegate beginUpdatesWithModel:self];
     }
 }
 
 - (void)notifyEndUpdates {
-    for (id <TEModelDelegate> delegate in self.delegates) {
-        if ([delegate respondsToSelector:@selector(endUpdatesWithModel:)]) {
-            [delegate endUpdatesWithModel:self];
-        }
+    if ([self.delegate respondsToSelector:@selector(endUpdatesWithModel:)]) {
+        [self.delegate endUpdatesWithModel:self];
     }
 }
 
@@ -121,10 +105,7 @@
 - (id)init {
     self = [super init];
     if (self) {
-#if !__has_feature(objc_arc)
-        [_delegates release];
-#endif
-        _delegates = [NSMutableArray new];
+        _delegate = nil;
         TERELEASE(_loadingThread);
     }
     return self;
@@ -132,7 +113,7 @@
 
 #if !__has_feature(objc_arc)
 - (void)dealloc {
-    TERELEASE(_delegates);
+    _delegate = nil;
     TERELEASE(_loadingThread);
     [super dealloc];
 }
