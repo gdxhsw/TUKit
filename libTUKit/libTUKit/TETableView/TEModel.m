@@ -95,11 +95,12 @@
 }
 
 - (void)loadData {
-    [self cancel];
-    _loadingThread = [[NSThread alloc] initWithTarget:self
-                                             selector:@selector(__load) 
-                                               object:nil];
-    [_loadingThread start];
+    if (!_loadingThread) {
+        _loadingThread = [[NSThread alloc] initWithTarget:self
+                                                 selector:@selector(__load) 
+                                                   object:nil];
+        [_loadingThread start];
+    }
 }
 
 - (id)init {
