@@ -198,7 +198,7 @@ static NSOperationQueue *_operationQueue = nil;
 
 - (void)startLoadImageWithInfo:(id)loaderInfo {
     TEImageLoaderInfo *info = loaderInfo;
-    NSError *error;
+    NSError *error = nil;
     NSString *cachePath = nil;
     if ([self isCacheAvailable:info.path cachePath:&cachePath]) {
         if ([info.delegate respondsToSelector:@selector(imageLoader:loadedWithPath:image:)]) {
@@ -217,7 +217,7 @@ static NSOperationQueue *_operationQueue = nil;
     else {
         UIImage *image = [self imageWithPath:info.path
                                        error:&error];
-        if (error == nil) {
+        if (error == nil && image) {
             if ([info.delegate respondsToSelector:@selector(imageLoader:preprocessWithPath:image:)]) {
                 image = [info.delegate imageLoader:self
                                 preprocessWithPath:info.path
@@ -265,11 +265,23 @@ static NSOperationQueue *_operationQueue = nil;
 
 - (UIImage *)imageWithPath:(NSString *)path error:(NSError **)error {
     NSURL *url = [NSURL URLWithString:path];
-    NSData *imageData = [NSData dataWithContentsOfURL:url
-                                              options:NSDataReadingUncached
-                                                error:error];
+    NSError *_error = nil;
+    NSData *imageData = nil;
+    if (url) {
+        imageData = [NSData dataWithContentsOfURL:url
+                                          options:NSDataReadingUncached
+                                            error:&_error];
+    }
+    else {
+        imageData = [NSData dataWithContentsOfFile:path
+                                           options:NSDataReadingUncached
+                                             error:&_error];
+    }
     UIImage *image = nil;
-    if (!error) {
+    if (!_error) {
+        if (_error) {
+            *error = _error;
+        }
         image = [UIImage imageWithData:imageData];
     }
     return image;
@@ -294,6 +306,7 @@ static NSOperationQueue *_operationQueue = nil;
     [operations addObject:operation];
     [_operationQueue addOperation:operation];
 #if !__has_feature(objc_arc)
+    [info release];
     [operation release];
 #endif
 }
