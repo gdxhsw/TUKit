@@ -39,17 +39,24 @@
         [_imagePath release];
 #endif
         _imagePath = [imagePath copy];
-        if ([NSThread isMainThread]) {
-            [_loadingIndicator startAnimating];
+        UIImage *image = [[TEImageLoader sharedLoader] imageCacheWithPath:imagePath
+                                                                    error:nil];
+        if (image) {
+            [self stopLoadingAndSetImage:image];
         }
         else {
-            [_loadingIndicator performSelectorOnMainThread:@selector(startAnimating) 
-                                                withObject:nil
-                                             waitUntilDone:NO];
+            if ([NSThread isMainThread]) {
+                [_loadingIndicator startAnimating];
+            }
+            else {
+                [_loadingIndicator performSelectorOnMainThread:@selector(startAnimating) 
+                                                    withObject:nil
+                                                 waitUntilDone:NO];
+            }
+            [[TEImageLoader sharedLoader] cancelOperationForDelegate:self];
+            [[TEImageLoader sharedLoader] loadImageWithPath:_imagePath
+                                                   delegate:self];
         }
-        [[TEImageLoader sharedLoader] cancelOperationForDelegate:self];
-        [[TEImageLoader sharedLoader] loadImageWithPath:_imagePath
-                                               delegate:self];
     }
 }
 

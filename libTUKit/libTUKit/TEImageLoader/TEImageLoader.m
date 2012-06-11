@@ -23,7 +23,8 @@ static NSString *kImageCacheFilder = @"__image_cache__";
 /* Error codes */
 NSInteger ImageLoaderPathNotSupported = 0;
 NSInteger ImageLoaderImageDoesNotExist = 1;
-NSInteger ImageLoaderImageFileNotSupported = 1;
+NSInteger ImageLoaderImageFileNotSupported = 2;
+NSInteger ImageLoaderUnknownError = 3;
 
 /* Path schema types */
 typedef enum {
@@ -204,14 +205,31 @@ static NSOperationQueue *_operationQueue = nil;
         if ([info.delegate respondsToSelector:@selector(imageLoader:loadedWithPath:image:)]) {
             UIImage *image = [self imageInMemoryCacheWithPath:info.path];
             if (image == nil) {
+                TELOG(@"4, %@", cachePath);
                 image = [self imageWithPath:cachePath
-                                      error:nil];
+                                      error:&error];
+                TELOG(@"9, %@, %@", image, error);
                 [self saveImageToMemoryCacheWithPath:info.path
-                                         image:image];
+                                               image:image];
+                TELOG(@"10");
             }
-            [info.delegate imageLoader:self
-                        loadedWithPath:info.path 
-                                 image:image];
+            TELOG(@"5");
+            if (!error) {
+                TELOG(@"6");
+                TELOG(@"Success");
+                [info.delegate imageLoader:self
+                            loadedWithPath:info.path 
+                                     image:image];
+            }
+            else {
+                TELOG(@"7");
+                TELOG(@"%@", error);
+                if ([info.delegate respondsToSelector:@selector(imageLoader:loadFailedWithPath:error:)]) {
+                    [info.delegate imageLoader:self
+                            loadFailedWithPath:info.path
+                                         error:error];
+                }
+            }
         }
     }
     else {
@@ -264,25 +282,38 @@ static NSOperationQueue *_operationQueue = nil;
 }
 
 - (UIImage *)imageWithPath:(NSString *)path error:(NSError **)error {
-    NSURL *url = [NSURL URLWithString:path];
     NSError *_error = nil;
     NSData *imageData = nil;
-    if (url) {
+    ImagePathType pathType = [self isTypeWithPath:path];
+    if (pathType == ImagePathTypeHttpsUrl || pathType == ImagePathTypeHttpUrl) {
+        NSURL *url = [NSURL URLWithString:path];
         imageData = [NSData dataWithContentsOfURL:url
                                           options:NSDataReadingUncached
                                             error:&_error];
     }
-    else {
+    else if (pathType == ImagePathTypeFileSystem) {
         imageData = [NSData dataWithContentsOfFile:path
                                            options:NSDataReadingUncached
                                              error:&_error];
     }
+    else {
+        _error = [NSError errorWithDomain:kImageLoaderErrorDomain
+                                     code:ImageLoaderPathNotSupported
+                                 userInfo:nil];
+    }
     UIImage *image = nil;
     if (!_error) {
-        if (_error) {
-            *error = _error;
+        if (imageData) {
+            image = [UIImage imageWithData:imageData];
         }
-        image = [UIImage imageWithData:imageData];
+        if (image == nil) {
+            *error = [NSError errorWithDomain:kImageLoaderErrorDomain
+                                         code:ImageLoaderUnknownError
+                                     userInfo:nil];
+        }
+    }
+    else if (_error && error) {
+        *error = _error;
     }
     return image;
 }
