@@ -51,10 +51,6 @@
 		F501A8D3158761D100E784DD /* TETableViewExpandableDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5580A311573AEA000865948 /* TETableViewExpandableDelegate.m */; };
 		F501A8D4158761D100E784DD /* TETableViewSectionDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = F5580A371573AEA000865948 /* TETableViewSectionDataSource.m */; };
 		F501A8D5158761D100E784DD /* TETableViewSectionExpandableDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = F5580A391573AEA000865948 /* TETableViewSectionExpandableDataSource.m */; };
-		F501A8D6158761F300E784DD /* __default_highlighted_star.png in Resources */ = {isa = PBXBuildFile; fileRef = F5580A501573AEB500865948 /* __default_highlighted_star.png */; };
-		F501A8D7158761F300E784DD /* __default_highlighted_star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5580A511573AEB500865948 /* __default_highlighted_star@2x.png */; };
-		F501A8D8158761F300E784DD /* __default_star.png in Resources */ = {isa = PBXBuildFile; fileRef = F5580A521573AEB500865948 /* __default_star.png */; };
-		F501A8D9158761F300E784DD /* __default_star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5580A531573AEB500865948 /* __default_star@2x.png */; };
 		F501A8DA1587623400E784DD /* UIView+Animations.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AF6C7FD157FC13800AA2923 /* UIView+Animations.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F501A8DB1587623400E784DD /* TELoadingImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AD064D615740DBA00C6DAA6 /* TELoadingImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F501A8DC1587623400E784DD /* TERoundedCornerImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AD064D815740DBA00C6DAA6 /* TERoundedCornerImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -76,6 +72,10 @@
 		F501A8EC1587623400E784DD /* TETableViewSectionExpandableDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = F5580A381573AEA000865948 /* TETableViewSectionExpandableDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F501A8ED1587623400E784DD /* TEDebug.h in Headers */ = {isa = PBXBuildFile; fileRef = F5580A651573AEF900865948 /* TEDebug.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F501A8EE1587623400E784DD /* TEArcCompatible.h in Headers */ = {isa = PBXBuildFile; fileRef = F5580A691573B80700865948 /* TEArcCompatible.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F526EEDF158770C2003B148A /* __default_highlighted_star.png in Resources */ = {isa = PBXBuildFile; fileRef = F5580A501573AEB500865948 /* __default_highlighted_star.png */; };
+		F526EEE0158770C2003B148A /* __default_highlighted_star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5580A511573AEB500865948 /* __default_highlighted_star@2x.png */; };
+		F526EEE1158770C2003B148A /* __default_star.png in Resources */ = {isa = PBXBuildFile; fileRef = F5580A521573AEB500865948 /* __default_star.png */; };
+		F526EEE2158770C2003B148A /* __default_star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5580A531573AEB500865948 /* __default_star@2x.png */; };
 		F5580A3A1573AEA000865948 /* TEModel.h in Headers */ = {isa = PBXBuildFile; fileRef = F5580A261573AEA000865948 /* TEModel.h */; };
 		F5580A3B1573AEA000865948 /* TEModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F5580A271573AEA000865948 /* TEModel.m */; };
 		F5580A3E1573AEA000865948 /* TETableViewDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = F5580A2A1573AEA000865948 /* TETableViewDataSource.h */; };
@@ -121,6 +121,11 @@
 		F501A8BE15874B5200E784DD /* TUKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TUKit-Prefix.pch"; sourceTree = "<group>"; };
 		F501A8F31587647A00E784DD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QuartzCore.framework; sourceTree = "<group>"; };
 		F501A8F51587648C00E784DD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UIKit.framework; sourceTree = "<group>"; };
+		F526EED1158770A8003B148A /* TUKitResources.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TUKitResources.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		F526EED2158770A8003B148A /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		F526EED6158770A8003B148A /* TUKitResources-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TUKitResources-Info.plist"; sourceTree = "<group>"; };
+		F526EED8158770A8003B148A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F526EEDA158770A8003B148A /* TUKitResources-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TUKitResources-Prefix.pch"; sourceTree = "<group>"; };
 		F5580A0F1573AD0100865948 /* libTUKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTUKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5580A161573AD0100865948 /* libTUKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "libTUKit-Prefix.pch"; sourceTree = "<group>"; };
 		F5580A261573AEA000865948 /* TEModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEModel.h; path = TETableView/TEModel.h; sourceTree = "<group>"; };
@@ -157,6 +162,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		F501A8B215874B5100E784DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F526EECE158770A8003B148A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -231,11 +243,30 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F526EED4158770A8003B148A /* TUKitResources */ = {
+			isa = PBXGroup;
+			children = (
+				F526EED5158770A8003B148A /* Supporting Files */,
+			);
+			path = TUKitResources;
+			sourceTree = "<group>";
+		};
+		F526EED5158770A8003B148A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F526EED6158770A8003B148A /* TUKitResources-Info.plist */,
+				F526EED7158770A8003B148A /* InfoPlist.strings */,
+				F526EEDA158770A8003B148A /* TUKitResources-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		F5580A041573AD0100865948 = {
 			isa = PBXGroup;
 			children = (
 				F5580A141573AD0100865948 /* libTUKit */,
 				F501A8B815874B5200E784DD /* TUKit */,
+				F526EED4158770A8003B148A /* TUKitResources */,
 				F5580A111573AD0100865948 /* Frameworks */,
 				F5580A101573AD0100865948 /* Products */,
 			);
@@ -246,6 +277,7 @@
 			children = (
 				F5580A0F1573AD0100865948 /* libTUKit.a */,
 				F501A8B515874B5200E784DD /* TUKit.framework */,
+				F526EED1158770A8003B148A /* TUKitResources.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -255,6 +287,7 @@
 			children = (
 				F501A8F51587648C00E784DD /* UIKit.framework */,
 				F501A8F31587647A00E784DD /* QuartzCore.framework */,
+				F526EED2158770A8003B148A /* CoreFoundation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -420,6 +453,23 @@
 			productReference = F501A8B515874B5200E784DD /* TUKit.framework */;
 			productType = "com.apple.product-type.bundle";
 		};
+		F526EED0158770A8003B148A /* TUKitResources */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F526EEDD158770A8003B148A /* Build configuration list for PBXNativeTarget "TUKitResources" */;
+			buildPhases = (
+				F526EECD158770A8003B148A /* Sources */,
+				F526EECE158770A8003B148A /* Frameworks */,
+				F526EECF158770A8003B148A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TUKitResources;
+			productName = TUKitResources;
+			productReference = F526EED1158770A8003B148A /* TUKitResources.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
 		F5580A0E1573AD0100865948 /* libTUKit */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F5580A1C1573AD0100865948 /* Build configuration list for PBXNativeTarget "libTUKit" */;
@@ -461,6 +511,7 @@
 				F5580A0E1573AD0100865948 /* libTUKit */,
 				F501A8B415874B5100E784DD /* TUKit */,
 				F501A8F91587669100E784DD /* TUKit Universal Framework */,
+				F526EED0158770A8003B148A /* TUKitResources */,
 			);
 		};
 /* End PBXProject section */
@@ -470,11 +521,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F501A8D6158761F300E784DD /* __default_highlighted_star.png in Resources */,
-				F501A8D7158761F300E784DD /* __default_highlighted_star@2x.png in Resources */,
-				F501A8D8158761F300E784DD /* __default_star.png in Resources */,
-				F501A8D9158761F300E784DD /* __default_star@2x.png in Resources */,
 				F501A8BD15874B5200E784DD /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F526EECF158770A8003B148A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F526EEDF158770C2003B148A /* __default_highlighted_star.png in Resources */,
+				F526EEE0158770C2003B148A /* __default_highlighted_star@2x.png in Resources */,
+				F526EEE1158770C2003B148A /* __default_star.png in Resources */,
+				F526EEE2158770C2003B148A /* __default_star@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,6 +579,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F526EECD158770A8003B148A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F5580A0B1573AD0100865948 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -552,6 +617,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				F501A8BC15874B5200E784DD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F526EED7158770A8003B148A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F526EED8158770A8003B148A /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -628,6 +701,42 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F526EEDB158770A8003B148A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TUKitResources/TUKitResources-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "TUKitResources/TUKitResources-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = "";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		F526EEDC158770A8003B148A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TUKitResources/TUKitResources-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "TUKitResources/TUKitResources-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
 		};
@@ -711,6 +820,7 @@
 				F501A8C115874B5200E784DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F501A8FA1587669100E784DD /* Build configuration list for PBXAggregateTarget "TUKit Universal Framework" */ = {
 			isa = XCConfigurationList;
@@ -719,6 +829,16 @@
 				F501A8FC1587669100E784DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F526EEDD158770A8003B148A /* Build configuration list for PBXNativeTarget "TUKitResources" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F526EEDB158770A8003B148A /* Debug */,
+				F526EEDC158770A8003B148A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F5580A091573AD0100865948 /* Build configuration list for PBXProject "libTUKit" */ = {
 			isa = XCConfigurationList;

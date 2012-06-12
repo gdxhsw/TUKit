@@ -16,8 +16,8 @@
 @end
 
 
-NSString *kDefaultStarImageName = @"__default_star.png";
-NSString *kDefaultHighlightedStarImageName = @"__default_highlighted_star.png";
+NSString *kDefaultStarImageName = @"__default_star";
+NSString *kDefaultHighlightedStarImageName = @"__default_highlighted_star";
 NSUInteger kDefaultNumberOfStars = 5;
 
 
@@ -142,15 +142,20 @@ NSUInteger kDefaultNumberOfStars = 5;
 #pragma mark - Lifecycle
 
 - (void)initView {
-#if !__has_feature(objc_arc)
-    [_starImage release];
-    _starImage = [[UIImage imageNamed:kDefaultStarImageName] retain];
-    [_highlightedStarImage release];
-    _highlightedStarImage = [[UIImage imageNamed:kDefaultHighlightedStarImageName] retain];
-#else
-    _starImage = [UIImage imageNamed:kDefaultStarImageName];
-    _highlightedStarImage = [UIImage imageNamed:kDefaultHighlightedStarImageName];
-#endif
+    NSBundle *bundle = [NSBundle bundleWithURL:[[NSBundle mainBundle] URLForResource:@"TUKitResources" 
+                                                                       withExtension:@"bundle"]];
+    static UIImage *defaultStarImage = nil;
+    static UIImage *defaultHighlightedStarImage = nil;
+    if (defaultStarImage == nil) {
+        NSString *defaultStarImageURL = [bundle pathForResource:kDefaultStarImageName 
+                                                         ofType:@"png"];
+        NSString *defaultHighlightedStarImageURL = [bundle pathForResource:kDefaultHighlightedStarImageName
+                                                                    ofType:@"png"];
+        defaultStarImage = [UIImage imageWithContentsOfFile:defaultStarImageURL];
+        defaultHighlightedStarImage = [UIImage imageWithContentsOfFile:defaultHighlightedStarImageURL];
+    }
+    self.starImage = defaultStarImage;
+    self.highlightedStarImage = defaultHighlightedStarImage;
     _rating = 0.0f;
     _numberOfStars = kDefaultNumberOfStars;
 }

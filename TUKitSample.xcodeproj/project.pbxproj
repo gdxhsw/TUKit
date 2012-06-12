@@ -34,6 +34,20 @@
 			remoteGlobalIDString = F5580A0E1573AD0100865948;
 			remoteInfo = libTUKit;
 		};
+		F5AC7785158782F900427E4D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5580A1F1573AD0100865948 /* libTUKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F501A8B515874B5200E784DD;
+			remoteInfo = TUKit;
+		};
+		F5AC7787158782F900427E4D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5580A1F1573AD0100865948 /* libTUKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F526EED1158770A8003B148A;
+			remoteInfo = TUKitResources;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -126,6 +140,8 @@
 			isa = PBXGroup;
 			children = (
 				F5580A241573AD0200865948 /* libTUKit.a */,
+				F5AC7786158782F900427E4D /* TUKit.framework */,
+				F5AC7788158782F900427E4D /* TUKitResources.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -190,6 +206,20 @@
 			fileType = archive.ar;
 			path = libTUKit.a;
 			remoteRef = F5580A231573AD0200865948 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F5AC7786158782F900427E4D /* TUKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = TUKit.framework;
+			remoteRef = F5AC7785158782F900427E4D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F5AC7788158782F900427E4D /* TUKitResources.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = TUKitResources.bundle;
+			remoteRef = F5AC7787158782F900427E4D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
