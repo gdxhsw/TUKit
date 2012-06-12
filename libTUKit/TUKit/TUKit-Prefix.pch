@@ -1,0 +1,9 @@
+//
+// Prefix header for all source files of the 'TUKit' target in the 'TUKit' project
+//
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+#endif
+
+#include "TEDebug.h"
