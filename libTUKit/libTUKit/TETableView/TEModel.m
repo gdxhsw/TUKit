@@ -26,6 +26,7 @@
 }
 
 - (void)notifyDidFinishLoad {
+    NSLog(@"");
     if ([self.delegate respondsToSelector:@selector(didFinishLoadWithModel:)]) {
         [self.delegate didFinishLoadWithModel:self];
     }
@@ -70,7 +71,7 @@
 #pragma mark - Properties
 
 - (BOOL)isLoading {
-    return (_loadingThread != nil && _loadingThread.isExecuting);
+    return (_operation != nil && !_operation.isFinished);
 }
 
 - (void)load {
@@ -79,34 +80,39 @@
 - (void)__load {
     [self notifyDidStart];
     [self load];
-    if ([NSThread currentThread].isCancelled) {
-        [self notifyDidCancel];
-    }
-    else {
-        [self notifyDidFinishLoad];
-    }
+    [self notifyDidFinishLoad];
+    TERELEASE(_operation);
 }
 
 - (void)cancel {
-    [_loadingThread cancel];
-    TERELEASE(_loadingThread);
+    [_operation cancel];
+    TERELEASE(_operation);
 }
 
 - (void)loadData {
-    [self cancel];
-    if (!_loadingThread) {
-        _loadingThread = [[NSThread alloc] initWithTarget:self
-                                                 selector:@selector(__load) 
-                                                   object:nil];
-        [_loadingThread start];
+    static NSOperationQueue *queue = nil;
+    @synchronized (self) {
+        if (queue == nil) {
+            queue = [[NSOperationQueue alloc] init];
+            queue.maxConcurrentOperationCount = 5;
+        }
     }
+    NSLog(@"7, isLoading = %@", self.isLoading ? @"YES" : @"NO");
+    [_lock lock];
+    if (!self.isLoading) {
+        _operation = [[NSInvocationOperation alloc] initWithTarget:self
+                                                          selector:@selector(__load) 
+                                                            object:nil];
+        [queue addOperation:_operation];
+    }
+    [_lock unlock];
 }
 
 - (id)init {
     self = [super init];
     if (self) {
         _delegate = nil;
-        TERELEASE(_loadingThread);
+        _lock = [[NSRecursiveLock alloc] init];
     }
     return self;
 }
@@ -114,6 +120,7 @@
 #if !__has_feature(objc_arc)
 - (void)dealloc {
     _delegate = nil;
+    TERELEASE(_lock);
     TERELEASE(_loadingThread);
     [super dealloc];
 }

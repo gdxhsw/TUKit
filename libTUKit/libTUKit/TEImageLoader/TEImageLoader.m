@@ -72,7 +72,6 @@ typedef enum {
 
 @end
 
-static TEImageLoader *_imageLoader = nil;
 static NSOperationQueue *_operationQueue = nil;
 
 @implementation TEImageLoader
@@ -84,10 +83,14 @@ static NSOperationQueue *_operationQueue = nil;
 @synthesize cachePath = _cachePath;
 
 + (id)sharedLoader {
-    if (_imageLoader == nil) {
-        _imageLoader = [TEImageLoader new];
+    @synchronized (self) {
+        static TEImageLoader *sharedInstance = nil;
+        if (sharedInstance == nil) {
+            sharedInstance = [[TEImageLoader alloc] init];
+            // Do any other initialisation stuff here
+        }
+        return sharedInstance;
     }
-    return _imageLoader;
 }
 
 #pragma mark - Lifecycle
