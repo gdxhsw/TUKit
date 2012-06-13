@@ -33,6 +33,10 @@
 		3AD064DD15740DBA00C6DAA6 /* TERoundedCornerImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD064D915740DBA00C6DAA6 /* TERoundedCornerImageView.m */; };
 		3AF6C7FF157FC13800AA2923 /* UIView+Animations.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AF6C7FD157FC13800AA2923 /* UIView+Animations.h */; };
 		3AF6C800157FC13800AA2923 /* UIView+Animations.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF6C7FE157FC13800AA2923 /* UIView+Animations.m */; };
+		3AF6C82A1589156D00AA2923 /* TUKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AF6C827158914D500AA2923 /* TUKit.h */; };
+		3AF6C82B1589157400AA2923 /* TETableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AF6C8291589150E00AA2923 /* TETableView.h */; };
+		3AF6C82C158915EE00AA2923 /* TUKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AF6C827158914D500AA2923 /* TUKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3AF6C82D158915F400AA2923 /* TETableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AF6C8291589150E00AA2923 /* TETableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F501A8BD15874B5200E784DD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F501A8BB15874B5200E784DD /* InfoPlist.strings */; };
 		F501A8C5158761D100E784DD /* UIView+Animations.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF6C7FE157FC13800AA2923 /* UIView+Animations.m */; };
 		F501A8C6158761D100E784DD /* TELoadingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD064D715740DBA00C6DAA6 /* TELoadingImageView.m */; };
@@ -115,12 +119,14 @@
 		3AD064D915740DBA00C6DAA6 /* TERoundedCornerImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TERoundedCornerImageView.m; path = TELoadingImageView/TERoundedCornerImageView.m; sourceTree = "<group>"; };
 		3AF6C7FD157FC13800AA2923 /* UIView+Animations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Animations.h"; path = "Extensions/UIView+Animations.h"; sourceTree = "<group>"; };
 		3AF6C7FE157FC13800AA2923 /* UIView+Animations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Animations.m"; path = "Extensions/UIView+Animations.m"; sourceTree = "<group>"; };
+		3AF6C827158914D500AA2923 /* TUKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TUKit.h; sourceTree = "<group>"; };
+		3AF6C8291589150E00AA2923 /* TETableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TETableView.h; path = TETableView/TETableView.h; sourceTree = "<group>"; };
+		3AF6C832158916CB00AA2923 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		3AF6C834158916DD00AA2923 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F501A8B515874B5200E784DD /* TUKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TUKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F501A8BA15874B5200E784DD /* TUKit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TUKit-Info.plist"; sourceTree = "<group>"; };
 		F501A8BC15874B5200E784DD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F501A8BE15874B5200E784DD /* TUKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TUKit-Prefix.pch"; sourceTree = "<group>"; };
-		F501A8F31587647A00E784DD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QuartzCore.framework; sourceTree = "<group>"; };
-		F501A8F51587648C00E784DD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UIKit.framework; sourceTree = "<group>"; };
 		F526EED1158770A8003B148A /* TUKitResources.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TUKitResources.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		F526EED2158770A8003B148A /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		F526EED6158770A8003B148A /* TUKitResources-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TUKitResources-Info.plist"; sourceTree = "<group>"; };
@@ -285,8 +291,8 @@
 		F5580A111573AD0100865948 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F501A8F51587648C00E784DD /* UIKit.framework */,
-				F501A8F31587647A00E784DD /* QuartzCore.framework */,
+				3AF6C834158916DD00AA2923 /* UIKit.framework */,
+				3AF6C832158916CB00AA2923 /* QuartzCore.framework */,
 				F526EED2158770A8003B148A /* CoreFoundation.framework */,
 			);
 			name = Frameworks;
@@ -304,6 +310,7 @@
 				F5580A251573AD4100865948 /* TETableView */,
 				F5580A651573AEF900865948 /* TEDebug.h */,
 				F5580A691573B80700865948 /* TEArcCompatible.h */,
+				3AF6C827158914D500AA2923 /* TUKit.h */,
 				F5580A151573AD0100865948 /* Supporting Files */,
 			);
 			path = libTUKit;
@@ -336,6 +343,7 @@
 				F5580A371573AEA000865948 /* TETableViewSectionDataSource.m */,
 				F5580A381573AEA000865948 /* TETableViewSectionExpandableDataSource.h */,
 				F5580A391573AEA000865948 /* TETableViewSectionExpandableDataSource.m */,
+				3AF6C8291589150E00AA2923 /* TETableView.h */,
 			);
 			name = TETableView;
 			sourceTree = "<group>";
@@ -402,6 +410,8 @@
 				F501A8EB1587623400E784DD /* TETableViewSectionDataSource.h in Headers */,
 				F501A8EC1587623400E784DD /* TETableViewSectionExpandableDataSource.h in Headers */,
 				F501A8ED1587623400E784DD /* TEDebug.h in Headers */,
+				3AF6C82D158915F400AA2923 /* TETableView.h in Headers */,
+				3AF6C82C158915EE00AA2923 /* TUKit.h in Headers */,
 				F501A8EE1587623400E784DD /* TEArcCompatible.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -410,6 +420,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AF6C82B1589157400AA2923 /* TETableView.h in Headers */,
+				3AF6C82A1589156D00AA2923 /* TUKit.h in Headers */,
 				F5580A3A1573AEA000865948 /* TEModel.h in Headers */,
 				F5580A3E1573AEA000865948 /* TETableViewDataSource.h in Headers */,
 				F5580A401573AEA000865948 /* TETableViewDelegate.h in Headers */,

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3AF6C826158914B200AA2923 /* TUKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AF6C825158914B200AA2923 /* TUKit.framework */; };
+		3AF6C8371589172400AA2923 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AF6C8361589172400AA2923 /* QuartzCore.framework */; };
 		F55809D91573AC5800865948 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55809D81573AC5800865948 /* UIKit.framework */; };
 		F55809DB1573AC5800865948 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55809DA1573AC5800865948 /* Foundation.framework */; };
 		F55809DD1573AC5800865948 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55809DC1573AC5800865948 /* CoreGraphics.framework */; };
@@ -15,7 +17,6 @@
 		F55809E91573AC5800865948 /* TEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F55809E81573AC5800865948 /* TEAppDelegate.m */; };
 		F55809EC1573AC5800865948 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F55809EA1573AC5800865948 /* MainStoryboard.storyboard */; };
 		F55809EF1573AC5800865948 /* TEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F55809EE1573AC5800865948 /* TEViewController.m */; };
-		F5580A681573AF4600865948 /* libTUKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5580A241573AD0200865948 /* libTUKit.a */; };
 		F5580A6B1573C25B00865948 /* README in Resources */ = {isa = PBXBuildFile; fileRef = F5580A6A1573C25B00865948 /* README */; };
 /* End PBXBuildFile section */
 
@@ -25,13 +26,6 @@
 			containerPortal = F5580A1F1573AD0100865948 /* libTUKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = F5580A0F1573AD0100865948;
-			remoteInfo = libTUKit;
-		};
-		F5580A661573AF3C00865948 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F5580A1F1573AD0100865948 /* libTUKit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = F5580A0E1573AD0100865948;
 			remoteInfo = libTUKit;
 		};
 		F5AC7785158782F900427E4D /* PBXContainerItemProxy */ = {
@@ -51,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3AF6C825158914B200AA2923 /* TUKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TUKit.framework; path = libTUKit/Products/TUKit.framework; sourceTree = "<group>"; };
+		3AF6C8361589172400AA2923 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F55809D41573AC5800865948 /* TUKitSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TUKitSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F55809D81573AC5800865948 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F55809DA1573AC5800865948 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -73,10 +69,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5580A681573AF4600865948 /* libTUKit.a in Frameworks */,
+				3AF6C8371589172400AA2923 /* QuartzCore.framework in Frameworks */,
 				F55809D91573AC5800865948 /* UIKit.framework in Frameworks */,
 				F55809DB1573AC5800865948 /* Foundation.framework in Frameworks */,
 				F55809DD1573AC5800865948 /* CoreGraphics.framework in Frameworks */,
+				3AF6C826158914B200AA2923 /* TUKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +102,8 @@
 		F55809D71573AC5800865948 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3AF6C8361589172400AA2923 /* QuartzCore.framework */,
+				3AF6C825158914B200AA2923 /* TUKit.framework */,
 				F55809D81573AC5800865948 /* UIKit.framework */,
 				F55809DA1573AC5800865948 /* Foundation.framework */,
 				F55809DC1573AC5800865948 /* CoreGraphics.framework */,
@@ -160,7 +159,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				F5580A671573AF3C00865948 /* PBXTargetDependency */,
 			);
 			name = TUKitSample;
 			productName = TUKitSample;
@@ -250,14 +248,6 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		F5580A671573AF3C00865948 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = libTUKit;
-			targetProxy = F5580A661573AF3C00865948 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
 		F55809E11573AC5800865948 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
@@ -328,6 +318,10 @@
 		F55809F31573AC5800865948 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/libTUKit/Products\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TUKitSample/TUKitSample-Prefix.pch";
 				INFOPLIST_FILE = "TUKitSample/TUKitSample-Info.plist";
@@ -339,6 +333,10 @@
 		F55809F41573AC5800865948 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/libTUKit/Products\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TUKitSample/TUKitSample-Prefix.pch";
 				INFOPLIST_FILE = "TUKitSample/TUKitSample-Info.plist";
