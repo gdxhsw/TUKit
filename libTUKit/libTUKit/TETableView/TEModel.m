@@ -7,6 +7,8 @@
 
 #import "TEModel.h"
 
+static NSOperationQueue *queue = nil;
+
 @implementation TEModel
 
 @synthesize delegate = _delegate;
@@ -70,7 +72,7 @@
 #pragma mark - Properties
 
 - (BOOL)isLoading {
-    return (_loadingThread != nil && _loadingThread.isExecuting);
+    return (_operation != nil && _operation.isExecuting);
 }
 
 - (void)load {
@@ -79,34 +81,32 @@
 - (void)__load {
     [self notifyDidStart];
     [self load];
-    if ([NSThread currentThread].isCancelled) {
-        [self notifyDidCancel];
-    }
-    else {
-        [self notifyDidFinishLoad];
-    }
+    [self notifyDidFinishLoad];
+    TERELEASE(_operation);
 }
 
 - (void)cancel {
-    [_loadingThread cancel];
-    TERELEASE(_loadingThread);
+    [_operation cancel];
+    TERELEASE(_operation);
 }
 
 - (void)loadData {
-    [self cancel];
-    if (!_loadingThread) {
-        _loadingThread = [[NSThread alloc] initWithTarget:self
-                                                 selector:@selector(__load) 
-                                                   object:nil];
-        [_loadingThread start];
+    if (queue == nil) {
+        queue = [[NSOperationQueue alloc] init];
+        queue.maxConcurrentOperationCount = 5;
     }
+    [self cancel];
+    _operation = [[NSInvocationOperation alloc] initWithTarget:self
+                                                      selector:@selector(__load) 
+                                                        object:nil];
+    [queue addOperation:_operation];
 }
 
 - (id)init {
     self = [super init];
     if (self) {
         _delegate = nil;
-        TERELEASE(_loadingThread);
+        _lock = [[NSRecursiveLock alloc] init];
     }
     return self;
 }
@@ -114,6 +114,7 @@
 #if !__has_feature(objc_arc)
 - (void)dealloc {
     _delegate = nil;
+    TERELEASE(_lock);
     TERELEASE(_loadingThread);
     [super dealloc];
 }

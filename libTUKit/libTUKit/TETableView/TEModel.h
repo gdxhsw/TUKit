@@ -11,7 +11,8 @@
 @protocol TEModelDelegate;
 
 @interface TEModel : NSObject {
-    NSThread *_loadingThread;
+    NSOperation *_operation;
+    NSRecursiveLock *_lock;
 }
 
 @property (WEAK, nonatomic) id <TEModelDelegate> delegate;
