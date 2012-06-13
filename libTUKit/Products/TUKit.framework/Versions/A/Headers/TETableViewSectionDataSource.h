@@ -10,7 +10,7 @@
 
 @interface TETableViewSection : NSObject
 
-@property (STRONG, nonatomic) NSMutableArray *items;
+@property (STRONG, nonatomic) NSArray *items;
 @property (copy, nonatomic) NSString *title;
 @property (copy, nonatomic) NSString *footer;
 

@@ -70,11 +70,10 @@
 #pragma mark - Properties
 
 - (BOOL)isLoading {
-    return !!_loadingThread;
+    return (_loadingThread != nil && _loadingThread.isExecuting);
 }
 
 - (void)load {
-    
 }
 
 - (void)__load {
@@ -86,7 +85,6 @@
     else {
         [self notifyDidFinishLoad];
     }
-    TERELEASE(_loadingThread);
 }
 
 - (void)cancel {
@@ -95,6 +93,7 @@
 }
 
 - (void)loadData {
+    [self cancel];
     if (!_loadingThread) {
         _loadingThread = [[NSThread alloc] initWithTarget:self
                                                  selector:@selector(__load) 

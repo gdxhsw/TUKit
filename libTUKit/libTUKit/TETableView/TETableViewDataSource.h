@@ -12,7 +12,7 @@
 
 @interface TETableViewDataSource : NSObject <UITableViewDataSource, TEModelDelegate>
 
-@property (STRONG, nonatomic) NSMutableArray *items;
+@property (STRONG, nonatomic) NSArray *items;
 
 - (id <TETableViewItem>)itemForIndexPath:(NSIndexPath *)indexPath;
 

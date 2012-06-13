@@ -16,8 +16,6 @@ NSString *kTEInvalidClass = @"invalidClass";
 - (id)init {
     self = [super init];
     if (self) {
-        TERELEASE(_items);
-        _items = [NSMutableArray new];
     }
     return self;
 }
