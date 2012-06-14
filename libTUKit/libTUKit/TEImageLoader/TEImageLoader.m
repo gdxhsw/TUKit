@@ -8,6 +8,7 @@
 #import "TEImageLoader.h"
 #import "TEArcCompatible.h"
 #import "NSString+URLEncode.h"
+#import "ARCSingleton.h"
 
 static NSString *kImageLoaderErrorDomain = @"imageLoaderErrorDomain";
 
@@ -82,16 +83,7 @@ static NSOperationQueue *_operationQueue = nil;
 /* Get cache folder path */
 @synthesize cachePath = _cachePath;
 
-+ (id)sharedLoader {
-    @synchronized (self) {
-        static TEImageLoader *sharedInstance = nil;
-        if (sharedInstance == nil) {
-            sharedInstance = [[TEImageLoader alloc] init];
-            // Do any other initialisation stuff here
-        }
-        return sharedInstance;
-    }
-}
+SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_CUSTOM_METHOD_NAME(TEImageLoader, sharedLoader);
 
 #pragma mark - Lifecycle
 

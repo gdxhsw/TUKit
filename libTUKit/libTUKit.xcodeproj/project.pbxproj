@@ -107,6 +107,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A15DA9D158A697A005DB057 /* ARCSingleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARCSingleton.h; sourceTree = "<group>"; };
 		3AD064C81574092600C6DAA6 /* NSString+URLEncode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+URLEncode.h"; path = "TEImageLoader/NSString+URLEncode.h"; sourceTree = "<group>"; };
 		3AD064C91574092600C6DAA6 /* NSString+URLEncode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+URLEncode.m"; path = "TEImageLoader/NSString+URLEncode.m"; sourceTree = "<group>"; };
 		3AD064CA1574092600C6DAA6 /* TEImageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEImageLoader.h; path = TEImageLoader/TEImageLoader.h; sourceTree = "<group>"; };
@@ -310,6 +311,7 @@
 				F5580A251573AD4100865948 /* TETableView */,
 				F5580A651573AEF900865948 /* TEDebug.h */,
 				F5580A691573B80700865948 /* TEArcCompatible.h */,
+				3A15DA9D158A697A005DB057 /* ARCSingleton.h */,
 				3AF6C827158914D500AA2923 /* TUKit.h */,
 				F5580A151573AD0100865948 /* Supporting Files */,
 			);
