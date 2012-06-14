@@ -26,7 +26,6 @@
 }
 
 - (void)notifyDidFinishLoad {
-    NSLog(@"");
     if ([self.delegate respondsToSelector:@selector(didFinishLoadWithModel:)]) {
         [self.delegate didFinishLoadWithModel:self];
     }
@@ -68,51 +67,33 @@
     }
 }
 
+- (void)notifyDidFailWithError:(NSError *)error {
+    if ([self.delegate respondsToSelector:@selector(didFailLoadWithModel:)]) {
+        [self.delegate didFailLoadWithModel:self
+                                      error:error];
+    }
+}
+
 #pragma mark - Properties
 
 - (BOOL)isLoading {
-    return (_operation != nil && !_operation.isFinished);
+    return NO;
 }
 
-- (void)load {
-}
-
-- (void)__load {
-    [self notifyDidStart];
-    [self load];
-    [self notifyDidFinishLoad];
-    TERELEASE(_operation);
+- (BOOL)isLoaded {
+    return NO;
 }
 
 - (void)cancel {
-    [_operation cancel];
-    TERELEASE(_operation);
 }
 
-- (void)loadData {
-    static NSOperationQueue *queue = nil;
-    @synchronized (self) {
-        if (queue == nil) {
-            queue = [[NSOperationQueue alloc] init];
-            queue.maxConcurrentOperationCount = 5;
-        }
-    }
-    NSLog(@"7, isLoading = %@", self.isLoading ? @"YES" : @"NO");
-    [_lock lock];
-    if (!self.isLoading) {
-        _operation = [[NSInvocationOperation alloc] initWithTarget:self
-                                                          selector:@selector(__load) 
-                                                            object:nil];
-        [queue addOperation:_operation];
-    }
-    [_lock unlock];
+- (void)loadMore:(BOOL)more {
 }
 
 - (id)init {
     self = [super init];
     if (self) {
         _delegate = nil;
-        _lock = [[NSRecursiveLock alloc] init];
     }
     return self;
 }
