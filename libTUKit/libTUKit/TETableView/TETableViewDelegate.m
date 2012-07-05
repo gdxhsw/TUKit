@@ -34,6 +34,16 @@
     }
 }
 
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([self.delegate respondsToSelector:@selector(tableView:willDisplayCell:forRowAtIndexPath:)]) {
+        TETableViewDataSource *dataSource = (TETableViewDataSource *)tableView.dataSource;
+        id <TETableViewItem> item = [dataSource itemForIndexPath:indexPath];
+        [self.delegate tableView:tableView
+                 willDisplayItem:item
+                     atIndexPath:indexPath];
+    }
+}
+
 #if !__has_feature(objc_arc)
 - (void)dealloc {
     _delegate = nil;
