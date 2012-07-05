@@ -26,8 +26,8 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     TETableViewDataSource *dataSource = (TETableViewDataSource *)tableView.dataSource;
     id <TETableViewItem> item = [dataSource itemForIndexPath:indexPath];
-    if ([item respondsToSelector:@selector(cellHeight)]) {
-        return [item cellHeight];
+    if ([item respondsToSelector:@selector(cellHeightWithTableView:)]) {
+        return [item cellHeightWithTableView:tableView];
     }
     else {
         return 44.0f;
