@@ -12,6 +12,8 @@
 @implementation TETableViewExpandableDelegate
 
 @synthesize canExpandMultipleItem = _canExpandMultipleItem;
+@synthesize expandAnimation = _expandAnimation;
+@synthesize shrinkAnimation = _shrinkAnimation;
 
 #pragma mark - Initial methods
 
@@ -19,6 +21,8 @@
     self = [super init];
     if (self) {
         _canExpandMultipleItem = multipleItem;
+        self.expandAnimation = UITableViewRowAnimationBottom;
+        self.shrinkAnimation = UITableViewRowAnimationTop;
     }
     return self;
 }
@@ -56,12 +60,12 @@
                 }
             }
             [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:expandIndexPath]
-                             withRowAnimation:UITableViewRowAnimationMiddle];
+                             withRowAnimation:self.expandAnimation];
         }
         else {
             // Shrink
             [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:expandIndexPath]
-                             withRowAnimation:UITableViewRowAnimationTop];
+                             withRowAnimation:self.shrinkAnimation];
             expandIndexPath = nil;
             expandableItem = nil;
         }
