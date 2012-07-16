@@ -16,3 +16,21 @@
 - (CGFloat)cellHeightWithTableView:(UITableView *)tableView;
 
 @end
+
+
+@interface TETableViewItem : NSObject <TETableViewItem> {
+    UITableViewCellStyle _cellStyle;
+}
+
+@property (copy, nonatomic) NSString *title;
+@property (copy, nonatomic) NSString *subtitle;
+@property (assign, nonatomic) UITableViewCellAccessoryType accessoryType;
+@property (assign, nonatomic) UITableViewCellSelectionStyle selectionStyle;
+@property (copy, nonatomic) NSString *reuseIdentifier;
+@property (assign, nonatomic) NSInteger tag;
+
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier;
+
+
+
+@end
