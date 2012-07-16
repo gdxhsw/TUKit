@@ -22,5 +22,6 @@
 
 @optional
 - (void)tableView:(UITableView *)tableView didSelectItem:(id <TETableViewItem>)item atIndexPath:(NSIndexPath *)indexPath;
+- (void)tableView:(UITableView *)tableView willDisplayItem:(id <TETableViewItem>)item atIndexPath:(NSIndexPath *)indexPath;
 
 @end

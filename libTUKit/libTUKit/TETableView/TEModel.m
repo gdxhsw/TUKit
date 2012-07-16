@@ -84,6 +84,10 @@
     return NO;
 }
 
+- (BOOL)hasMore {
+    return NO;
+}
+
 - (void)cancel {
 }
 

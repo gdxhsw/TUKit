@@ -29,6 +29,7 @@
 
 @property (readonly, nonatomic) BOOL isLoading;
 @property (readonly, nonatomic) BOOL isLoaded;
+@property (readonly, nonatomic) BOOL hasMore;
 
 @end
 

@@ -13,6 +13,6 @@
 - (UITableViewCell *)cellWithTableView:(UITableView *)tableView;
 
 @optional
-- (CGFloat)cellHeight;
+- (CGFloat)cellHeightWithTableView:(UITableView *)tableView;
 
 @end
