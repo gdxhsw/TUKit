@@ -82,12 +82,16 @@
 #pragma mark - TEImageLoaderDelegate
 
 - (void)imageLoader:(TEImageLoader *)loader loadedWithPath:(NSString *)path image:(UIImage *)image {
-    [self stopLoadingAndSetImage:image];
+    if ([self.imagePath isEqualToString:path]) {
+        [self stopLoadingAndSetImage:image];
+    }
 }
 
 - (void)imageLoader:(TEImageLoader *)loader loadFailedWithPath:(NSString *)path error:(NSError *)error {
-    if (self.loadFailedImage != nil) {
-        [self stopLoadingAndSetImage:self.loadFailedImage];
+    if ([self.imagePath isEqualToString:path]) {
+        if (self.loadFailedImage != nil) {
+            [self stopLoadingAndSetImage:self.loadFailedImage];
+        }
     }
 }
 
@@ -160,6 +164,10 @@
     TERELEASE(_loadFailedImage);
     TERELEASE(_loadingIndicator);
     [super dealloc];
+}
+#else
+- (void)dealloc {
+    [[TEImageLoader sharedLoader] cancelOperationForDelegate:self];
 }
 #endif
 

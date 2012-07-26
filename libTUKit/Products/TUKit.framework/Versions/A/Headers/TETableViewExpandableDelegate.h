@@ -15,6 +15,8 @@
 }
 
 @property (readonly, nonatomic) BOOL canExpandMultipleItem;
+@property (assign, nonatomic) UITableViewRowAnimation expandAnimation;
+@property (assign, nonatomic) UITableViewRowAnimation shrinkAnimation;
 
 - (NSIndexPath *)expandForIndexPath:(NSIndexPath *)indexPath withTableView:(UITableView *)tableView;
 

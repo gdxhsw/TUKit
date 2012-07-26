@@ -104,6 +104,10 @@
 		F5580A621573AECA00865948 /* TEGallery.m in Sources */ = {isa = PBXBuildFile; fileRef = F5580A5C1573AECA00865948 /* TEGallery.m */; };
 		F5580A631573AECA00865948 /* TEPhoto.h in Headers */ = {isa = PBXBuildFile; fileRef = F5580A5D1573AECA00865948 /* TEPhoto.h */; };
 		F5580A641573AECA00865948 /* TEPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = F5580A5E1573AECA00865948 /* TEPhoto.m */; };
+		F5FD88C715C1260500AC4A60 /* NSMutableArray+WeakReference.h in Headers */ = {isa = PBXBuildFile; fileRef = F5FD88C515C1260500AC4A60 /* NSMutableArray+WeakReference.h */; };
+		F5FD88C815C1260500AC4A60 /* NSMutableArray+WeakReference.m in Sources */ = {isa = PBXBuildFile; fileRef = F5FD88C615C1260500AC4A60 /* NSMutableArray+WeakReference.m */; };
+		F5FD88D015C12E3300AC4A60 /* NSMutableArray+WeakReference.h in Headers */ = {isa = PBXBuildFile; fileRef = F5FD88C515C1260500AC4A60 /* NSMutableArray+WeakReference.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F5FD88D115C12E4900AC4A60 /* NSMutableArray+WeakReference.m in Sources */ = {isa = PBXBuildFile; fileRef = F5FD88C615C1260500AC4A60 /* NSMutableArray+WeakReference.m */; };
 		F5FEE88E15B4063600AC5569 /* TETableViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F5FEE88D15B4063600AC5569 /* TETableViewItem.m */; };
 /* End PBXBuildFile section */
 
@@ -166,6 +170,8 @@
 		F5580A5E1573AECA00865948 /* TEPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEPhoto.m; path = TEGallery/TEPhoto.m; sourceTree = "<group>"; };
 		F5580A651573AEF900865948 /* TEDebug.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TEDebug.h; sourceTree = "<group>"; };
 		F5580A691573B80700865948 /* TEArcCompatible.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TEArcCompatible.h; sourceTree = "<group>"; };
+		F5FD88C515C1260500AC4A60 /* NSMutableArray+WeakReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+WeakReference.h"; path = "Extensions/NSMutableArray+WeakReference.h"; sourceTree = "<group>"; };
+		F5FD88C615C1260500AC4A60 /* NSMutableArray+WeakReference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+WeakReference.m"; path = "Extensions/NSMutableArray+WeakReference.m"; sourceTree = "<group>"; };
 		F5FEE88D15B4063600AC5569 /* TETableViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TETableViewItem.m; path = TETableView/TETableViewItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -228,6 +234,8 @@
 		3AF6C7FB157FC10C00AA2923 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F5FD88C515C1260500AC4A60 /* NSMutableArray+WeakReference.h */,
+				F5FD88C615C1260500AC4A60 /* NSMutableArray+WeakReference.m */,
 				3AF6C7FD157FC13800AA2923 /* UIView+Animations.h */,
 				3AF6C7FE157FC13800AA2923 /* UIView+Animations.m */,
 			);
@@ -418,6 +426,7 @@
 				3AF6C82D158915F400AA2923 /* TETableView.h in Headers */,
 				3AF6C82C158915EE00AA2923 /* TUKit.h in Headers */,
 				F501A8EE1587623400E784DD /* TEArcCompatible.h in Headers */,
+				F5FD88D015C12E3300AC4A60 /* NSMutableArray+WeakReference.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +455,7 @@
 				3AD064DA15740DBA00C6DAA6 /* TELoadingImageView.h in Headers */,
 				3AD064DC15740DBA00C6DAA6 /* TERoundedCornerImageView.h in Headers */,
 				3AF6C7FF157FC13800AA2923 /* UIView+Animations.h in Headers */,
+				F5FD88C715C1260500AC4A60 /* NSMutableArray+WeakReference.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -576,6 +586,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5FD88D115C12E4900AC4A60 /* NSMutableArray+WeakReference.m in Sources */,
 				F501A8C5158761D100E784DD /* UIView+Animations.m in Sources */,
 				F501A8C6158761D100E784DD /* TELoadingImageView.m in Sources */,
 				F501A8C7158761D100E784DD /* TERoundedCornerImageView.m in Sources */,
@@ -625,6 +636,7 @@
 				3AD064DD15740DBA00C6DAA6 /* TERoundedCornerImageView.m in Sources */,
 				3AF6C800157FC13800AA2923 /* UIView+Animations.m in Sources */,
 				F5FEE88E15B4063600AC5569 /* TETableViewItem.m in Sources */,
+				F5FD88C815C1260500AC4A60 /* NSMutableArray+WeakReference.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

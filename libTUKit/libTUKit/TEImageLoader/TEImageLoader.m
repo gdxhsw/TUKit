@@ -89,19 +89,21 @@ SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_CUSTOM_METHOD_NAME(TEImageLoader, sharedLoad
 
 - (id)init {
     if ((self = [super init])) {
-        if (_operationQueue == nil) {
-            _operationQueue = [NSOperationQueue new];
-            [_operationQueue setMaxConcurrentOperationCount:5];
-        }
+        @synchronized (self) {
+            if (_operationQueue == nil) {
+                _operationQueue = [NSOperationQueue new];
+                [_operationQueue setMaxConcurrentOperationCount:5];
+            }
 #if __has_feature(objc_arc)
-        _documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-        _cachePath = [_documentsPath stringByAppendingPathComponent:kImageCacheFilder];
+            _documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+            _cachePath = [_documentsPath stringByAppendingPathComponent:kImageCacheFilder];
 #else
-        [_documentsPath release];
-        _documentsPath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] retain];
-        [_cachePath release];
-        _cachePath = [[_documentsPath stringByAppendingPathComponent:kImageCacheFilder] retain];
+            [_documentsPath release];
+            _documentsPath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] retain];
+            [_cachePath release];
+            _cachePath = [[_documentsPath stringByAppendingPathComponent:kImageCacheFilder] retain];
 #endif
+        }
         NSFileManager *fileManager = [NSFileManager defaultManager];
         if (![fileManager fileExistsAtPath:_cachePath]) {
             [fileManager createDirectoryAtPath:_cachePath
@@ -198,12 +200,15 @@ SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_CUSTOM_METHOD_NAME(TEImageLoader, sharedLoad
     NSString *cachePath = nil;
     if ([self isCacheAvailable:info.path cachePath:&cachePath]) {
         if ([info.delegate respondsToSelector:@selector(imageLoader:loadedWithPath:image:)]) {
-            UIImage *image = [self imageInMemoryCacheWithPath:info.path];
-            if (image == nil) {
-                image = [self imageWithPath:cachePath
-                                      error:&error];
-                [self saveImageToMemoryCacheWithPath:info.path
-                                               image:image];
+            UIImage *image = nil;
+            @synchronized (self) {
+                image = [self imageInMemoryCacheWithPath:info.path];
+                if (image == nil) {
+                    image = [self imageWithPath:cachePath
+                                          error:&error];
+                    [self saveImageToMemoryCacheWithPath:info.path
+                                                   image:image];
+                }
             }
             if (!error) {
                 [info.delegate imageLoader:self
@@ -312,16 +317,18 @@ SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_CUSTOM_METHOD_NAME(TEImageLoader, sharedLoad
     NSInvocationOperation *operation = [[NSInvocationOperation alloc] initWithTarget:self
                                                                             selector:@selector(startLoadImageWithInfo:) 
                                                                               object:info];
-    NSMutableArray *operations = [_operationDelegates objectForKey:delegate];
-    if (operations == nil) {
-        operations = [NSMutableArray new];
-        [_operationDelegates setObject:operations
-                                forKey:delegate];
+    @synchronized (self) {
+        NSMutableArray *operations = [_operationDelegates objectForKey:delegate];
+        if (operations == nil) {
+            operations = [NSMutableArray new];
+            [_operationDelegates setObject:operations
+                                    forKey:delegate];
 #if !__has_feature(objc_arc)
-        [operations release];
+            [operations release];
 #endif
+        }
+        [operations addObject:operation];
     }
-    [operations addObject:operation];
     [_operationQueue addOperation:operation];
 #if !__has_feature(objc_arc)
     [info release];
@@ -331,10 +338,12 @@ SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_CUSTOM_METHOD_NAME(TEImageLoader, sharedLoad
 
 - (void)cancelOperationForDelegate:(id <TEImageLoaderDelegate>)delegate {
     NSMutableArray *operations = [_operationDelegates objectForKey:delegate];
-    for (NSInvocationOperation *operation in operations) {
-        [operation cancel];
+    @synchronized (self) {
+        for (NSInvocationOperation *operation in operations) {
+            [operation cancel];
+        }
+        [operations removeAllObjects];
     }
-    [operations removeAllObjects];
 }
 
 - (void)cancelAllOperations {
@@ -357,11 +366,16 @@ SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_CUSTOM_METHOD_NAME(TEImageLoader, sharedLoad
 
 #if !__has_feature(objc_arc)
 - (void)dealloc {
+    [[TEImageLoader sharedLoader] cancelAllOperations];
     TERELEASE(_documentsPath);
     TERELEASE(_cachePath);
     TERELEASE(_memoryCache);
     TERELEASE(_operationDelegates);
     [super dealloc];
+}
+#else
+- (void)dealloc {
+    [[TEImageLoader sharedLoader] cancelAllOperations];
 }
 #endif
 
