@@ -366,7 +366,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_CUSTOM_METHOD_NAME(TEImageLoader, sharedLoad
 
 #if !__has_feature(objc_arc)
 - (void)dealloc {
-    [[TEImageLoader sharedLoader] cancelAllOperations];
+    [self cancelAllOperations];
     TERELEASE(_documentsPath);
     TERELEASE(_cachePath);
     TERELEASE(_memoryCache);
@@ -375,7 +375,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_CUSTOM_METHOD_NAME(TEImageLoader, sharedLoad
 }
 #else
 - (void)dealloc {
-    [[TEImageLoader sharedLoader] cancelAllOperations];
+    [self cancelAllOperations];
 }
 #endif
 
