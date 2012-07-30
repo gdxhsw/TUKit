@@ -39,8 +39,8 @@
         [_imagePath release];
 #endif
         _imagePath = [imagePath copy];
-        UIImage *image = [[TEImageLoader sharedLoader] imageCacheWithPath:imagePath
-                                                                    error:nil];
+        UIImage *image = [TEImageLoader imageCacheWithPath:imagePath
+                                                     error:nil];
         if (image) {
             [self stopLoadingAndSetImage:image];
         }
@@ -53,8 +53,8 @@
                                                     withObject:nil
                                                  waitUntilDone:NO];
             }
-            [[TEImageLoader sharedLoader] cancelOperationForDelegate:self];
-            [[TEImageLoader sharedLoader] loadImageWithPath:_imagePath
+            [_imageLoader cancel];
+            _imageLoader = [TEImageLoader loadImageWithPath:_imagePath
                                                    delegate:self];
         }
     }
@@ -84,6 +84,7 @@
 - (void)imageLoader:(TEImageLoader *)loader loadedWithPath:(NSString *)path image:(UIImage *)image {
     if ([self.imagePath isEqualToString:path]) {
         [self stopLoadingAndSetImage:image];
+        _imageLoader = nil;
     }
 }
 
@@ -92,6 +93,7 @@
         if (self.loadFailedImage != nil) {
             [self stopLoadingAndSetImage:self.loadFailedImage];
         }
+        _imageLoader = nil;
     }
 }
 
@@ -167,7 +169,7 @@
 }
 #else
 - (void)dealloc {
-    [[TEImageLoader sharedLoader] cancelOperationForDelegate:self];
+    [_imageLoader cancel];
 }
 #endif
 

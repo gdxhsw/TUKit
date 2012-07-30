@@ -7,40 +7,33 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "TEArcCompatible.h"
 
 @protocol TEImageLoaderDelegate;
 
-@interface TEImageLoader : NSObject {
-    NSString *_documentsPath;
-    NSString *_cachePath;
-    NSMutableDictionary *_memoryCache;
-    NSMutableDictionary *_operationDelegates;
-}
+@interface TEImageLoader : NSOperation
 
-+ (id)sharedLoader;
+@property (strong, nonatomic) NSString *path;
+@property (WEAK, nonatomic) id <TEImageLoaderDelegate> delegate;
 
 /* Check if image cache already exist */
-- (BOOL)hasImageWithPath:(NSString *)path error:(NSError **)error;
++ (BOOL)hasImageWithPath:(NSString *)path error:(NSError **)error;
 
-- (UIImage *)imageCacheWithPath:(NSString *)path error:(NSError **)error;
++ (UIImage *)imageCacheWithPath:(NSString *)path error:(NSError **)error;
 
 /* Load image from path */
-- (UIImage *)imageWithPath:(NSString *)path error:(NSError **)error;
++ (UIImage *)imageWithPath:(NSString *)path error:(NSError **)error;
 
 /* Load image from path async */
-- (void)loadImageWithPath:(NSString *)path delegate:(id <TEImageLoaderDelegate>)delegate;
-
-/* Cancel image load operation called from specific delegate */
-- (void)cancelOperationForDelegate:(id <TEImageLoaderDelegate>)delegate;
-
-/* Cancel all image load ope */
-- (void)cancelAllOperations;
++ (TEImageLoader *)loadImageWithPath:(NSString *)path delegate:(id <TEImageLoaderDelegate>)delegate;
 
 /* Free all cache in memory */
-- (void)clearMemoryCache;
++ (void)clearMemoryCache;
 
 /* Remove all cache in local file system */
-- (void)clearCacheImages;
++ (void)clearCacheImages;
+
++ (void)cancelOperationsWithDelegate:(id <TEImageLoaderDelegate>)delegate;
 
 @end
 

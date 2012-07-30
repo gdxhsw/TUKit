@@ -9,7 +9,9 @@
 #import "TEArcCompatible.h"
 #import "TEImageLoader.h"
 
-@interface TELoadingImageView : UIView <TEImageLoaderDelegate, NSCopying>
+@interface TELoadingImageView : UIView <TEImageLoaderDelegate, NSCopying> {
+    TEImageLoader *_imageLoader;
+}
 
 @property (STRONG, nonatomic) UIImage *image;
 @property (copy, nonatomic) NSString *imagePath;
