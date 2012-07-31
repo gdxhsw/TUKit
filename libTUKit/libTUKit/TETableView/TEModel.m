@@ -68,7 +68,7 @@
 }
 
 - (void)notifyDidFailWithError:(NSError *)error {
-    if ([self.delegate respondsToSelector:@selector(didFailLoadWithModel:)]) {
+    if ([self.delegate respondsToSelector:@selector(didFailLoadWithModel:error:)]) {
         [self.delegate didFailLoadWithModel:self
                                       error:error];
     }
