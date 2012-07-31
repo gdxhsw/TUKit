@@ -18,7 +18,7 @@
 
 @end
 
-@protocol TETableViewActionDelegate <NSObject>
+@protocol TETableViewActionDelegate <UIScrollViewDelegate>
 
 @optional
 - (void)tableView:(UITableView *)tableView didSelectItem:(id <TETableViewItem>)item atIndexPath:(NSIndexPath *)indexPath;

@@ -44,6 +44,78 @@
     }
 }
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    if ([self.delegate respondsToSelector:@selector(scrollViewDidScroll:)]) {
+        [self.delegate scrollViewDidScroll:scrollView];
+    }
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    if ([self.delegate respondsToSelector:@selector(scrollViewDidEndDragging:willDecelerate:)]) {
+        [self.delegate scrollViewDidEndDragging:scrollView
+                                 willDecelerate:decelerate];
+    }
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    if ([self.delegate respondsToSelector:@selector(scrollViewDidEndDecelerating:)]) {
+        [self.delegate scrollViewDidEndDecelerating:scrollView];
+    }
+}
+
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
+    if ([self.delegate respondsToSelector:@selector(scrollViewDidEndScrollingAnimation:)]) {
+        [self.delegate scrollViewDidEndScrollingAnimation:scrollView];
+    }
+}
+
+- (void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(UIView *)view atScale:(float)scale {
+    if ([self.delegate respondsToSelector:@selector(scrollViewDidEndZooming:withView:atScale:)]) {
+        [self.delegate scrollViewDidEndZooming:scrollView
+                                      withView:view
+                                       atScale:scale];
+    }
+}
+
+- (void)scrollViewDidScrollToTop:(UIScrollView *)scrollView {
+    if ([self.delegate respondsToSelector:@selector(scrollViewDidScrollToTop:)]) {
+        [self.delegate scrollViewDidScrollToTop:scrollView];
+    }
+}
+
+- (void)scrollViewDidZoom:(UIScrollView *)scrollView {
+    if ([self.delegate respondsToSelector:@selector(scrollViewDidZoom:)]) {
+        [self.delegate scrollViewDidZoom:scrollView];
+    }
+}
+
+- (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView {
+    if ([self.delegate respondsToSelector:@selector(scrollViewWillBeginDecelerating:)]) {
+        [self.delegate scrollViewWillBeginDecelerating:scrollView];
+    }
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    if ([self.delegate respondsToSelector:@selector(scrollViewWillBeginDragging:)]) {
+        [self.delegate scrollViewWillBeginDragging:scrollView];
+    }
+}
+
+- (void)scrollViewWillBeginZooming:(UIScrollView *)scrollView withView:(UIView *)view {
+    if ([self.delegate respondsToSelector:@selector(scrollViewWillBeginZooming:withView:)]) {
+        [self.delegate scrollViewWillBeginZooming:scrollView
+                                         withView:view];
+    }
+}
+
+- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset {
+    if ([self.delegate respondsToSelector:@selector(scrollViewWillEndDragging:withVelocity:targetContentOffset:)]) {
+        [self.delegate scrollViewWillEndDragging:scrollView
+                                    withVelocity:velocity
+                             targetContentOffset:targetContentOffset];
+    }
+}
+
 #if !__has_feature(objc_arc)
 - (void)dealloc {
     _delegate = nil;
