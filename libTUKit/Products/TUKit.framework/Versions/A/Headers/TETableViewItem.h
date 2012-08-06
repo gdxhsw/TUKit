@@ -1,12 +1,12 @@
 //
 //  TETableViewItem.h
-//  Sniff
+//  libTUKit
 //
-//  Created by  on 12/4/26.
+//  Created by GDX on 12/4/26.
 //  Copyright (c) 2012年 28 interactive. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @protocol TETableViewItem <NSObject>
 
@@ -16,7 +16,6 @@
 - (CGFloat)cellHeightWithTableView:(UITableView *)tableView;
 
 @end
-
 
 @interface TETableViewItem : NSObject <TETableViewItem> {
     UITableViewCellStyle _cellStyle;
@@ -30,7 +29,5 @@
 @property (assign, nonatomic) NSInteger tag;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier;
-
-
 
 @end
