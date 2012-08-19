@@ -225,7 +225,7 @@
 								<string key="NSFrame">{{10, 11}, {142, 21}}</string>
 								<reference key="NSSuperview" ref="418839739"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="920233394"/>
+								<reference key="NSNextKeyView" ref="630420347"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -240,10 +240,10 @@
 								<reference key="IBUIFontDescription" ref="1032814866"/>
 								<reference key="IBUIFont" ref="479315033"/>
 							</object>
-							<object class="IBUISegmentedControl" id="920233394">
+							<object class="IBUISegmentedControl" id="630420347">
 								<reference key="NSNextResponder" ref="418839739"/>
 								<int key="NSvFlags">291</int>
-								<string key="NSFrame">{{128, 1}, {183, 44}}</string>
+								<string key="NSFrame">{{114, 1}, {197, 44}}</string>
 								<reference key="NSSuperview" ref="418839739"/>
 								<reference key="NSWindow"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
@@ -348,7 +348,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">segmentedControl</string>
 						<reference key="source" ref="500467390"/>
-						<reference key="destination" ref="920233394"/>
+						<reference key="destination" ref="630420347"/>
 					</object>
 					<int key="connectionID">24</int>
 				</object>
@@ -415,7 +415,7 @@
 						<reference key="object" ref="500467390"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="224173489"/>
-							<reference ref="920233394"/>
+							<reference ref="630420347"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -426,7 +426,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">17</int>
-						<reference key="object" ref="920233394"/>
+						<reference key="object" ref="630420347"/>
 						<reference key="parent" ref="500467390"/>
 					</object>
 				</array>
