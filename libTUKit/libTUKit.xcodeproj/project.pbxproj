@@ -21,6 +21,25 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		3A98D4BF15E0CF7A00C9F564 /* TESwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A98D4BD15E0CF7A00C9F564 /* TESwitchCell.m */; };
+		3A98D4C615E0D18700C9F564 /* TESelectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A98D4C415E0D18700C9F564 /* TESelectCell.m */; };
+		3A98D4CA15E0D1C600C9F564 /* TETextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A98D4C815E0D1C500C9F564 /* TETextFieldCell.m */; };
+		3A98D4CE15E0D57D00C9F564 /* TESwitchItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A98D4CC15E0D57D00C9F564 /* TESwitchItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A98D4CF15E0D57D00C9F564 /* TESwitchItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A98D4CD15E0D57D00C9F564 /* TESwitchItem.m */; };
+		3A98D4D215E0D58F00C9F564 /* TESelectItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A98D4D015E0D58F00C9F564 /* TESelectItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A98D4D315E0D58F00C9F564 /* TESelectItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A98D4D115E0D58F00C9F564 /* TESelectItem.m */; };
+		3A98D4D615E0D59F00C9F564 /* TETextFieldItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A98D4D415E0D59F00C9F564 /* TETextFieldItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A98D4D715E0D59F00C9F564 /* TETextFieldItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A98D4D515E0D59F00C9F564 /* TETextFieldItem.m */; };
+		3A98D4D815E0D6FE00C9F564 /* TETableViewCells.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A98D4C015E0D02A00C9F564 /* TETableViewCells.xib */; };
+		3A98D4E015E0E64500C9F564 /* TESwitchItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A98D4CC15E0D57D00C9F564 /* TESwitchItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A98D4E115E0E64500C9F564 /* TESelectItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A98D4D015E0D58F00C9F564 /* TESelectItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A98D4E215E0E64500C9F564 /* TETextFieldItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A98D4D415E0D59F00C9F564 /* TETextFieldItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A98D4E515E0E7D600C9F564 /* TESwitchItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A98D4CD15E0D57D00C9F564 /* TESwitchItem.m */; };
+		3A98D4E615E0E7D600C9F564 /* TESelectItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A98D4D115E0D58F00C9F564 /* TESelectItem.m */; };
+		3A98D4E715E0E7D600C9F564 /* TETextFieldItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A98D4D515E0D59F00C9F564 /* TETextFieldItem.m */; };
+		3A98D4E815E0E7D600C9F564 /* TESwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A98D4BD15E0CF7A00C9F564 /* TESwitchCell.m */; };
+		3A98D4E915E0E7D600C9F564 /* TESelectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A98D4C415E0D18700C9F564 /* TESelectCell.m */; };
+		3A98D4EA15E0E7D600C9F564 /* TETextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A98D4C815E0D1C500C9F564 /* TETextFieldCell.m */; };
 		3AD064CC1574092600C6DAA6 /* NSString+URLEncode.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AD064C81574092600C6DAA6 /* NSString+URLEncode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3AD064CD1574092600C6DAA6 /* NSString+URLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD064C91574092600C6DAA6 /* NSString+URLEncode.m */; };
 		3AD064CE1574092600C6DAA6 /* TEImageLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AD064CA1574092600C6DAA6 /* TEImageLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -117,6 +136,19 @@
 
 /* Begin PBXFileReference section */
 		3A15DA9D158A697A005DB057 /* ARCSingleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARCSingleton.h; sourceTree = "<group>"; };
+		3A98D4BC15E0CF7A00C9F564 /* TESwitchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TESwitchCell.h; path = TETableView/TESwitchCell.h; sourceTree = "<group>"; };
+		3A98D4BD15E0CF7A00C9F564 /* TESwitchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TESwitchCell.m; path = TETableView/TESwitchCell.m; sourceTree = "<group>"; };
+		3A98D4C015E0D02A00C9F564 /* TETableViewCells.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TETableViewCells.xib; sourceTree = "<group>"; };
+		3A98D4C315E0D18700C9F564 /* TESelectCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TESelectCell.h; path = TETableView/TESelectCell.h; sourceTree = "<group>"; };
+		3A98D4C415E0D18700C9F564 /* TESelectCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TESelectCell.m; path = TETableView/TESelectCell.m; sourceTree = "<group>"; };
+		3A98D4C715E0D1C500C9F564 /* TETextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TETextFieldCell.h; path = TETableView/TETextFieldCell.h; sourceTree = "<group>"; };
+		3A98D4C815E0D1C500C9F564 /* TETextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TETextFieldCell.m; path = TETableView/TETextFieldCell.m; sourceTree = "<group>"; };
+		3A98D4CC15E0D57D00C9F564 /* TESwitchItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TESwitchItem.h; path = TETableView/TESwitchItem.h; sourceTree = "<group>"; };
+		3A98D4CD15E0D57D00C9F564 /* TESwitchItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TESwitchItem.m; path = TETableView/TESwitchItem.m; sourceTree = "<group>"; };
+		3A98D4D015E0D58F00C9F564 /* TESelectItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TESelectItem.h; path = TETableView/TESelectItem.h; sourceTree = "<group>"; };
+		3A98D4D115E0D58F00C9F564 /* TESelectItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TESelectItem.m; path = TETableView/TESelectItem.m; sourceTree = "<group>"; };
+		3A98D4D415E0D59F00C9F564 /* TETextFieldItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TETextFieldItem.h; path = TETableView/TETextFieldItem.h; sourceTree = "<group>"; };
+		3A98D4D515E0D59F00C9F564 /* TETextFieldItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TETextFieldItem.m; path = TETableView/TETextFieldItem.m; sourceTree = "<group>"; };
 		3AD064C81574092600C6DAA6 /* NSString+URLEncode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+URLEncode.h"; path = "TEImageLoader/NSString+URLEncode.h"; sourceTree = "<group>"; };
 		3AD064C91574092600C6DAA6 /* NSString+URLEncode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+URLEncode.m"; path = "TEImageLoader/NSString+URLEncode.m"; sourceTree = "<group>"; };
 		3AD064CA1574092600C6DAA6 /* TEImageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEImageLoader.h; path = TEImageLoader/TEImageLoader.h; sourceTree = "<group>"; };
@@ -207,6 +239,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A98D4B915E0CEEF00C9F564 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3A98D4C015E0D02A00C9F564 /* TETableViewCells.xib */,
+				3A98D4BC15E0CF7A00C9F564 /* TESwitchCell.h */,
+				3A98D4BD15E0CF7A00C9F564 /* TESwitchCell.m */,
+				3A98D4C315E0D18700C9F564 /* TESelectCell.h */,
+				3A98D4C415E0D18700C9F564 /* TESelectCell.m */,
+				3A98D4C715E0D1C500C9F564 /* TETextFieldCell.h */,
+				3A98D4C815E0D1C500C9F564 /* TETextFieldCell.m */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		3A98D4BB15E0CF2F00C9F564 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				3A98D4CC15E0D57D00C9F564 /* TESwitchItem.h */,
+				3A98D4CD15E0D57D00C9F564 /* TESwitchItem.m */,
+				3A98D4D015E0D58F00C9F564 /* TESelectItem.h */,
+				3A98D4D115E0D58F00C9F564 /* TESelectItem.m */,
+				3A98D4D415E0D59F00C9F564 /* TETextFieldItem.h */,
+				3A98D4D515E0D59F00C9F564 /* TETextFieldItem.m */,
+			);
+			name = Items;
+			sourceTree = "<group>";
+		};
 		3AD064C6157408D300C6DAA6 /* TEImageLoader */ = {
 			isa = PBXGroup;
 			children = (
@@ -346,6 +405,8 @@
 		F5580A251573AD4100865948 /* TETableView */ = {
 			isa = PBXGroup;
 			children = (
+				3A98D4BB15E0CF2F00C9F564 /* Items */,
+				3A98D4B915E0CEEF00C9F564 /* Cells */,
 				F5580A261573AEA000865948 /* TEModel.h */,
 				F5580A271573AEA000865948 /* TEModel.m */,
 				F5580A341573AEA000865948 /* TETableViewItem.h */,
@@ -429,6 +490,9 @@
 				F501A8EA1587623400E784DD /* TETableViewExpandableDelegate.h in Headers */,
 				F501A8EB1587623400E784DD /* TETableViewSectionDataSource.h in Headers */,
 				F501A8EC1587623400E784DD /* TETableViewSectionExpandableDataSource.h in Headers */,
+				3A98D4E015E0E64500C9F564 /* TESwitchItem.h in Headers */,
+				3A98D4E115E0E64500C9F564 /* TESelectItem.h in Headers */,
+				3A98D4E215E0E64500C9F564 /* TETextFieldItem.h in Headers */,
 				F501A8ED1587623400E784DD /* TEDebug.h in Headers */,
 				3AF6C82D158915F400AA2923 /* TETableView.h in Headers */,
 				3AF6C82C158915EE00AA2923 /* TUKit.h in Headers */,
@@ -463,6 +527,9 @@
 				3AD064DC15740DBA00C6DAA6 /* TERoundedCornerImageView.h in Headers */,
 				3AF6C7FF157FC13800AA2923 /* UIView+Animations.h in Headers */,
 				F5FD88C715C1260500AC4A60 /* NSMutableArray+WeakReference.h in Headers */,
+				3A98D4CE15E0D57D00C9F564 /* TESwitchItem.h in Headers */,
+				3A98D4D215E0D58F00C9F564 /* TESelectItem.h in Headers */,
+				3A98D4D615E0D59F00C9F564 /* TETextFieldItem.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,6 +630,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A98D4D815E0D6FE00C9F564 /* TETableViewCells.xib in Resources */,
 				F526EEDF158770C2003B148A /* __default_highlighted_star.png in Resources */,
 				F526EEE0158770C2003B148A /* __default_highlighted_star@2x.png in Resources */,
 				F526EEE1158770C2003B148A /* __default_star.png in Resources */,
@@ -593,6 +661,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A98D4E515E0E7D600C9F564 /* TESwitchItem.m in Sources */,
+				3A98D4E615E0E7D600C9F564 /* TESelectItem.m in Sources */,
+				3A98D4E715E0E7D600C9F564 /* TETextFieldItem.m in Sources */,
+				3A98D4E815E0E7D600C9F564 /* TESwitchCell.m in Sources */,
+				3A98D4E915E0E7D600C9F564 /* TESelectCell.m in Sources */,
+				3A98D4EA15E0E7D600C9F564 /* TETextFieldCell.m in Sources */,
 				F527805D15CFDF0A002D6D36 /* TETableViewItem.m in Sources */,
 				F5FD88D115C12E4900AC4A60 /* NSMutableArray+WeakReference.m in Sources */,
 				F501A8C5158761D100E784DD /* UIView+Animations.m in Sources */,
@@ -645,6 +719,12 @@
 				3AF6C800157FC13800AA2923 /* UIView+Animations.m in Sources */,
 				F5FEE88E15B4063600AC5569 /* TETableViewItem.m in Sources */,
 				F5FD88C815C1260500AC4A60 /* NSMutableArray+WeakReference.m in Sources */,
+				3A98D4BF15E0CF7A00C9F564 /* TESwitchCell.m in Sources */,
+				3A98D4C615E0D18700C9F564 /* TESelectCell.m in Sources */,
+				3A98D4CA15E0D1C600C9F564 /* TETextFieldCell.m in Sources */,
+				3A98D4CF15E0D57D00C9F564 /* TESwitchItem.m in Sources */,
+				3A98D4D315E0D58F00C9F564 /* TESelectItem.m in Sources */,
+				3A98D4D715E0D59F00C9F564 /* TETextFieldItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

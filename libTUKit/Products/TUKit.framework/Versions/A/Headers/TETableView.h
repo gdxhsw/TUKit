@@ -14,3 +14,7 @@
 #import "TETableViewExpandableItem.h"
 #import "TETableViewSectionDataSource.h"
 #import "TETableViewSectionExpandableDataSource.h"
+
+#import "TESwitchItem.h"
+#import "TESelectItem.h"
+#import "TETextFieldItem.h"
