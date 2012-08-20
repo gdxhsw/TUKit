@@ -40,8 +40,6 @@
                              options:nil] objectAtIndex:2];
     }
     cell.titleLabel.text = self.title;
-//    [cell.segmentedControl removeFromSuperview];
-//    UISegmentedControl *segmentedControl = [[UISegmentedControl alloc] initWithItems:self.items];
     [cell.segmentedControl removeAllSegments];
     cell.segmentedControl.transform = CGAffineTransformIdentity;
     NSInteger index = 0;
@@ -57,21 +55,9 @@
     CGFloat ratio = 33.0f / 44.0f;
     cell.segmentedControl.layer.anchorPoint = CGPointMake(0.32f, 0.5f);
     cell.segmentedControl.transform = CGAffineTransformMakeScale(ratio, ratio);
-//    [cell sizeToFit];
     [cell.segmentedControl addTarget:self
                               action:@selector(segmentedControlValueChanged:)
                     forControlEvents:UIControlEventValueChanged];
-    
-//    CGRect rect = segmentedControl.frame;
-//    rect.origin = CGPointMake(cell.frame.size.width - rect.size.width - 7.0f,
-//                              0.0f);
-//    segmentedControl.frame = rect;
-//    segmentedControl.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin;
-//    cell.autoresizesSubviews = YES;
-//    NSLog(@"%f", cell.frame.size.width);
-//    [cell addSubview:segmentedControl];
-//    NSLog(@"%f", cell.frame.size.width);
-//    cell.segmentedControl = segmentedControl;
     
     return cell;
 }

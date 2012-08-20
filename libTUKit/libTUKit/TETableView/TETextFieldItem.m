@@ -34,6 +34,7 @@
                              options:nil] objectAtIndex:0];
     }
     cell.titleLabel.text = self.title;
+    cell.textField.text = self.text;
     [cell.textField removeTarget:nil
                           action:nil
                 forControlEvents:UIControlEventEditingChanged];
