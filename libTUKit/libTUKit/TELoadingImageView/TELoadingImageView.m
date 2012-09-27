@@ -34,7 +34,7 @@
 #pragma mark - Properties
 
 - (void)setImagePath:(NSString *)imagePath {
-    if (![_imagePath isEqualToString:imagePath]) {
+    if (imagePath.length > 0 && ![_imagePath isEqualToString:imagePath]) {
 #if !__has_feature(objc_arc)
         [_imagePath release];
 #endif
