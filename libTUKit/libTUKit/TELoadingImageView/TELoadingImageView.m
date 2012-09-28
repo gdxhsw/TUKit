@@ -34,7 +34,7 @@
 #pragma mark - Properties
 
 - (void)setImagePath:(NSString *)imagePath {
-    if (imagePath.length > 0 && ![_imagePath isEqualToString:imagePath]) {
+    if (![_imagePath isEqualToString:imagePath]) {
 #if !__has_feature(objc_arc)
         [_imagePath release];
 #endif
@@ -45,6 +45,7 @@
             [self stopLoadingAndSetImage:image];
         }
         else {
+            self.image = nil;
             if ([NSThread isMainThread]) {
                 [_loadingIndicator startAnimating];
             }
@@ -90,9 +91,7 @@
 
 - (void)imageLoader:(TEImageLoader *)loader loadFailedWithPath:(NSString *)path error:(NSError *)error {
     if ([self.imagePath isEqualToString:path]) {
-        if (self.loadFailedImage != nil) {
-            [self stopLoadingAndSetImage:self.loadFailedImage];
-        }
+        [self stopLoadingAndSetImage:self.loadFailedImage];
         _imageLoader = nil;
     }
 }

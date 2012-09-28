@@ -72,6 +72,10 @@ static NSMutableDictionary *_operationDelegates = nil;
 #pragma mark - Private methods
 
 + (ImagePathType)isTypeWithPath:(NSString *)path {
+    NSArray *components = [path pathComponents];
+    if (components.count == 0) {
+        return ImageLoaderPathNotSupported;
+    }
     NSString *schema = [[path pathComponents] objectAtIndex:0];
     if ([schema isEqualToString:kPathSchemaFileSystem]) {
         return ImagePathTypeFileSystem;
@@ -88,12 +92,6 @@ static NSMutableDictionary *_operationDelegates = nil;
 }
 
 + (NSString *)cachePathWithImagePath:(NSString *)path error:(NSError **)error {
-    if (path.length == 0) {
-        *error = [NSError errorWithDomain:@"EmptyArgument"
-                                     code:0
-                                 userInfo:nil];
-        return nil;
-    }
     ImagePathType type = [TEImageLoader isTypeWithPath:path];
     error = nil;
     switch (type) {
@@ -115,24 +113,15 @@ static NSMutableDictionary *_operationDelegates = nil;
 }
 
 + (UIImage *)imageInMemoryCacheWithPath:(NSString *)path {
-    if (path.length > 0) {
-        return [_memoryCache objectForKey:path];
-    }
-    return nil;
+    return [_memoryCache objectForKey:path];
 }
 
 + (void)saveImageToMemoryCacheWithPath:(NSString *)path image:(UIImage *)image {
-    if (path.length == 0) {
-        return;
-    }
     [_memoryCache setObject:image
                      forKey:path];
 }
 
 + (BOOL)isCacheAvailable:(NSString *)path cachePath:(NSString **)cachePath {
-    if (path.length == 0) {
-        return NO;
-    }
     *cachePath = [TEImageLoader cachePathWithImagePath:path
                                                  error:nil];
     if (*cachePath != nil) {
@@ -143,9 +132,6 @@ static NSMutableDictionary *_operationDelegates = nil;
 }
 
 + (void)saveImageToCacheWithPath:(NSString *)path image:(UIImage *)image {
-    if (path.length == 0) {
-        return;
-    }
     ImagePathType type = [TEImageLoader isTypeWithPath:path];
     NSError *error;
     switch (type) {
@@ -164,13 +150,6 @@ static NSMutableDictionary *_operationDelegates = nil;
 
 - (void)main {
     if (self.isCancelled) {
-        return;
-    }
-    
-    if (self.path.length == 0) {
-        [self.delegate imageLoader:self
-                loadFailedWithPath:self.path
-                             error:nil];
         return;
     }
     
@@ -276,9 +255,6 @@ static NSMutableDictionary *_operationDelegates = nil;
 }
 
 + (UIImage *)imageCacheWithPath:(NSString *)path error:(NSError **)error {
-    if (path.length == 0) {
-        return nil;
-    }
     UIImage *image = nil;
     NSString *cachePath = nil;
     if ([TEImageLoader isCacheAvailable:path cachePath:&cachePath]) {
@@ -294,9 +270,6 @@ static NSMutableDictionary *_operationDelegates = nil;
 }
 
 + (UIImage *)imageWithPath:(NSString *)path error:(NSError **)error {
-    if (path.length == 0) {
-        return nil;
-    }
     NSError *_error = nil;
     NSData *imageData = nil;
     ImagePathType pathType = [TEImageLoader isTypeWithPath:path];
