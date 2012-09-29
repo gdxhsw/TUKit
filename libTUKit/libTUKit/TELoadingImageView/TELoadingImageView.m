@@ -107,6 +107,8 @@
 }
 
 - (void)drawRect:(CGRect)rect {
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(ctx, self.backgroundColor.CGColor);
     [self.image drawInRect:rect];
 }
 
