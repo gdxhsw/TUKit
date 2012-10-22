@@ -220,7 +220,6 @@ static NSMutableDictionary *_operationDelegates = nil;
         _documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
         NSString *rootCachePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0];
         _cachePath = [rootCachePath stringByAppendingPathComponent:kImageCacheFilder];
-        NSLog(@"%@", _cachePath);
 #else
         [_documentsPath release];
         _documentsPath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] retain];
