@@ -211,7 +211,6 @@ static NSMutableDictionary *_operationDelegates = nil;
 #pragma mark - Lifecycle
 
 + (void)initialize {
-    TELOG(@"");
     @synchronized (self) {
         if (_operationQueue == nil) {
             _operationQueue = [NSOperationQueue new];
@@ -219,12 +218,15 @@ static NSMutableDictionary *_operationDelegates = nil;
         }
 #if __has_feature(objc_arc)
         _documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-        _cachePath = [_documentsPath stringByAppendingPathComponent:kImageCacheFilder];
+        NSString *rootCachePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+        _cachePath = [rootCachePath stringByAppendingPathComponent:kImageCacheFilder];
+        NSLog(@"%@", _cachePath);
 #else
         [_documentsPath release];
         _documentsPath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] retain];
+        NSString *rootCachePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0];
         [_cachePath release];
-        _cachePath = [[_documentsPath stringByAppendingPathComponent:kImageCacheFilder] retain];
+        _cachePath = [[rootCachePath stringByAppendingPathComponent:kImageCacheFilder] retain];
 #endif
     }
     NSFileManager *fileManager = [NSFileManager defaultManager];
