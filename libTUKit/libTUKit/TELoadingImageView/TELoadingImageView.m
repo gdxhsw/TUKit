@@ -16,16 +16,18 @@
 
 #pragma mark - Private methods
 
+- (void)__stopLoadingAndSetImage:(UIImage *)image {
+    [_loadingIndicator stopAnimating];
+    self.image = image;
+    [self setNeedsDisplay];
+}
+
 - (void)stopLoadingAndSetImage:(UIImage *)image {
     if ([NSThread isMainThread]) {
-        [_loadingIndicator stopAnimating];
-        self.image = image;
+        [self __stopLoadingAndSetImage:image];
     }
     else {
-        [_loadingIndicator performSelectorOnMainThread:@selector(stopAnimating) 
-                                            withObject:nil
-                                         waitUntilDone:YES];
-        [self performSelectorOnMainThread:@selector(setImage:) 
+        [self performSelectorOnMainThread:@selector(__stopLoadingAndSetImage:)
                                withObject:image
                             waitUntilDone:YES];
     }
@@ -83,14 +85,14 @@
 #pragma mark - TEImageLoaderDelegate
 
 - (void)imageLoader:(TEImageLoader *)loader loadedWithPath:(NSString *)path image:(UIImage *)image {
-    if ([self.imagePath isEqualToString:path]) {
+    if (_imageLoader == loader) {
         [self stopLoadingAndSetImage:image];
         _imageLoader = nil;
     }
 }
 
 - (void)imageLoader:(TEImageLoader *)loader loadFailedWithPath:(NSString *)path error:(NSError *)error {
-    if ([self.imagePath isEqualToString:path]) {
+    if (_imageLoader == loader) {
         [self stopLoadingAndSetImage:self.loadFailedImage];
         _imageLoader = nil;
     }
