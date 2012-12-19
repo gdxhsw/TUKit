@@ -19,7 +19,7 @@
 
 - (void)notifyDidStart;
 - (void)notifyDidCancel;
-- (void)notifyDidFinishLoad;
+- (void)notifyDidFinishLoadWithResult:(id)result;
 - (void)notifyDidFailWithError:(NSError *)error;
 - (void)notifyDidUpdateWithObject:(id)object atIndexPath:(NSIndexPath *)indexPath;
 - (void)notifyDidInsertWithObject:(id)object atIndexPath:(NSIndexPath *)indexPath;
@@ -37,16 +37,16 @@
 @protocol TEModelDelegate <NSObject>
 
 @optional
-- (void)didStartLoadWithModel:(TEModel *)model;
-- (void)didFinishLoadWithModel:(TEModel *)model;
-- (void)didCancelLoadWithModel:(TEModel *)model;
-- (void)didFailLoadWithModel:(TEModel *)model error:(NSError *)error;
+- (void)modelDidStartLoad:(TEModel *)model;
+- (void)model:(TEModel *)model didFinishLoadWithResult:(id)result;
+- (void)modelDidCancelLoad:(TEModel *)model;
+- (void)model:(TEModel *)model didFailLoadWithError:(NSError *)error;
 
-- (void)didUpdateModel:(TEModel *)model withObject:(id)object atIndexPath:(NSIndexPath *)indexPath;
-- (void)didInsertModel:(TEModel *)model withObject:(id)object atIndexPath:(NSIndexPath *)indexPath;
-- (void)didDeleteModel:(TEModel *)model withObject:(id)object atIndexPath:(NSIndexPath *)indexPath;
+- (void)model:(TEModel *)model didUpdateWithObject:(id)object atIndexPath:(NSIndexPath *)indexPath;
+- (void)model:(TEModel *)model didInsertWithObject:(id)object atIndexPath:(NSIndexPath *)indexPath;
+- (void)model:(TEModel *)model didDeleteWithObject:(id)object atIndexPath:(NSIndexPath *)indexPath;
 
-- (void)beginUpdatesWithModel:(TEModel *)model;
-- (void)endUpdatesWithModel:(TEModel *)model;
+- (void)modelBeginUpdates:(TEModel *)model;
+- (void)modelEndUpdates:(TEModel *)model;
 
 @end
