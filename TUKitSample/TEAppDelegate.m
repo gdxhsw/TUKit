@@ -7,6 +7,7 @@
 //
 
 #import "TEAppDelegate.h"
+#import <TUKit/TUKit.h>
 
 @implementation TEAppDelegate
 
@@ -15,6 +16,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [TEImageLoader clearCacheImages];
     return YES;
 }
 							
