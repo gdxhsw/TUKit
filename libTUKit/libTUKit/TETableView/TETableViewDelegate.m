@@ -11,13 +11,11 @@
 
 @implementation TETableViewDelegate
 
-@synthesize delegate = _delegate;
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if ([self.delegate respondsToSelector:@selector(tableView:didSelectItem:atIndexPath:)]) {
+    if ([self.actionDelegate respondsToSelector:@selector(tableView:didSelectItem:atIndexPath:)]) {
         TETableViewDataSource *dataSource = (TETableViewDataSource *)tableView.dataSource;
         id item = [dataSource itemForIndexPath:indexPath];
-        [self.delegate tableView:tableView
+        [self.actionDelegate tableView:tableView
                    didSelectItem:item
                      atIndexPath:indexPath];
     }
@@ -35,82 +33,82 @@
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if ([self.delegate respondsToSelector:@selector(tableView:willDisplayItem:atIndexPath:)]) {
+    if ([self.actionDelegate respondsToSelector:@selector(tableView:willDisplayItem:atIndexPath:)]) {
         TETableViewDataSource *dataSource = (TETableViewDataSource *)tableView.dataSource;
         id <TETableViewItem> item = [dataSource itemForIndexPath:indexPath];
-        [self.delegate tableView:tableView
+        [self.actionDelegate tableView:tableView
                  willDisplayItem:item
                      atIndexPath:indexPath];
     }
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    if ([self.delegate respondsToSelector:@selector(scrollViewDidScroll:)]) {
-        [self.delegate scrollViewDidScroll:scrollView];
+    if ([self.actionDelegate respondsToSelector:@selector(scrollViewDidScroll:)]) {
+        [self.actionDelegate scrollViewDidScroll:scrollView];
     }
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
-    if ([self.delegate respondsToSelector:@selector(scrollViewDidEndDragging:willDecelerate:)]) {
-        [self.delegate scrollViewDidEndDragging:scrollView
+    if ([self.actionDelegate respondsToSelector:@selector(scrollViewDidEndDragging:willDecelerate:)]) {
+        [self.actionDelegate scrollViewDidEndDragging:scrollView
                                  willDecelerate:decelerate];
     }
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    if ([self.delegate respondsToSelector:@selector(scrollViewDidEndDecelerating:)]) {
-        [self.delegate scrollViewDidEndDecelerating:scrollView];
+    if ([self.actionDelegate respondsToSelector:@selector(scrollViewDidEndDecelerating:)]) {
+        [self.actionDelegate scrollViewDidEndDecelerating:scrollView];
     }
 }
 
 - (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
-    if ([self.delegate respondsToSelector:@selector(scrollViewDidEndScrollingAnimation:)]) {
-        [self.delegate scrollViewDidEndScrollingAnimation:scrollView];
+    if ([self.actionDelegate respondsToSelector:@selector(scrollViewDidEndScrollingAnimation:)]) {
+        [self.actionDelegate scrollViewDidEndScrollingAnimation:scrollView];
     }
 }
 
 - (void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(UIView *)view atScale:(float)scale {
-    if ([self.delegate respondsToSelector:@selector(scrollViewDidEndZooming:withView:atScale:)]) {
-        [self.delegate scrollViewDidEndZooming:scrollView
+    if ([self.actionDelegate respondsToSelector:@selector(scrollViewDidEndZooming:withView:atScale:)]) {
+        [self.actionDelegate scrollViewDidEndZooming:scrollView
                                       withView:view
                                        atScale:scale];
     }
 }
 
 - (void)scrollViewDidScrollToTop:(UIScrollView *)scrollView {
-    if ([self.delegate respondsToSelector:@selector(scrollViewDidScrollToTop:)]) {
-        [self.delegate scrollViewDidScrollToTop:scrollView];
+    if ([self.actionDelegate respondsToSelector:@selector(scrollViewDidScrollToTop:)]) {
+        [self.actionDelegate scrollViewDidScrollToTop:scrollView];
     }
 }
 
 - (void)scrollViewDidZoom:(UIScrollView *)scrollView {
-    if ([self.delegate respondsToSelector:@selector(scrollViewDidZoom:)]) {
-        [self.delegate scrollViewDidZoom:scrollView];
+    if ([self.actionDelegate respondsToSelector:@selector(scrollViewDidZoom:)]) {
+        [self.actionDelegate scrollViewDidZoom:scrollView];
     }
 }
 
 - (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView {
-    if ([self.delegate respondsToSelector:@selector(scrollViewWillBeginDecelerating:)]) {
-        [self.delegate scrollViewWillBeginDecelerating:scrollView];
+    if ([self.actionDelegate respondsToSelector:@selector(scrollViewWillBeginDecelerating:)]) {
+        [self.actionDelegate scrollViewWillBeginDecelerating:scrollView];
     }
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
-    if ([self.delegate respondsToSelector:@selector(scrollViewWillBeginDragging:)]) {
-        [self.delegate scrollViewWillBeginDragging:scrollView];
+    if ([self.actionDelegate respondsToSelector:@selector(scrollViewWillBeginDragging:)]) {
+        [self.actionDelegate scrollViewWillBeginDragging:scrollView];
     }
 }
 
 - (void)scrollViewWillBeginZooming:(UIScrollView *)scrollView withView:(UIView *)view {
-    if ([self.delegate respondsToSelector:@selector(scrollViewWillBeginZooming:withView:)]) {
-        [self.delegate scrollViewWillBeginZooming:scrollView
+    if ([self.actionDelegate respondsToSelector:@selector(scrollViewWillBeginZooming:withView:)]) {
+        [self.actionDelegate scrollViewWillBeginZooming:scrollView
                                          withView:view];
     }
 }
 
 - (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset {
-    if ([self.delegate respondsToSelector:@selector(scrollViewWillEndDragging:withVelocity:targetContentOffset:)]) {
-        [self.delegate scrollViewWillEndDragging:scrollView
+    if ([self.actionDelegate respondsToSelector:@selector(scrollViewWillEndDragging:withVelocity:targetContentOffset:)]) {
+        [self.actionDelegate scrollViewWillEndDragging:scrollView
                                     withVelocity:velocity
                              targetContentOffset:targetContentOffset];
     }

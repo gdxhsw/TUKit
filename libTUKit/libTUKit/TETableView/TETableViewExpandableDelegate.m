@@ -88,8 +88,8 @@
     NSIndexPath *selectedIndexPath = [self expandForIndexPath:indexPath
                                                 withTableView:tableView];
     id <TETableViewItem> item = [dataSource itemForIndexPath:selectedIndexPath];
-    if ([self.delegate respondsToSelector:@selector(tableView:didSelectItem:atIndexPath:)]) {
-        [self.delegate tableView:tableView
+    if ([self.actionDelegate respondsToSelector:@selector(tableView:didSelectItem:atIndexPath:)]) {
+        [self.actionDelegate tableView:tableView
                    didSelectItem:item
                      atIndexPath:selectedIndexPath];
     }

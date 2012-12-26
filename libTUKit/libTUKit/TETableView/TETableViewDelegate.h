@@ -14,7 +14,7 @@
 
 @interface TETableViewDelegate : NSObject <UITableViewDelegate>
 
-@property (WEAK, nonatomic) id <TETableViewActionDelegate> delegate;
+@property (WEAK, nonatomic) id <TETableViewActionDelegate> actionDelegate;
 
 @end
 
