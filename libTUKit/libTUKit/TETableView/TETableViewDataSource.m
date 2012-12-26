@@ -41,6 +41,24 @@ NSString *kTEInvalidClass = @"invalidClass";
     return [self.items count];
 }
 
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([self.actionDelegate respondsToSelector:@selector(dataSource:withTableView:commitEditingStyle:forRowAtIndexPath:)]) {
+        [self.actionDelegate dataSource:self
+                          withTableView:tableView
+                     commitEditingStyle:editingStyle
+                      forRowAtIndexPath:indexPath];
+    }
+}
+
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath {
+    if ([self.actionDelegate respondsToSelector:@selector(dataSource:withTableView:moveRowAtIndexPath:toIndexPath:)]) {
+        [self.actionDelegate dataSource:self
+                          withTableView:tableView
+                     moveRowAtIndexPath:sourceIndexPath
+                            toIndexPath:destinationIndexPath];
+    }
+}
+
 #if !__has_feature(objc_arc)
 - (void)dealloc {
     TERELEASE(_items);
