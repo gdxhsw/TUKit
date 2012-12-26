@@ -8,10 +8,11 @@
 
 #import "TEViewController.h"
 
-#define ITEM_TAG_IMAGELOADER_FROM_URL   1
-#define ITEM_TAG_LOADING_IMAGE_VIEW     2
+#define ITEM_TAG_IMAGELOADER_FROM_URL       1
+#define ITEM_TAG_LOADING_IMAGE_VIEW         2
 
-#define ITEM_TAG_EXPANDABLE_TABLE_VIEW  11
+#define ITEM_TAG_EXPANDABLE_TABLE_VIEW      11
+#define ITEM_TAG_EXPANDABLE_TABLE_VIEW_2    12
 
 @interface TEViewController ()
 
@@ -51,13 +52,19 @@
     expandableItem.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     expandableItem.tag = ITEM_TAG_EXPANDABLE_TABLE_VIEW;
     
+    TETableViewItem *expandableItem2 = [TETableViewItem new];
+    expandableItem2.title = @"Expandable TableView 2";
+    expandableItem2.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    expandableItem2.tag = ITEM_TAG_EXPANDABLE_TABLE_VIEW_2;
+    
     tableViewSection.items = @[
-    expandableItem
+    expandableItem,
+    expandableItem2,
     ];
     
     _dataSource.items = @[
     imageLoaderSection,
-    tableViewSection
+    tableViewSection,
     ];
     
     [self.tableView reloadData];
@@ -91,6 +98,10 @@
                     break;
                 case ITEM_TAG_EXPANDABLE_TABLE_VIEW:
                     [self performSegueWithIdentifier:@"expandableTableViewSegue"
+                                              sender:nil];
+                    break;
+                case ITEM_TAG_EXPANDABLE_TABLE_VIEW_2:
+                    [self performSegueWithIdentifier:@"expandableTableViewSegue2"
                                               sender:nil];
                     break;
                 default:
