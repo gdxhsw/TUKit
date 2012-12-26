@@ -9,6 +9,7 @@
 #import "TEViewController.h"
 
 #define ITEM_TAG_IMAGELOADER_FROM_URL   1
+#define ITEM_TAG_LOADING_IMAGE_VIEW     2
 
 @interface TEViewController ()
 
@@ -26,9 +27,18 @@
                                                                    reuseIdentifier:nil];
     loadImageFromUrlItem.title = @"Load image from url";
     loadImageFromUrlItem.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    loadImageFromUrlItem.selectionStyle = UITableViewCellSelectionStyleBlue;
     loadImageFromUrlItem.tag = ITEM_TAG_IMAGELOADER_FROM_URL;
-    imageLoaderSection.items = @[loadImageFromUrlItem];
+    
+    TETableViewItem *loadingImageViewItem = [[TETableViewItem alloc] initWithStyle:UITableViewCellStyleDefault
+                                                                   reuseIdentifier:nil];
+    loadingImageViewItem.title = @"TELoadingImageView";
+    loadingImageViewItem.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    loadingImageViewItem.tag = ITEM_TAG_LOADING_IMAGE_VIEW;
+    
+    imageLoaderSection.items = @[
+    loadImageFromUrlItem,
+    loadingImageViewItem
+    ];
     
     _dataSource.items = @[imageLoaderSection];
     [self.tableView reloadData];
@@ -56,7 +66,10 @@
                     [self performSegueWithIdentifier:@"imageLoaderFromUrlSegue"
                                               sender:nil];
                     break;
-                    
+                case ITEM_TAG_LOADING_IMAGE_VIEW:
+                    [self performSegueWithIdentifier:@"loadingImageViewSegue"
+                                              sender:nil];
+                    break;
                 default:
                     break;
             }

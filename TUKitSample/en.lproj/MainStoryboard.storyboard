@@ -16,6 +16,7 @@
                     <navigationItem key="navigationItem" title="Menu" id="BIi-tn-Mcv"/>
                     <connections>
                         <segue destination="X2r-8d-vkE" kind="push" identifier="imageLoaderFromUrlSegue" id="BgQ-4v-7mJ"/>
+                        <segue destination="Iev-hS-5s1" kind="push" identifier="loadingImageViewSegue" id="dVt-uh-2n0"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B04-38-A3d" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -46,6 +47,31 @@
             </objects>
             <point key="canvasLocation" x="927" y="-234"/>
         </scene>
+        <!--Loading Image View View Controller - TELoadingImageView-->
+        <scene sceneID="PzO-Jb-9lN">
+            <objects>
+                <viewController id="Iev-hS-5s1" customClass="TELoadingImageViewViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dDT-lz-vMO">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="dfx-Do-MYZ" customClass="TELoadingImageView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="TELoadingImageView" id="nD6-EK-Yvx"/>
+                    <connections>
+                        <outlet property="loadingImageView" destination="dfx-Do-MYZ" id="nUN-mn-nbN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6cB-cd-l06" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="927" y="482"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="b6u-wU-gda">
             <objects>
@@ -67,6 +93,15 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TEImageLoaderFromUrlViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="TELoadingImageView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TELoadingImageView.h"/>
+        </class>
+        <class className="TELoadingImageViewViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TELoadingImageViewViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="loadingImageView" candidateClass="TELoadingImageView"/>
             </relationships>
         </class>
         <class className="TEViewController" superclassName="UITableViewController">
