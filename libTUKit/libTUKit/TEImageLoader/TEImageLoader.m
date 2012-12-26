@@ -244,8 +244,8 @@ static NSMutableDictionary *_operationDelegates = nil;
 }
 
 - (void)cancel {
-    [super cancel];
     self.delegate = nil;
+    [super cancel];
 }
 
 #pragma mark - Public methods

@@ -64,9 +64,12 @@
 }
 
 - (void)viewDidUnload {
-    [TEImageLoader cancelOperationsWithDelegate:self];
     [self setImageView:nil];
     [super viewDidUnload];
+}
+
+- (void)dealloc {
+    [TEImageLoader cancelOperationsWithDelegate:self];
 }
 
 @end

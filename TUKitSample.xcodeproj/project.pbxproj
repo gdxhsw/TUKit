@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		3AF6C8371589172400AA2923 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AF6C8361589172400AA2923 /* QuartzCore.framework */; };
 		8F162EAC16894D93009A721C /* TEImageLoaderFromUrlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F162EAB16894D93009A721C /* TEImageLoaderFromUrlViewController.m */; };
-		8F46839D16895C75000CC6F5 /* TUKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F46839C16895C75000CC6F5 /* TUKit.framework */; };
+		8FE68CF1168AFC1900782D16 /* libTUKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5580A241573AD0200865948 /* libTUKit.a */; };
 		F55809D91573AC5800865948 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55809D81573AC5800865948 /* UIKit.framework */; };
 		F55809DB1573AC5800865948 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55809DA1573AC5800865948 /* Foundation.framework */; };
 		F55809DD1573AC5800865948 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55809DC1573AC5800865948 /* CoreGraphics.framework */; };
@@ -49,7 +49,6 @@
 		3AF6C8361589172400AA2923 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		8F162EAA16894D93009A721C /* TEImageLoaderFromUrlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TEImageLoaderFromUrlViewController.h; sourceTree = "<group>"; };
 		8F162EAB16894D93009A721C /* TEImageLoaderFromUrlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TEImageLoaderFromUrlViewController.m; sourceTree = "<group>"; };
-		8F46839C16895C75000CC6F5 /* TUKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TUKit.framework; path = libTUKit/Products/TUKit.framework; sourceTree = "<group>"; };
 		F55809D41573AC5800865948 /* TUKitSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TUKitSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F55809D81573AC5800865948 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F55809DA1573AC5800865948 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -72,7 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F46839D16895C75000CC6F5 /* TUKit.framework in Frameworks */,
+				8FE68CF1168AFC1900782D16 /* libTUKit.a in Frameworks */,
 				3AF6C8371589172400AA2923 /* QuartzCore.framework in Frameworks */,
 				F55809D91573AC5800865948 /* UIKit.framework in Frameworks */,
 				F55809DB1573AC5800865948 /* Foundation.framework in Frameworks */,
@@ -114,7 +113,6 @@
 		F55809D71573AC5800865948 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8F46839C16895C75000CC6F5 /* TUKit.framework */,
 				3AF6C8361589172400AA2923 /* QuartzCore.framework */,
 				F55809D81573AC5800865948 /* UIKit.framework */,
 				F55809DA1573AC5800865948 /* Foundation.framework */,
