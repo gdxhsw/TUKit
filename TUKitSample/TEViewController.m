@@ -11,6 +11,8 @@
 #define ITEM_TAG_IMAGELOADER_FROM_URL   1
 #define ITEM_TAG_LOADING_IMAGE_VIEW     2
 
+#define ITEM_TAG_EXPANDABLE_TABLE_VIEW  11
+
 @interface TEViewController ()
 
 @end
@@ -23,6 +25,7 @@
 - (void)__loadMenu {
     TETableViewSection *imageLoaderSection = [TETableViewSection new];
     imageLoaderSection.title = @"TEImageLoader";
+    
     TETableViewItem *loadImageFromUrlItem = [[TETableViewItem alloc] initWithStyle:UITableViewCellStyleDefault
                                                                    reuseIdentifier:nil];
     loadImageFromUrlItem.title = @"Load image from url";
@@ -40,7 +43,23 @@
     loadingImageViewItem
     ];
     
-    _dataSource.items = @[imageLoaderSection];
+    TETableViewSection *tableViewSection = [TETableViewSection new];
+    tableViewSection.title = @"TETableView";
+    
+    TETableViewItem *expandableItem = [TETableViewItem new];
+    expandableItem.title = @"Expandable TableView";
+    expandableItem.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    expandableItem.tag = ITEM_TAG_EXPANDABLE_TABLE_VIEW;
+    
+    tableViewSection.items = @[
+    expandableItem
+    ];
+    
+    _dataSource.items = @[
+    imageLoaderSection,
+    tableViewSection
+    ];
+    
     [self.tableView reloadData];
 }
 
@@ -68,6 +87,10 @@
                     break;
                 case ITEM_TAG_LOADING_IMAGE_VIEW:
                     [self performSegueWithIdentifier:@"loadingImageViewSegue"
+                                              sender:nil];
+                    break;
+                case ITEM_TAG_EXPANDABLE_TABLE_VIEW:
+                    [self performSegueWithIdentifier:@"expandableTableViewSegue"
                                               sender:nil];
                     break;
                 default:

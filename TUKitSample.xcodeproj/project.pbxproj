@@ -11,6 +11,7 @@
 		8F162EAC16894D93009A721C /* TEImageLoaderFromUrlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F162EAB16894D93009A721C /* TEImageLoaderFromUrlViewController.m */; };
 		8FE68CF1168AFC1900782D16 /* libTUKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5580A241573AD0200865948 /* libTUKit.a */; };
 		8FE68CF4168AFED200782D16 /* TELoadingImageViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE68CF3168AFED200782D16 /* TELoadingImageViewViewController.m */; };
+		8FE68CF8168B01EE00782D16 /* TEExpandableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE68CF7168B01EE00782D16 /* TEExpandableTableViewController.m */; };
 		F55809D91573AC5800865948 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55809D81573AC5800865948 /* UIKit.framework */; };
 		F55809DB1573AC5800865948 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55809DA1573AC5800865948 /* Foundation.framework */; };
 		F55809DD1573AC5800865948 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55809DC1573AC5800865948 /* CoreGraphics.framework */; };
@@ -52,6 +53,8 @@
 		8F162EAB16894D93009A721C /* TEImageLoaderFromUrlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TEImageLoaderFromUrlViewController.m; sourceTree = "<group>"; };
 		8FE68CF2168AFED200782D16 /* TELoadingImageViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TELoadingImageViewViewController.h; sourceTree = "<group>"; };
 		8FE68CF3168AFED200782D16 /* TELoadingImageViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TELoadingImageViewViewController.m; sourceTree = "<group>"; };
+		8FE68CF6168B01EE00782D16 /* TEExpandableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TEExpandableTableViewController.h; sourceTree = "<group>"; };
+		8FE68CF7168B01EE00782D16 /* TEExpandableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TEExpandableTableViewController.m; sourceTree = "<group>"; };
 		F55809D41573AC5800865948 /* TUKitSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TUKitSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F55809D81573AC5800865948 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F55809DA1573AC5800865948 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -96,6 +99,15 @@
 			name = TEImageLoader;
 			sourceTree = "<group>";
 		};
+		8FE68CF5168B01D100782D16 /* TETableView */ = {
+			isa = PBXGroup;
+			children = (
+				8FE68CF6168B01EE00782D16 /* TEExpandableTableViewController.h */,
+				8FE68CF7168B01EE00782D16 /* TEExpandableTableViewController.m */,
+			);
+			name = TETableView;
+			sourceTree = "<group>";
+		};
 		F55809C91573AC5800865948 = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +141,7 @@
 		F55809DE1573AC5800865948 /* TUKitSample */ = {
 			isa = PBXGroup;
 			children = (
+				8FE68CF5168B01D100782D16 /* TETableView */,
 				8F162EA916894D12009A721C /* TEImageLoader */,
 				F55809E71573AC5800865948 /* TEAppDelegate.h */,
 				F55809E81573AC5800865948 /* TEAppDelegate.m */,
@@ -261,6 +274,7 @@
 				F55809EF1573AC5800865948 /* TEViewController.m in Sources */,
 				8F162EAC16894D93009A721C /* TEImageLoaderFromUrlViewController.m in Sources */,
 				8FE68CF4168AFED200782D16 /* TELoadingImageViewViewController.m in Sources */,
+				8FE68CF8168B01EE00782D16 /* TEExpandableTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

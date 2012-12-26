@@ -17,6 +17,7 @@
                     <connections>
                         <segue destination="X2r-8d-vkE" kind="push" identifier="imageLoaderFromUrlSegue" id="BgQ-4v-7mJ"/>
                         <segue destination="Iev-hS-5s1" kind="push" identifier="loadingImageViewSegue" id="dVt-uh-2n0"/>
+                        <segue destination="wCu-C0-IoD" kind="push" identifier="expandableTableViewSegue" id="J1t-zB-Kpb"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B04-38-A3d" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -46,6 +47,31 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UXE-5M-BDm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="927" y="-234"/>
+        </scene>
+        <!--Expandable Table View Controller - Expandable TableView-->
+        <scene sceneID="VVI-7X-ADa">
+            <objects>
+                <viewController id="wCu-C0-IoD" customClass="TEExpandableTableViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XCE-Is-Es5">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Rbk-ts-avo">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Expandable TableView" id="suX-VU-Zle"/>
+                    <connections>
+                        <outlet property="tableView" destination="Rbk-ts-avo" id="JxH-zA-tKN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CKT-50-CWi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1362" y="-234"/>
         </scene>
         <!--Loading Image View View Controller - TELoadingImageView-->
         <scene sceneID="PzO-Jb-9lN">
@@ -89,6 +115,12 @@
         </scene>
     </scenes>
     <classes>
+        <class className="TEExpandableTableViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TEExpandableTableViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
         <class className="TEImageLoaderFromUrlViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TEImageLoaderFromUrlViewController.h"/>
             <relationships>
