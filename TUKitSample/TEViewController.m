@@ -75,7 +75,7 @@
     self.tableView.dataSource = _dataSource;
     
     _delegate = [TETableViewDelegate new];
-    _delegate.delegate = self;
+    _delegate.actionDelegate = self;
     self.tableView.delegate = _delegate;
     
     [self __loadMenu];
