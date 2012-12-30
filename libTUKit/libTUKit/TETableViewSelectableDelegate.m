@@ -16,9 +16,16 @@
     
     TETableViewDataSource *dataSource = (TETableViewDataSource *)tableView.dataSource;
     id <TETableViewSelectableItem> selectedItem = (id <TETableViewSelectableItem>)[dataSource itemForIndexPath:indexPath];
-    selectedItem.selected = YES;
+    if (!oldSelectedIndexPath || oldSelectedIndexPath.section != indexPath.section || oldSelectedIndexPath.row != indexPath.row) {
+        selectedItem.selected = YES;
+        _oldSelectedIndexPath = indexPath;
+    }
+    else {
+        selectedItem.selected = NO;
+        _oldSelectedIndexPath = nil;
+        oldSelectedIndexPath = nil;
+    }
     
-    _oldSelectedIndexPath = indexPath;
     if (oldSelectedIndexPath) {
         id <TETableViewSelectableItem> oldItem = [dataSource.items objectAtIndex:oldSelectedIndexPath.row];
         oldItem.selected = NO;
