@@ -21,6 +21,9 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		3A28A9A016902CC500D76028 /* TETableViewSelectableDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A28A99E16902CC500D76028 /* TETableViewSelectableDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A28A9A116902CC500D76028 /* TETableViewSelectableDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A28A99F16902CC500D76028 /* TETableViewSelectableDelegate.m */; };
+		3A28A9A316902FDE00D76028 /* TETableViewSelectableDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A28A99E16902CC500D76028 /* TETableViewSelectableDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3A98D4BF15E0CF7A00C9F564 /* TESwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A98D4BD15E0CF7A00C9F564 /* TESwitchCell.m */; };
 		3A98D4C615E0D18700C9F564 /* TESelectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A98D4C415E0D18700C9F564 /* TESelectCell.m */; };
 		3A98D4CA15E0D1C600C9F564 /* TETextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A98D4C815E0D1C500C9F564 /* TETextFieldCell.m */; };
@@ -136,6 +139,8 @@
 
 /* Begin PBXFileReference section */
 		3A15DA9D158A697A005DB057 /* ARCSingleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARCSingleton.h; sourceTree = "<group>"; };
+		3A28A99E16902CC500D76028 /* TETableViewSelectableDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TETableViewSelectableDelegate.h; sourceTree = "<group>"; };
+		3A28A99F16902CC500D76028 /* TETableViewSelectableDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TETableViewSelectableDelegate.m; sourceTree = "<group>"; };
 		3A98D4BC15E0CF7A00C9F564 /* TESwitchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TESwitchCell.h; path = TETableView/TESwitchCell.h; sourceTree = "<group>"; };
 		3A98D4BD15E0CF7A00C9F564 /* TESwitchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TESwitchCell.m; path = TETableView/TESwitchCell.m; sourceTree = "<group>"; };
 		3A98D4C015E0D02A00C9F564 /* TETableViewCells.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TETableViewCells.xib; sourceTree = "<group>"; };
@@ -424,6 +429,8 @@
 				F5580A371573AEA000865948 /* TETableViewSectionDataSource.m */,
 				F5580A381573AEA000865948 /* TETableViewSectionExpandableDataSource.h */,
 				F5580A391573AEA000865948 /* TETableViewSectionExpandableDataSource.m */,
+				3A28A99E16902CC500D76028 /* TETableViewSelectableDelegate.h */,
+				3A28A99F16902CC500D76028 /* TETableViewSelectableDelegate.m */,
 				3AF6C8291589150E00AA2923 /* TETableView.h */,
 			);
 			name = TETableView;
@@ -490,6 +497,7 @@
 				F501A8EA1587623400E784DD /* TETableViewExpandableDelegate.h in Headers */,
 				F501A8EB1587623400E784DD /* TETableViewSectionDataSource.h in Headers */,
 				F501A8EC1587623400E784DD /* TETableViewSectionExpandableDataSource.h in Headers */,
+				3A28A9A316902FDE00D76028 /* TETableViewSelectableDelegate.h in Headers */,
 				3A98D4E015E0E64500C9F564 /* TESwitchItem.h in Headers */,
 				3A98D4E115E0E64500C9F564 /* TESelectItem.h in Headers */,
 				3A98D4E215E0E64500C9F564 /* TETextFieldItem.h in Headers */,
@@ -516,6 +524,7 @@
 				F5580A481573AEA000865948 /* TETableViewItem.h in Headers */,
 				F5580A4A1573AEA000865948 /* TETableViewSectionDataSource.h in Headers */,
 				F5580A4C1573AEA000865948 /* TETableViewSectionExpandableDataSource.h in Headers */,
+				3A28A9A016902CC500D76028 /* TETableViewSelectableDelegate.h in Headers */,
 				F5580A561573AEB500865948 /* TEStarRatingView.h in Headers */,
 				F5580A5F1573AECA00865948 /* AFUIImageReflection.h in Headers */,
 				F5580A611573AECA00865948 /* TEGallery.h in Headers */,
@@ -725,6 +734,7 @@
 				3A98D4CF15E0D57D00C9F564 /* TESwitchItem.m in Sources */,
 				3A98D4D315E0D58F00C9F564 /* TESelectItem.m in Sources */,
 				3A98D4D715E0D59F00C9F564 /* TETextFieldItem.m in Sources */,
+				3A28A9A116902CC500D76028 /* TETableViewSelectableDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

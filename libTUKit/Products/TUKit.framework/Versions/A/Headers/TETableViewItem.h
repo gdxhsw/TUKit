@@ -31,3 +31,11 @@
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier;
 
 @end
+
+
+@protocol TETableViewSelectableItem <TETableViewItem>
+
+@required
+@property (assign, nonatomic) BOOL selected;
+
+@end
