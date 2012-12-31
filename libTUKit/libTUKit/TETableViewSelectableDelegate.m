@@ -12,14 +12,14 @@
 @implementation TETableViewSelectableDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSIndexPath *oldSelectedIndexPath = _oldSelectedIndexPath;
+    NSIndexPath *oldSelectedIndexPath = self.selectedIndexPath;
     
     TETableViewDataSource *dataSource = (TETableViewDataSource *)tableView.dataSource;
     id <TETableViewSelectableItem> selectedItem = (id <TETableViewSelectableItem>)[dataSource itemForIndexPath:indexPath];
     
     if (!oldSelectedIndexPath || oldSelectedIndexPath.section != indexPath.section || oldSelectedIndexPath.row != indexPath.row) {
         selectedItem.selected = YES;
-        _oldSelectedIndexPath = indexPath;
+        self.selectedIndexPath = indexPath;
     }
     else {
         if (self.shouldDeselectItem) {
