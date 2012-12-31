@@ -12,4 +12,6 @@
     NSIndexPath *_oldSelectedIndexPath;
 }
 
+@property (assign, nonatomic) BOOL shouldDeselectItem;
+
 @end

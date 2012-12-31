@@ -16,14 +16,20 @@
     
     TETableViewDataSource *dataSource = (TETableViewDataSource *)tableView.dataSource;
     id <TETableViewSelectableItem> selectedItem = (id <TETableViewSelectableItem>)[dataSource itemForIndexPath:indexPath];
+    
     if (!oldSelectedIndexPath || oldSelectedIndexPath.section != indexPath.section || oldSelectedIndexPath.row != indexPath.row) {
         selectedItem.selected = YES;
         _oldSelectedIndexPath = indexPath;
     }
     else {
-        selectedItem.selected = NO;
-        _oldSelectedIndexPath = nil;
-        oldSelectedIndexPath = nil;
+        if (self.shouldDeselectItem) {
+            selectedItem.selected = NO;
+            _oldSelectedIndexPath = nil;
+            oldSelectedIndexPath = nil;
+        }
+        else {
+            return;
+        }
     }
     
     if (oldSelectedIndexPath) {
