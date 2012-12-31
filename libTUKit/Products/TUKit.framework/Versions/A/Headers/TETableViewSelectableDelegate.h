@@ -8,8 +8,8 @@
 
 #import "TETableViewDelegate.h"
 
-@interface TETableViewSelectableDelegate : TETableViewDelegate {
-    NSIndexPath *_oldSelectedIndexPath;
-}
+@interface TETableViewSelectableDelegate : TETableViewDelegate
+
+@property (strong, nonatomic) NSIndexPath *selectedIndexPath;
 
 @end
