@@ -24,7 +24,7 @@
     else {
         if (self.shouldDeselectItem) {
             selectedItem.selected = NO;
-            _oldSelectedIndexPath = nil;
+            self.selectedIndexPath = nil;
             oldSelectedIndexPath = nil;
         }
         else {
