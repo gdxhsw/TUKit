@@ -59,6 +59,14 @@ NSString *kTEInvalidClass = @"invalidClass";
     }
 }
 
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return NO;
+}
+
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
+    return NO;
+}
+
 #if !__has_feature(objc_arc)
 - (void)dealloc {
     TERELEASE(_items);
