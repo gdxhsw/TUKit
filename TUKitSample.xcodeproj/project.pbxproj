@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A8A93211844C745005B4315 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A8A93201844C745005B4315 /* Default-568h@2x.png */; };
 		3AF6C8371589172400AA2923 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AF6C8361589172400AA2923 /* QuartzCore.framework */; };
 		8F162EAC16894D93009A721C /* TEImageLoaderFromUrlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F162EAB16894D93009A721C /* TEImageLoaderFromUrlViewController.m */; };
 		8FE68CF1168AFC1900782D16 /* libTUKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5580A241573AD0200865948 /* libTUKit.a */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3A8A93201844C745005B4315 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		3AF6C8361589172400AA2923 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		8F162EAA16894D93009A721C /* TEImageLoaderFromUrlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TEImageLoaderFromUrlViewController.h; sourceTree = "<group>"; };
 		8F162EAB16894D93009A721C /* TEImageLoaderFromUrlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TEImageLoaderFromUrlViewController.m; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 		F55809C91573AC5800865948 = {
 			isa = PBXGroup;
 			children = (
+				3A8A93201844C745005B4315 /* Default-568h@2x.png */,
 				F5580A6A1573C25B00865948 /* README */,
 				F5580A1F1573AD0100865948 /* libTUKit.xcodeproj */,
 				F55809DE1573AC5800865948 /* TUKitSample */,
@@ -262,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F55809E31573AC5800865948 /* InfoPlist.strings in Resources */,
+				3A8A93211844C745005B4315 /* Default-568h@2x.png in Resources */,
 				F55809EC1573AC5800865948 /* MainStoryboard.storyboard in Resources */,
 				F5580A6B1573C25B00865948 /* README in Resources */,
 			);
